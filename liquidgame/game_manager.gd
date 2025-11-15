@@ -9,7 +9,13 @@ func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
 	player = main_game_node.get_child(0)
 	load_new_area(load(_default_area))
-
+func dialogue_anim():
+	$DialoguePanel.show()
+	$DialoguePanel/DialogueAnim.current_animation = "dialogue_start"
+	await DialogueManager.dialogue_ended
+	$DialoguePanel/DialogueAnim.current_animation = "dialogue_end"
+	await $DialoguePanel/DialogueAnim.animation_finished
+	$DialoguePanel.hide()
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click"):
 		if inter_obj != null:

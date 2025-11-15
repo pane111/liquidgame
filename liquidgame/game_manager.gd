@@ -1,0 +1,27 @@
+extends Node
+
+@export_file("*.tscn") var _default_area: String
+var current_area
+var main_game_node
+var player
+var inter_obj
+func _ready() -> void:
+	main_game_node = get_node("/root/MainGame")
+	player = main_game_node.get_child(0)
+	load_new_area(load(_default_area))
+
+func _unhandled_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("click"):
+		if inter_obj != null:
+			inter_obj._on_interact()
+		else:
+			print_debug("You clicked on nothing")
+	
+func load_new_area(area: PackedScene):
+	var new_area = area.instantiate()
+	if current_area != null:
+		current_area.queue_free()
+	add_child(new_area)
+	current_area = new_area
+	player.global_position = current_area.start_point.position
+	player.rotation = current_area.start_point.rotation

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://6jwyshv4pv0f"]
+
+[ext_resource type="PackedScene" uid="uid://cij3m80i3u2v3" path="res://Assets/Scenes/player.tscn" id="1_3nrmw"]
+[ext_resource type="Script" uid="uid://b6ui0seb11adj" path="res://game_manager.gd" id="1_n570t"]
+
+[node name="MainGame" type="Node"]
+script = ExtResource("1_n570t")
+_default_area = "uid://d3v22pgllbtmu"
+
+[node name="Player" parent="." instance=ExtResource("1_3nrmw")]

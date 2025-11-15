@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyf4divhnhkov"]
+
+[ext_resource type="Script" uid="uid://dffrdgvawvtvx" path="res://Assets/Scenes/System/interactable.gd" id="1_rhjln"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rhjln"]
+size = Vector3(1, 3, 1)
+
+[node name="Interactable" type="Node3D" groups=["interactable"]]
+script = ExtResource("1_rhjln")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_rhjln")
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3v22pgllbtmu"]
+
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_f0qnb"]
+[ext_resource type="PackedScene" uid="uid://bmowaffmhu6wr" path="res://Assets/3D/simple_room.fbx" id="1_mfl1m"]
+[ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://Assets/Scenes/npc.tscn" id="3_7wweu"]
+
+[node name="TestRoom" type="Node3D" node_paths=PackedStringArray("start_point")]
+script = ExtResource("1_f0qnb")
+start_point = NodePath("PlayerStartPoint")
+rotation_lim = Vector2(45, 30)
+
+[node name="PlayerStartPoint" type="Node3D" parent="."]
+transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 0, 0, -31)
+
+[node name="simple_room" parent="." instance=ExtResource("1_mfl1m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.668677, -0.0394329, 0.742507, -0.743553, -0.035462, 0.667736, 0, -0.998593, -0.0530331, 0, 9, 1)
+light_energy = 0.49
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6, 0)
+spot_range = 15.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 7, -23)
+spot_range = 15.0
+
+[node name="NPC" parent="." instance=ExtResource("3_7wweu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30759, -0.6, -25.0721)

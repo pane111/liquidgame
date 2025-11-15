@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://5whxhmlcsrmg"]
+
+[ext_resource type="Texture2D" uid="uid://bkh03tmf7gk43" path="res://Assets/2D/heartyouguy.png" id="1_8n6a7"]
+[ext_resource type="Script" uid="uid://b04pshwcy136n" path="res://Assets/Scenes/npc.gd" id="1_peea3"]
+[ext_resource type="Resource" uid="uid://blrpgwrot5lbb" path="res://Dialogue/test_dialogue.dialogue" id="2_7a58h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_peea3"]
+size = Vector3(1, 3, 1)
+
+[node name="NPC" type="Node3D" groups=["interactable"]]
+script = ExtResource("1_peea3")
+dialogue = ExtResource("2_7a58h")
+metadata/_edit_group_ = true
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_peea3")
+
+[node name="Sprite" type="Sprite3D" parent="."]
+pixel_size = 0.025
+billboard = 1
+texture_filter = 2
+texture = ExtResource("1_8n6a7")
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]

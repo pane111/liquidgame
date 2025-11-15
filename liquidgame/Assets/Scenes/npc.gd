@@ -6,8 +6,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _on_interact():
-	DialogueManager.show_example_dialogue_balloon(dialogue,"start")
-	get_node("/root/MainGame").dialogue_anim()
+	get_node("/root/MainGame").dialogue_anim(dialogue)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

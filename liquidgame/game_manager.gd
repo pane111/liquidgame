@@ -9,9 +9,11 @@ func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
 	player = main_game_node.get_child(0)
 	load_new_area(load(_default_area))
-func dialogue_anim():
+func dialogue_anim(dia: DialogueResource):
 	$DialoguePanel.show()
 	$DialoguePanel/DialogueAnim.current_animation = "dialogue_start"
+	await $DialoguePanel/DialogueAnim.animation_finished
+	DialogueManager.show_example_dialogue_balloon(dia,"start")
 	await DialogueManager.dialogue_ended
 	$DialoguePanel/DialogueAnim.current_animation = "dialogue_end"
 	await $DialoguePanel/DialogueAnim.animation_finished

@@ -1,12 +1,16 @@
 extends "res://Assets/Scenes/System/interactable.gd"
 
 @export var dialogue: DialogueResource
+@export var character: Character
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	$Outline.texture = character.normal_outline
+	$Color.texture = character.normal_color
+	$Shading.texture = character.normal_shading
+	$Shading.modulate = Color("ee82ee")
+	
 func _on_interact():
-	get_node("/root/MainGame").dialogue_anim(dialogue)
+	get_node("/root/MainGame").dialogue_anim(dialogue,character)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

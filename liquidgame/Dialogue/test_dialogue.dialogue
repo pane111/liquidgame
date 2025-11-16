@@ -1,4 +1,7 @@
 ~ start
-I Heart You Guy: I heart you bro
-I Heart You Guy: I hope you will enjoy this super cool game
+Bentley: My name is Bentley
+do set_surprised_expression()
+Bentley: I am surprised
+do set_normal_expression()
+Bentley: I am normal
 => END

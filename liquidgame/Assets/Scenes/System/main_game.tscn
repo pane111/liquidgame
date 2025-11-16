@@ -1,35 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://6jwyshv4pv0f"]
+[gd_scene load_steps=10 format=3 uid="uid://6jwyshv4pv0f"]
 
 [ext_resource type="PackedScene" uid="uid://cij3m80i3u2v3" path="res://Assets/Scenes/player.tscn" id="1_3nrmw"]
 [ext_resource type="Script" uid="uid://b6ui0seb11adj" path="res://game_manager.gd" id="1_n570t"]
-[ext_resource type="Texture2D" uid="uid://bkh03tmf7gk43" path="res://Assets/2D/heartyouguy.png" id="3_fnbvd"]
-
-[sub_resource type="Animation" id="Animation_fnbvd"]
-resource_name = "dialogue_start"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("HBoxContainer/CharSprite:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.2, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
+[ext_resource type="Texture2D" uid="uid://dguggyhmksw2j" path="res://Assets/2D/Characters/Bentley/bentley_outline.png" id="3_0qls7"]
+[ext_resource type="Texture2D" uid="uid://cxlbrxhcw1ed7" path="res://Assets/2D/Characters/Bentley/bentley_color.png" id="4_7abc5"]
+[ext_resource type="Texture2D" uid="uid://vc2lfmsnr87w" path="res://Assets/2D/Characters/Bentley/bentley_shading.png" id="5_hg5cd"]
 
 [sub_resource type="Animation" id="Animation_d8qdf"]
 length = 0.001
@@ -48,7 +23,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("HBoxContainer/CharSprite:self_modulate")
+tracks/1/path = NodePath("CharSprite:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -75,14 +50,41 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("HBoxContainer/CharSprite:self_modulate")
+tracks/1/path = NodePath("CharSprite:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6),
+"times": PackedFloat32Array(0.08, 0.633333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fnbvd"]
+resource_name = "dialogue_start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharSprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.24, 0.77),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7abc5"]
@@ -100,24 +102,40 @@ _default_area = "uid://d3v22pgllbtmu"
 
 [node name="DialoguePanel" type="Panel" parent="."]
 visible = false
+z_index = -10
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="DialoguePanel"]
+[node name="CharSprite" type="Control" parent="DialoguePanel"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 3
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 199.0
+offset_bottom = 199.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="CharSprite" type="Sprite2D" parent="DialoguePanel/HBoxContainer"]
-position = Vector2(544, 560)
-scale = Vector2(8, 8)
-texture = ExtResource("3_fnbvd")
+[node name="Outline" type="Sprite2D" parent="DialoguePanel/CharSprite"]
+texture = ExtResource("3_0qls7")
+
+[node name="Color" type="Sprite2D" parent="DialoguePanel/CharSprite"]
+z_index = -2
+texture = ExtResource("4_7abc5")
+
+[node name="Shading" type="Sprite2D" parent="DialoguePanel/CharSprite"]
+self_modulate = Color(0.933333, 0.509804, 0.933333, 1)
+z_index = -1
+texture = ExtResource("5_hg5cd")
 
 [node name="DialogueAnim" type="AnimationPlayer" parent="DialoguePanel"]
 libraries = {

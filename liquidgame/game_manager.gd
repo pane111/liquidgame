@@ -5,12 +5,17 @@ var current_area
 var main_game_node
 var player
 var inter_obj
+var cur_char
 func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
 	player = main_game_node.get_child(0)
 	load_new_area(load(_default_area))
-func dialogue_anim(dia: DialogueResource):
+	
+func dialogue_anim(dia: DialogueResource, char: Character):
 	$DialoguePanel.show()
+	cur_char = char
+	
+	$DialoguePanel/CharSprite/Shading.self_modulate = char.color
 	$DialoguePanel/DialogueAnim.current_animation = "dialogue_start"
 	await $DialoguePanel/DialogueAnim.animation_finished
 	DialogueManager.show_example_dialogue_balloon(dia,"start")
@@ -18,6 +23,17 @@ func dialogue_anim(dia: DialogueResource):
 	$DialoguePanel/DialogueAnim.current_animation = "dialogue_end"
 	await $DialoguePanel/DialogueAnim.animation_finished
 	$DialoguePanel.hide()
+	
+func set_normal_expression():
+	$DialoguePanel/CharSprite/Outline.texture = cur_char.normal_outline
+	$DialoguePanel/CharSprite/Color.texture = cur_char.normal_color
+	$DialoguePanel/CharSprite/Shading.texture = cur_char.normal_shading
+	
+func set_surprised_expression():
+	$DialoguePanel/CharSprite/Outline.texture = cur_char.surprised_outline
+	$DialoguePanel/CharSprite/Color.texture = cur_char.surprised_color
+	$DialoguePanel/CharSprite/Shading.texture = cur_char.surprised_shading
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click"):
 		if inter_obj != null:

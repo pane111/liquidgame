@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dguggyhmksw2j"
-path.s3tc="res://.godot/imported/bentley_outline.png-1f140fafc7ffc8b3f707f47c99fd4d28.s3tc.ctex"
+path.s3tc="res://.godot/imported/bentley_outline.png-488797e81d45c4ca62f6b0a674de4cdc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/2D/Characters/Bentley/bentley_outline.png"
-dest_files=["res://.godot/imported/bentley_outline.png-1f140fafc7ffc8b3f707f47c99fd4d28.s3tc.ctex"]
+source_file="res://assets/2D/Characters/Bentley/bentley_outline.png"
+dest_files=["res://.godot/imported/bentley_outline.png-488797e81d45c4ca62f6b0a674de4cdc.s3tc.ctex"]
 
 [params]
 

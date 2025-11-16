@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxlbrxhcw1ed7"
-path.s3tc="res://.godot/imported/bentley_color.png-3bd67affa4992fc1a832563c4edddd62.s3tc.ctex"
+path.s3tc="res://.godot/imported/bentley_color.png-09e0ca6bcb3efa3454d4c8eb758ba092.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/2D/Characters/Bentley/bentley_color.png"
-dest_files=["res://.godot/imported/bentley_color.png-3bd67affa4992fc1a832563c4edddd62.s3tc.ctex"]
+source_file="res://assets/2D/Characters/Bentley/bentley_color.png"
+dest_files=["res://.godot/imported/bentley_color.png-09e0ca6bcb3efa3454d4c8eb758ba092.s3tc.ctex"]
 
 [params]
 

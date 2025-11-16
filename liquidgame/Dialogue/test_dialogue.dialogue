@@ -4,4 +4,8 @@ do set_surprised_expression()
 Bentley: I am surprised
 do set_normal_expression()
 Bentley: I am normal
+- Hi Bentley
+	Bentley: Hello
+- Bye Bentley
+	Bentley: Bye
 => END

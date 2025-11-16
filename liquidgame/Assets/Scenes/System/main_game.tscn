@@ -1,35 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://6jwyshv4pv0f"]
+[gd_scene load_steps=9 format=3 uid="uid://6jwyshv4pv0f"]
 
-[ext_resource type="PackedScene" uid="uid://cij3m80i3u2v3" path="res://Assets/Scenes/player.tscn" id="1_3nrmw"]
-[ext_resource type="Script" uid="uid://b6ui0seb11adj" path="res://game_manager.gd" id="1_n570t"]
-[ext_resource type="Texture2D" uid="uid://bkh03tmf7gk43" path="res://Assets/2D/heartyouguy.png" id="3_fnbvd"]
-
-[sub_resource type="Animation" id="Animation_fnbvd"]
-resource_name = "dialogue_start"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("HBoxContainer/CharSprite:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.2, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
+[ext_resource type="PackedScene" uid="uid://cij3m80i3u2v3" path="res://assets/scenes/player.tscn" id="1_3nrmw"]
+[ext_resource type="Script" uid="uid://b6ui0seb11adj" path="res://scripts/game_manager.gd" id="1_n570t"]
+[ext_resource type="Material" uid="uid://c6rpkr5qdw34d" path="res://shaders/shader.tres" id="2_bll16"]
+[ext_resource type="Texture2D" uid="uid://bkh03tmf7gk43" path="res://assets/2D/heartyouguy.png" id="3_fnbvd"]
 
 [sub_resource type="Animation" id="Animation_d8qdf"]
 length = 0.001
@@ -85,6 +59,33 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_fnbvd"]
+resource_name = "dialogue_start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/CharSprite:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7abc5"]
 _data = {
 &"RESET": SubResource("Animation_d8qdf"),
@@ -92,21 +93,31 @@ _data = {
 &"dialogue_start": SubResource("Animation_fnbvd")
 }
 
-[node name="MainGame" type="Node"]
+[node name="MainGame" type="Node" node_paths=PackedStringArray("player")]
 script = ExtResource("1_n570t")
 _default_area = "uid://d3v22pgllbtmu"
+player = NodePath("SubViewportContainer/SubViewport/Player")
 
-[node name="Player" parent="." instance=ExtResource("1_3nrmw")]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+material = ExtResource("2_bll16")
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="DialoguePanel" type="Panel" parent="."]
-visible = false
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="Player" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_3nrmw")]
+
+[node name="DialoguePanel" type="Panel" parent="SubViewportContainer/SubViewport"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="DialoguePanel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="SubViewportContainer/SubViewport/DialoguePanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -114,12 +125,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CharSprite" type="Sprite2D" parent="DialoguePanel/HBoxContainer"]
+[node name="CharSprite" type="Sprite2D" parent="SubViewportContainer/SubViewport/DialoguePanel/HBoxContainer"]
 position = Vector2(544, 560)
 scale = Vector2(8, 8)
 texture = ExtResource("3_fnbvd")
 
-[node name="DialogueAnim" type="AnimationPlayer" parent="DialoguePanel"]
+[node name="DialogueAnim" type="AnimationPlayer" parent="SubViewportContainer/SubViewport/DialoguePanel"]
 libraries = {
 &"": SubResource("AnimationLibrary_7abc5")
 }

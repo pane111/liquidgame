@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://d3v22pgllbtmu"]
 
-[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_f0qnb"]
-[ext_resource type="PackedScene" uid="uid://bmowaffmhu6wr" path="res://Assets/3D/simple_room.fbx" id="1_mfl1m"]
-[ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://Assets/Scenes/npc.tscn" id="3_7wweu"]
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/Areas/area.gd" id="1_f0qnb"]
+[ext_resource type="PackedScene" uid="uid://bmowaffmhu6wr" path="res://assets/3D/simple_room.fbx" id="1_mfl1m"]
+[ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://assets/scenes/npc.tscn" id="3_7wweu"]
 
 [node name="TestRoom" type="Node3D" node_paths=PackedStringArray("start_point")]
 script = ExtResource("1_f0qnb")

@@ -3,11 +3,10 @@ extends Node
 @export_file("*.tscn") var _default_area: String
 var current_area
 var main_game_node
-var player
+@export var player: Camera3D
 var inter_obj
 func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
-	player = main_game_node.get_child(0)
 	load_new_area(load(_default_area))
 func dialogue_anim(dia: DialogueResource):
 	$DialoguePanel.show()

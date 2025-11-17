@@ -3,14 +3,17 @@ extends Node
 @export_file("*.tscn") var _default_area: String
 var current_area
 var main_game_node
-@export var player: Camera3D
+var player
 var inter_obj
 var cur_char
+signal finished_dialogue
 func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
+	player = $Player
 	load_new_area(load(_default_area))
 	
 func dialogue_anim(dia: DialogueResource, char: Character):
+	player.can_look=false
 	$DialoguePanel.show()
 	cur_char = char
 	
@@ -22,6 +25,8 @@ func dialogue_anim(dia: DialogueResource, char: Character):
 	$DialoguePanel/DialogueAnim.current_animation = "dialogue_end"
 	await $DialoguePanel/DialogueAnim.animation_finished
 	$DialoguePanel.hide()
+	player.can_look=true
+	finished_dialogue.emit()
 	
 func set_normal_expression():
 	$DialoguePanel/CharSprite/Outline.texture = cur_char.normal_outline
@@ -46,5 +51,8 @@ func load_new_area(area: PackedScene):
 		current_area.queue_free()
 	add_child(new_area)
 	current_area = new_area
+	$AreaLabel.text = current_area.area_name
 	player.global_position = current_area.start_point.position
-	player.rotation = current_area.start_point.rotation
+	player.rotation_degrees = current_area.start_point.rotation_degrees
+	player.init_rot = current_area.start_point.rotation_degrees
+	

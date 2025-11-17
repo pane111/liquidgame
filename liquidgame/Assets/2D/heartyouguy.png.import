@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkh03tmf7gk43"
-path.s3tc="res://.godot/imported/heartyouguy.png-79de3f1ecd399ba9955b230e6c4863f6.s3tc.ctex"
+path.s3tc="res://.godot/imported/heartyouguy.png-a9f24cb3fd4be54b684c9091dbbf7299.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/2D/heartyouguy.png"
-dest_files=["res://.godot/imported/heartyouguy.png-79de3f1ecd399ba9955b230e6c4863f6.s3tc.ctex"]
+source_file="res://Assets/2D/heartyouguy.png"
+dest_files=["res://.godot/imported/heartyouguy.png-a9f24cb3fd4be54b684c9091dbbf7299.s3tc.ctex"]
 
 [params]
 

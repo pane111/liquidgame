@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://6jwyshv4pv0f"]
 
+[ext_resource type="Script" uid="uid://b6ui0seb11adj" path="res://scripts/game_manager.gd" id="1_0qls7"]
 [ext_resource type="PackedScene" uid="uid://cij3m80i3u2v3" path="res://Assets/Scenes/player.tscn" id="1_3nrmw"]
-[ext_resource type="Script" uid="uid://b6ui0seb11adj" path="res://game_manager.gd" id="1_n570t"]
 [ext_resource type="Texture2D" uid="uid://dguggyhmksw2j" path="res://Assets/2D/Characters/Bentley/bentley_outline.png" id="3_0qls7"]
 [ext_resource type="Texture2D" uid="uid://cxlbrxhcw1ed7" path="res://Assets/2D/Characters/Bentley/bentley_color.png" id="4_7abc5"]
 [ext_resource type="Texture2D" uid="uid://vc2lfmsnr87w" path="res://Assets/2D/Characters/Bentley/bentley_shading.png" id="5_hg5cd"]
@@ -95,7 +95,7 @@ _data = {
 }
 
 [node name="MainGame" type="Node"]
-script = ExtResource("1_n570t")
+script = ExtResource("1_0qls7")
 _default_area = "uid://d3v22pgllbtmu"
 
 [node name="Player" parent="." instance=ExtResource("1_3nrmw")]
@@ -141,3 +141,8 @@ texture = ExtResource("5_hg5cd")
 libraries = {
 &"": SubResource("AnimationLibrary_7abc5")
 }
+
+[node name="AreaLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Area Label"

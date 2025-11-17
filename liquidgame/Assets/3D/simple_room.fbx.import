@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bmowaffmhu6wr"
-path="res://.godot/imported/simple_room.fbx-b7f11e91177af39d63a2ad5ff5a2a31d.scn"
+path="res://.godot/imported/simple_room.fbx-3d25e74484026b114c560febee006066.scn"
 
 [deps]
 
-source_file="res://assets/3D/simple_room.fbx"
-dest_files=["res://.godot/imported/simple_room.fbx-b7f11e91177af39d63a2ad5ff5a2a31d.scn"]
+source_file="res://Assets/3D/simple_room.fbx"
+dest_files=["res://.godot/imported/simple_room.fbx-3d25e74484026b114c560febee006066.scn"]
 
 [params]
 

@@ -34,7 +34,7 @@ void fragment() {
 
 	// reduce luminosity bit depth to give a more banded visual if desired
 	float bits = float(u_bit_depth);
-	lum = floor(lum * bits) / bits;
+	lum = (floor(lum * bits) / bits);
 
 	// to support multicolour palettes, we want to dither between the two colours on the palette
 	// which are adjacent to the current pixel luminosity.
@@ -64,11 +64,11 @@ void fragment() {
 
 	// adjust the dither slightly so min and max aren't quite at 0.0 and 1.0
 	// otherwise we wouldn't get fullly dark and fully light dither patterns at lum 0.0 and 1.0
-	threshold = threshold * 0.99 + 0.005;
+	threshold = threshold * 0.7 + 0.05;
 
 	// the lower lum_scaled is, the fewer pixels will be below the dither threshold, and thus will use the lower bound colour,
 	// and vice-versa
-	float ramp_val = lum_scaled < threshold ? 0.0f : 1.0f;
+	float ramp_val = lum_scaled < threshold ? 0.05f : 0.9f;
 	// sample at the lower bound colour if ramp_val is 0.0, upper bound colour if 1.0
 	float col_sample = mix(lum_lower, lum_upper, ramp_val);
 	vec3 final_col = texture(u_color_tex, vec2(col_sample, 0.5)).rgb;

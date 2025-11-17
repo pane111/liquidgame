@@ -153,6 +153,3 @@ libraries = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.13309431)
 extra_cull_margin = 5313.73
 mesh = SubResource("PlaneMesh_a0er8")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.5449903, 0.8384424, 0, -0.8384424, 0.5449903, 0, 0, 0, 1, 0.21867085, 0.9032531, 0)

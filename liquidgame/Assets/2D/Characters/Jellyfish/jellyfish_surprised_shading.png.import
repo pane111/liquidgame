@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnr75fgwwsqd3"
-path="res://.godot/imported/bentley_surprised_shading.png-91f7ee1cb5a18d71affc91c5fbf7f7f5.ctex"
+uid="uid://goetxl8boxox"
+path="res://.godot/imported/jellyfish_surprised_shading.png-41a24bd31e0b3fe2891377b861ddbfec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D/Characters/Bentley/bentley_surprised_shading.png"
-dest_files=["res://.godot/imported/bentley_surprised_shading.png-91f7ee1cb5a18d71affc91c5fbf7f7f5.ctex"]
+source_file="res://Assets/2D/Characters/Jellyfish/jellyfish_surprised_shading.png"
+dest_files=["res://.godot/imported/jellyfish_surprised_shading.png-41a24bd31e0b3fe2891377b861ddbfec.ctex"]
 
 [params]
 

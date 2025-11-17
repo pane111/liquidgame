@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctxhs48s1i4v4"
-path="res://.godot/imported/bentley_surprised_color.png-34950c241bf7a564e61e04cae6688c45.ctex"
+path="res://.godot/imported/bentley_surprised_color.png-49e0e5130410111709f051646ea5943b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/2D/Characters/Bentley/bentley_surprised_color.png"
-dest_files=["res://.godot/imported/bentley_surprised_color.png-34950c241bf7a564e61e04cae6688c45.ctex"]
+source_file="res://Assets/2D/Characters/Bentley/bentley_surprised_color.png"
+dest_files=["res://.godot/imported/bentley_surprised_color.png-49e0e5130410111709f051646ea5943b.ctex"]
 
 [params]
 

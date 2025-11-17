@@ -5,7 +5,7 @@
 [node name="Player" type="Camera3D"]
 fov = 50.0
 script = ExtResource("1_6cd4h")
-panning_speed = Vector2(35, 20)
+panning_speed = Vector2(35, 0)
 panning_percentage = 0.15
 easing = 50.0
 metadata/_edit_group_ = true

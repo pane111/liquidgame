@@ -45,6 +45,6 @@ func load_new_area(area: PackedScene):
 	if current_area != null:
 		current_area.queue_free()
 	add_child(new_area)
-	current_area = new_area
+	current_area = new_area;
 	player.global_position = current_area.start_point.position
 	player.rotation = current_area.start_point.rotation

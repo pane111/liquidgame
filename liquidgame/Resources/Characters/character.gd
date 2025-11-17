@@ -11,3 +11,4 @@ extends Resource
 @export var surprised_shading: Texture2D
 @export_category("Other")
 @export var color: Color
+@export var material: StandardMaterial3D

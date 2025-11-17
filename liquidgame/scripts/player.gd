@@ -3,7 +3,7 @@ extends Camera3D
 @export var panning_speed = 1.0
 @export var panning_percentage = 0.15
 @export var panning_limit = Vector2(30,30)
-var panvec
+var panvec: Vector3
 func _ready() -> void:
 	print_debug("Player initialized")
 

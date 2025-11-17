@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpa32mp4afgnt"
-path="res://.godot/imported/bentley_surprised_outline.png-994d048402f1dadc79544198eec77cb8.ctex"
+path="res://.godot/imported/bentley_surprised_outline.png-67f0513754e75b8871afc68901bef2e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D/Characters/Bentley/bentley_surprised_outline.png"
-dest_files=["res://.godot/imported/bentley_surprised_outline.png-994d048402f1dadc79544198eec77cb8.ctex"]
+source_file="res://assets/2D/Characters/Bentley/bentley_surprised_outline.png"
+dest_files=["res://.godot/imported/bentley_surprised_outline.png-67f0513754e75b8871afc68901bef2e5.ctex"]
 
 [params]
 

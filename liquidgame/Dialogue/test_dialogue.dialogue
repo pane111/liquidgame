@@ -1,5 +1,5 @@
 ~ start
-Bentley: My name is Bentley
+Bentley: My name is [color=#2BFF00]Bentley[/color]
 do set_surprised_expression()
 Bentley: I am surprised
 do set_normal_expression()

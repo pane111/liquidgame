@@ -17,4 +17,5 @@ surprised_outline = ExtResource("6_qfo3l")
 surprised_color = ExtResource("5_f80dx")
 surprised_shading = ExtResource("7_bvrft")
 color = Color(0.68890464, 0.5102348, 0.91646, 1)
+c_name = "Jellyfish"
 metadata/_custom_type_script = "uid://dvcn684qc8ol5"

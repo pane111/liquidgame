@@ -1,11 +1,11 @@
 ~ start
-Bentley: My name is [color=#2BFF00]Bentley[/color]
+{{FlagManager.char_name("Bentley")}}: My name is [color=#2BFF00]Bentley[/color]
 do set_surprised_expression()
-Bentley: I am surprised
+{{FlagManager.char_name("Bentley")}}: I am surprised
 do set_normal_expression()
-Bentley: I am normal
+{{FlagManager.char_name("Bentley")}}: I am normal
 - Hi Bentley
-	Bentley: Hello
+	{{FlagManager.char_name("Bentley")}}: Hello
 - Bye Bentley
-	Bentley: Bye
+	{{FlagManager.char_name("Bentley")}}: Bye
 => END

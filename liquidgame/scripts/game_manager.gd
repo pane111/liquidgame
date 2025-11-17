@@ -16,7 +16,7 @@ func dialogue_anim(dia: DialogueResource, char: Character):
 	player.can_look=false
 	$DialoguePanel.show()
 	cur_char = char
-	
+	set_normal_expression()
 	$DialoguePanel/CharSprite/Shading.self_modulate = char.color
 	$DialoguePanel/DialogueAnim.current_animation = "dialogue_start"
 	await $DialoguePanel/DialogueAnim.animation_finished

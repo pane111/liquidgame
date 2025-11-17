@@ -1,0 +1,8 @@
+~ start
+Hammer Dog: Hello
+- I know you're lying
+	do set_surprised_expression()
+	Hammer Dog: What!?
+- Bye
+	Hammer Dog: Goodbye!
+=> END

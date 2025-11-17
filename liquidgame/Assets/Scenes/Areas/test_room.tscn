@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3v22pgllbtmu"]
+[gd_scene load_steps=5 format=3 uid="uid://d3v22pgllbtmu"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_f0qnb"]
 [ext_resource type="PackedScene" uid="uid://bmowaffmhu6wr" path="res://Assets/3D/simple_room.fbx" id="1_mfl1m"]
 [ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://Assets/Scenes/npc.tscn" id="3_7wweu"]
+[ext_resource type="PackedScene" uid="uid://draw7n7tnksc2" path="res://Assets/Scenes/hammerdog.tscn" id="4_sd6vh"]
 
 [node name="TestRoom" type="Node3D" node_paths=PackedStringArray("start_point")]
 script = ExtResource("1_f0qnb")
@@ -30,3 +31,6 @@ spot_range = 15.0
 
 [node name="NPC" parent="." instance=ExtResource("3_7wweu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30759, -0.6, -25.0721)
+
+[node name="NPC2" parent="." instance=ExtResource("4_sd6vh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -20)

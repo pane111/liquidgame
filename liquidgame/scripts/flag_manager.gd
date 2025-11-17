@@ -11,7 +11,13 @@ var str_flags = {
 	"test_str": "test"
 }
 func char_name(name):
-	return characters[name].c_name
+	var c = characters[name]
+	var c_col = c.color
+	var hex := "#%02x%02x%02x" % [int(c_col.r * 255), int(c_col.g * 255), int(c_col.b * 255)] 
+	hex = hex.to_upper()
+	var col_string = "[color="+str(hex)+"]"+c.c_name+"[/color]"
+	print_debug("Character: " + col_string)
+	return col_string
 
 func set_int(name,val):
 	int_flags[name]=val

@@ -1,5 +1,5 @@
 ~ start
-{{FlagManager.char_name("Bentley")}}: My name is [color=#2BFF00]Bentley[/color]
+{{FlagManager.char_name("Bentley")}}: My name is {{FlagManager.char_name("Bentley")}}
 do set_surprised_expression()
 {{FlagManager.char_name("Bentley")}}: I am surprised
 do set_normal_expression()

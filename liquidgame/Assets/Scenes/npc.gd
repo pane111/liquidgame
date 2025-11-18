@@ -11,7 +11,7 @@ func _ready() -> void:
 	$Outline.billboard = FlagManager.billboarding
 	$Color.billboard = FlagManager.billboarding
 	$Shading.billboard = FlagManager.billboarding
-	$Color.material_overlay = character.material
+	# $Color.material_overlay = character.material
 	
 func _on_interact():
 	get_node("/root/MainGame").dialogue_anim(dialogue,character)

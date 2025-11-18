@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0e0mekr4kpgs"]
+
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_jmlkm"]
+
+[node name="MainHall" type="Node3D" node_paths=PackedStringArray("start_point")]
+script = ExtResource("1_jmlkm")
+start_point = NodePath("PlayerStartPosition")
+
+[node name="Area Geometry" type="Node3D" parent="."]
+
+[node name="PlayerStartPosition" type="Node3D" parent="."]

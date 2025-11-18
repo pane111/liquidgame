@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://d3v22pgllbtmu"]
 
-[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_f0qnb"]
-[ext_resource type="PackedScene" uid="uid://bmowaffmhu6wr" path="res://Assets/3D/simple_room.fbx" id="1_mfl1m"]
-[ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://Assets/Scenes/npc.tscn" id="3_7wweu"]
-[ext_resource type="PackedScene" uid="uid://draw7n7tnksc2" path="res://Assets/Scenes/hammerdog.tscn" id="4_sd6vh"]
-[ext_resource type="PackedScene" uid="uid://cllj6ollcip14" path="res://Assets/Scenes/jellyfish.tscn" id="5_n4iwq"]
-[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="6_ajrjj"]
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_f0qnb"]
+[ext_resource type="PackedScene" uid="uid://bmowaffmhu6wr" path="res://assets/3D/simple_room.fbx" id="1_mfl1m"]
+[ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://assets/scenes/chars/npc.tscn" id="3_7wweu"]
+[ext_resource type="PackedScene" uid="uid://draw7n7tnksc2" path="res://assets/scenes/chars/hammerdog.tscn" id="4_sd6vh"]
+[ext_resource type="PackedScene" uid="uid://cllj6ollcip14" path="res://assets/scenes/chars/jellyfish.tscn" id="5_n4iwq"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="6_ajrjj"]
 
 [node name="TestRoom" type="Node3D" node_paths=PackedStringArray("start_point")]
 script = ExtResource("1_f0qnb")
@@ -32,13 +32,13 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 7, 
 spot_range = 15.0
 
 [node name="NPC" parent="." instance=ExtResource("3_7wweu")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.30759, -0.6, -25.0721)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -1.30759, -0.6, -25.0721)
 
 [node name="NPC2" parent="." instance=ExtResource("4_sd6vh")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1, -0.5, -22)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 1, -0.5, -22)
 
 [node name="NPC3" parent="." instance=ExtResource("5_n4iwq")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.6, -0.6, -26)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 1.6, -0.6, -26)
 
 [node name="Door" parent="." instance=ExtResource("6_ajrjj")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.49922, -0.5, -28.419693)

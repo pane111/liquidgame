@@ -1,0 +1,11 @@
+~ start
+{{FlagManager.char_name("boss")}}: I am {{FlagManager.char_name("boss")}}.
+{{FlagManager.char_name("boss")}}: What is it?
+- You did it!
+	do set_surprised_expression()
+	{{FlagManager.char_name("boss")}}: Nooooo! You figured me out!
+	{{FlagManager.char_name("boss")}}: This is so sad!
+- You need to fire Bentley
+	{{FlagManager.char_name("boss")}}: Will do!
+
+=> END

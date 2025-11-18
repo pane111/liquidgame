@@ -1,11 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://6jwyshv4pv0f"]
 
 [ext_resource type="Script" uid="uid://b6ui0seb11adj" path="res://scripts/game_manager.gd" id="1_0qls7"]
-[ext_resource type="PackedScene" uid="uid://cij3m80i3u2v3" path="res://assets/scenes/player.tscn" id="1_3nrmw"]
-[ext_resource type="Texture2D" uid="uid://dguggyhmksw2j" path="res://assets/2D/Characters/Bentley/bentley_outline.png" id="3_0qls7"]
-[ext_resource type="Texture2D" uid="uid://cxlbrxhcw1ed7" path="res://assets/2D/Characters/Bentley/bentley_color.png" id="4_7abc5"]
-[ext_resource type="Texture2D" uid="uid://vc2lfmsnr87w" path="res://assets/2D/Characters/Bentley/bentley_shading.png" id="5_hg5cd"]
-[ext_resource type="Material" uid="uid://ds1bdlmk28323" path="res://shaders/dither_background.tres" id="6_a0er8"]
+[ext_resource type="PackedScene" uid="uid://cij3m80i3u2v3" path="res://Assets/Scenes/player.tscn" id="1_3nrmw"]
+[ext_resource type="Texture2D" uid="uid://dguggyhmksw2j" path="res://Assets/2D/Characters/Bentley/bentley_outline.png" id="3_0qls7"]
+[ext_resource type="Texture2D" uid="uid://cxlbrxhcw1ed7" path="res://Assets/2D/Characters/Bentley/bentley_color.png" id="4_7abc5"]
+[ext_resource type="Texture2D" uid="uid://vc2lfmsnr87w" path="res://Assets/2D/Characters/Bentley/bentley_shading.png" id="5_hg5cd"]
+[ext_resource type="Material" path="res://shaders/dither_background.tres" id="6_a0er8"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d0c4d"]
+material = ExtResource("6_a0er8")
+orientation = 2
 
 [sub_resource type="Animation" id="Animation_d8qdf"]
 length = 0.001
@@ -95,10 +99,6 @@ _data = {
 &"dialogue_start": SubResource("Animation_fnbvd")
 }
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_d0c4d"]
-material = ExtResource("6_a0er8")
-orientation = 2
-
 [node name="MainGame" type="Node"]
 script = ExtResource("1_0qls7")
 _default_area = "uid://d3v22pgllbtmu"
@@ -113,7 +113,13 @@ anchor_bottom = 0.056
 offset_right = 1189.12
 offset_bottom = 679.68
 
-[node name="DialoguePanel" type="Panel" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+extra_cull_margin = 3151.18
+mesh = SubResource("PlaneMesh_d0c4d")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialoguePanel" type="Panel" parent="CanvasLayer"]
 visible = false
 z_index = -10
 anchors_preset = 15
@@ -122,7 +128,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CharSprite" type="Control" parent="DialoguePanel"]
+[node name="CharSprite" type="Control" parent="CanvasLayer/DialoguePanel"]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 3
 layout_mode = 1
@@ -138,28 +144,47 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Outline" type="Sprite2D" parent="DialoguePanel/CharSprite"]
+[node name="Outline" type="Sprite2D" parent="CanvasLayer/DialoguePanel/CharSprite"]
 texture = ExtResource("3_0qls7")
 
-[node name="Color" type="Sprite2D" parent="DialoguePanel/CharSprite"]
+[node name="Color" type="Sprite2D" parent="CanvasLayer/DialoguePanel/CharSprite"]
 z_index = -2
 texture = ExtResource("4_7abc5")
 
-[node name="Shading" type="Sprite2D" parent="DialoguePanel/CharSprite"]
+[node name="Shading" type="Sprite2D" parent="CanvasLayer/DialoguePanel/CharSprite"]
 self_modulate = Color(0.933333, 0.509804, 0.933333, 1)
 z_index = -1
 texture = ExtResource("5_hg5cd")
 
-[node name="DialogueAnim" type="AnimationPlayer" parent="DialoguePanel"]
+[node name="DialogueAnim" type="AnimationPlayer" parent="CanvasLayer/DialoguePanel"]
 libraries = {
 &"": SubResource("AnimationLibrary_7abc5")
 }
 
-[node name="AreaLabel" type="Label" parent="."]
-offset_right = 40.0
+[node name="AreaLabel" type="Label" parent="CanvasLayer"]
+offset_right = 78.0
 offset_bottom = 23.0
 text = "Area Label"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-extra_cull_margin = 3151.18
-mesh = SubResource("PlaneMesh_d0c4d")
+[node name="RClickMenu" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GoBack" type="Button" parent="CanvasLayer/RClickMenu"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Go Back"
+
+[connection signal="button_down" from="CanvasLayer/RClickMenu/GoBack" to="." method="_on_go_back_button_down"]

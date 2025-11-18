@@ -3,13 +3,22 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bwdy7hyok4gax"
-path="res://.godot/imported/ceiling lamp.glb-2ff7a2cdc8db992bcd2d4fd973d04ee9.scn"
+uid="uid://dvpdhn5v1fhiy"
+<<<<<<< Updated upstream:liquidgame/assets/models_DONOTUSE/ceiling lamp.glb.import
+path="res://.godot/imported/ceiling lamp.glb-8338b6a03c59873e2d088ed7905d1347.scn"
 
 [deps]
 
-source_file="res://Assets/3D/furniture/ceiling lamp.glb"
-dest_files=["res://.godot/imported/ceiling lamp.glb-2ff7a2cdc8db992bcd2d4fd973d04ee9.scn"]
+source_file="res://Assets/models_DONOTUSE/ceiling lamp.glb"
+dest_files=["res://.godot/imported/ceiling lamp.glb-8338b6a03c59873e2d088ed7905d1347.scn"]
+=======
+path="res://.godot/imported/ceiling lamp.glb-db7b3b68da10770e4b99bedb1e2f96a3.scn"
+
+[deps]
+
+source_file="res://assets/DONOTUSE/ceiling lamp.glb"
+dest_files=["res://.godot/imported/ceiling lamp.glb-db7b3b68da10770e4b99bedb1e2f96a3.scn"]
+>>>>>>> Stashed changes:liquidgame/assets/DONOTUSE/ceiling lamp.glb.import
 
 [params]
 

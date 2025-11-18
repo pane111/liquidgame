@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhpooxohog2dd"]
+
+[ext_resource type="PackedScene" uid="uid://dvpdhn5v1fhiy" path="res://assets/DONOTUSE/ceiling lamp.glb" id="2_086te"]
+
+[sub_resource type="GDScript" id="GDScript_lhmpu"]
+script/source = "extends Node3D
+
+@export var isOn = true;
+@export var isFlickering = false;
+@export var flickerIntervall = 1.0;
+var lightObject: Node3D;
+
+func _ready():
+	lightObject = get_node(\"Lights\")
+
+func _process(_delta):
+	if isFlickering:
+		lightObject.visible = false;
+		await get_tree().create_timer(flickerIntervall * 0.75).timeout
+		lightObject.visible = true;
+		await get_tree().create_timer(flickerIntervall).timeout
+		lightObject.visible = false;
+		await get_tree().create_timer(flickerIntervall / 4).timeout
+		lightObject.visible = true;
+		await get_tree().create_timer(flickerIntervall / 6).timeout
+		lightObject.visible = false;
+		await get_tree().create_timer(flickerIntervall / 6).timeout
+		lightObject.visible = true;
+		await get_tree().create_timer(flickerIntervall * 1.25).timeout
+"
+
+[node name="Ceiling Lamp" type="Node3D"]
+script = SubResource("GDScript_lhmpu")
+
+[node name="ceiling lamp" parent="." instance=ExtResource("2_086te")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="Spot1" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.582847, 0)
+light_energy = 2717.5706
+spot_range = 4096.0
+spot_attenuation = 2.0
+spot_angle = 24.999998
+spot_angle_attenuation = 0.110526316
+
+[node name="Point" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.21574998, 0)
+visible = false
+light_energy = 100.0
+omni_range = 1.545
+
+[node name="Spot2" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2, 1)
+light_energy = 10.455
+spot_range = 15.0
+
+[node name="Spot3" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3, -0.1)
+spot_range = 15.0

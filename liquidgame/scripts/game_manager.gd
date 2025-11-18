@@ -13,21 +13,25 @@ func _ready() -> void:
 	player = $Player
 	load_new_area(load(_default_area))
 	
-func dialogue_anim(dia: DialogueResource, char: Character):
-	player.can_look=false
-	$CanvasLayer/DialoguePanel.show()
-	cur_char = char
-	set_normal_expression()
-	$CanvasLayer/DialoguePanel/CharSprite/Shading.self_modulate = char.color
-	$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "dialogue_start"
-	await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
-	DialogueManager.show_example_dialogue_balloon(dia,"start")
-	await DialogueManager.dialogue_ended
-	$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "dialogue_end"
-	await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
-	$CanvasLayer/DialoguePanel.hide()
-	player.can_look=true
-	finished_dialogue.emit()
+func dialogue_anim(dia: DialogueResource, char: Character = null):
+	if char != null:
+		player.can_look=false
+		$CanvasLayer/DialoguePanel.show()
+		cur_char = char
+		set_normal_expression()
+		$CanvasLayer/DialoguePanel/CharSprite/Shading.self_modulate = char.color
+		$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "dialogue_start"
+		await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
+		DialogueManager.show_example_dialogue_balloon(dia,"start")
+		await DialogueManager.dialogue_ended
+		$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "dialogue_end"
+		await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
+		$CanvasLayer/DialoguePanel.hide()
+		player.can_look=true
+		finished_dialogue.emit()
+	else:
+		DialogueManager.show_example_dialogue_balloon(dia,"start")
+		await DialogueManager.dialogue_ended
 	
 func set_normal_expression():
 	$CanvasLayer/DialoguePanel/CharSprite/Outline.texture = cur_char.normal_outline

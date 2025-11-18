@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://ciuokm66b1rv7"]
+
+[ext_resource type="Script" uid="uid://ccdksva50f377" path="res://scripts/interactable_object.gd" id="1_1nq8h"]
+[ext_resource type="Texture2D" uid="uid://bjnt8dmgspygd" path="res://Assets/2D/magazine.png" id="2_32a84"]
+[ext_resource type="Resource" uid="uid://ile712ulquc5" path="res://Dialogue/magazine.dialogue" id="2_t7t0a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t7t0a"]
+
+[sub_resource type="Animation" id="Animation_32a84"]
+resource_name = "hover"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 0, 0.1, 0, 2, 1, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_t7t0a"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_q5v3f"]
+resource_name = "clicked"
+length = 0.2
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.033333335, 1, 0, 1, 0, 0.2, 1, 0, 0, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q5v3f"]
+_data = {
+&"RESET": SubResource("Animation_t7t0a"),
+&"clicked": SubResource("Animation_q5v3f"),
+&"hover": SubResource("Animation_32a84")
+}
+
+[node name="InteractableObject" type="Node3D" groups=["interactable"]]
+script = ExtResource("1_1nq8h")
+dialogue = ExtResource("2_t7t0a")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.003
+render_priority = 1
+texture = ExtResource("2_32a84")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_t7t0a")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_q5v3f")
+}
+autoplay = "hover"
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]

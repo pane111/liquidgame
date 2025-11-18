@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bus1dj1eci46t"
-path="res://.godot/imported/boss_shading.png-20bbc0b91424acd02f8f946206695c51.ctex"
+path="res://.godot/imported/boss_shading.png-9684ddc89325332295a9206f9766a523.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D/Characters/Boss/boss_shading.png"
-dest_files=["res://.godot/imported/boss_shading.png-20bbc0b91424acd02f8f946206695c51.ctex"]
+source_file="res://assets/2D/Characters/Boss/boss_shading.png"
+dest_files=["res://.godot/imported/boss_shading.png-9684ddc89325332295a9206f9766a523.ctex"]
 
 [params]
 

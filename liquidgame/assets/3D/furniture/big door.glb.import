@@ -3,23 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-<<<<<<<< Updated upstream:liquidgame/assets/3D/furniture/big door.glb.import
-uid="uid://bssj0y35hvfjl"
+uid="uid://b0ngqo7v61jht"
 path="res://.godot/imported/big door.glb-46f4ed4c99c58fd5fa2fd4f3e9b5240b.scn"
 
 [deps]
 
 source_file="res://assets/3D/furniture/big door.glb"
 dest_files=["res://.godot/imported/big door.glb-46f4ed4c99c58fd5fa2fd4f3e9b5240b.scn"]
-========
-uid="uid://btswotwt2douf"
-path="res://.godot/imported/floor_square.glb-ffcff673461c03048e752b850f37a833.scn"
-
-[deps]
-
-source_file="res://assets/3D/floor_square.glb"
-dest_files=["res://.godot/imported/floor_square.glb-ffcff673461c03048e752b850f37a833.scn"]
->>>>>>>> Stashed changes:liquidgame/assets/3D/floor_square.glb.import
 
 [params]
 
@@ -48,5 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=2
+gltf/naming_version=0
 gltf/embedded_image_handling=1

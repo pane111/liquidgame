@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://deinp27j5p8jh"
-path="res://.godot/imported/wallpiece corner out.glb-484faf3b6f9c612bae110d4949d096df.scn"
+uid="uid://b36vqsdf7s1ju"
+path="res://.godot/imported/ceiling lamp.glb-db7b3b68da10770e4b99bedb1e2f96a3.scn"
 
 [deps]
 
-source_file="res://assets/3D/furniture/wallpiece corner out.glb"
-dest_files=["res://.godot/imported/wallpiece corner out.glb-484faf3b6f9c612bae110d4949d096df.scn"]
+source_file="res://assets/DONOTUSE/ceiling lamp.glb"
+dest_files=["res://.godot/imported/ceiling lamp.glb-db7b3b68da10770e4b99bedb1e2f96a3.scn"]
 
 [params]
 
@@ -38,5 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=2
+gltf/naming_version=0
 gltf/embedded_image_handling=1

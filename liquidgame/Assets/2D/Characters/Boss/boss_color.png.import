@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://emrf7p6e0eyg"
-path.s3tc="res://.godot/imported/boss_color.png-968ca27856a878137f7d8e8cd834f931.s3tc.ctex"
+path.s3tc="res://.godot/imported/boss_color.png-ed3c9356cdab18f0b34d2810f033cb0e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/2D/Characters/Boss/boss_color.png"
-dest_files=["res://.godot/imported/boss_color.png-968ca27856a878137f7d8e8cd834f931.s3tc.ctex"]
+source_file="res://assets/2D/Characters/Boss/boss_color.png"
+dest_files=["res://.godot/imported/boss_color.png-ed3c9356cdab18f0b34d2810f033cb0e.s3tc.ctex"]
 
 [params]
 

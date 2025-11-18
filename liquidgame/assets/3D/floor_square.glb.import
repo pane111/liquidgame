@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dvpdhn5v1fhiy"
-path="res://.godot/imported/ceiling lamp.glb-8338b6a03c59873e2d088ed7905d1347.scn"
+uid="uid://2jmucn8q32qm"
+path="res://.godot/imported/floor_square.glb-ffcff673461c03048e752b850f37a833.scn"
 
 [deps]
 
-source_file="res://Assets/models_DONOTUSE/ceiling lamp.glb"
-dest_files=["res://.godot/imported/ceiling lamp.glb-8338b6a03c59873e2d088ed7905d1347.scn"]
+source_file="res://assets/3D/floor_square.glb"
+dest_files=["res://.godot/imported/floor_square.glb-ffcff673461c03048e752b850f37a833.scn"]
 
 [params]
 
@@ -38,5 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=2
+gltf/naming_version=0
 gltf/embedded_image_handling=1

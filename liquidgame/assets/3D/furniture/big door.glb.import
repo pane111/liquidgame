@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bwdy7hyok4gax"
-path="res://.godot/imported/ceiling lamp.glb-2ff7a2cdc8db992bcd2d4fd973d04ee9.scn"
+uid="uid://b0ngqo7v61jht"
+path="res://.godot/imported/big door.glb-46f4ed4c99c58fd5fa2fd4f3e9b5240b.scn"
 
 [deps]
 
-source_file="res://Assets/3D/furniture/ceiling lamp.glb"
-dest_files=["res://.godot/imported/ceiling lamp.glb-2ff7a2cdc8db992bcd2d4fd973d04ee9.scn"]
+source_file="res://assets/3D/furniture/big door.glb"
+dest_files=["res://.godot/imported/big door.glb-46f4ed4c99c58fd5fa2fd4f3e9b5240b.scn"]
 
 [params]
 
@@ -38,5 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=2
+gltf/naming_version=0
 gltf/embedded_image_handling=1

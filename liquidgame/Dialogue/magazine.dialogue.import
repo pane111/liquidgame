@@ -4,12 +4,12 @@ importer="dialogue_manager"
 importer_version=15
 type="Resource"
 uid="uid://ile712ulquc5"
-path="res://.godot/imported/magazine.dialogue-a93551b055eae8f6fe08a1850884b2c1.tres"
+path="res://.godot/imported/magazine.dialogue-2db866b676639bbc1e11c0295714ce62.tres"
 
 [deps]
 
-source_file="res://Dialogue/magazine.dialogue"
-dest_files=["res://.godot/imported/magazine.dialogue-a93551b055eae8f6fe08a1850884b2c1.tres"]
+source_file="res://dialogue/magazine.dialogue"
+dest_files=["res://.godot/imported/magazine.dialogue-2db866b676639bbc1e11c0295714ce62.tres"]
 
 [params]
 

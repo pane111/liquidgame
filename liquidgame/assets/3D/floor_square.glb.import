@@ -3,6 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:liquidgame/assets/3D/furniture/ceiling lamp.glb.import
 uid="uid://bwdy7hyok4gax"
 path="res://.godot/imported/ceiling lamp.glb-2ff7a2cdc8db992bcd2d4fd973d04ee9.scn"
@@ -12,6 +13,17 @@ path="res://.godot/imported/ceiling lamp.glb-2ff7a2cdc8db992bcd2d4fd973d04ee9.sc
 source_file="res://Assets/3D/furniture/ceiling lamp.glb"
 dest_files=["res://.godot/imported/ceiling lamp.glb-2ff7a2cdc8db992bcd2d4fd973d04ee9.scn"]
 =======
+=======
+<<<<<<<< Updated upstream:liquidgame/assets/3D/furniture/big door.glb.import
+uid="uid://bssj0y35hvfjl"
+path="res://.godot/imported/big door.glb-46f4ed4c99c58fd5fa2fd4f3e9b5240b.scn"
+
+[deps]
+
+source_file="res://assets/3D/furniture/big door.glb"
+dest_files=["res://.godot/imported/big door.glb-46f4ed4c99c58fd5fa2fd4f3e9b5240b.scn"]
+========
+>>>>>>> Stashed changes
 uid="uid://btswotwt2douf"
 path="res://.godot/imported/floor_square.glb-ffcff673461c03048e752b850f37a833.scn"
 
@@ -19,7 +31,11 @@ path="res://.godot/imported/floor_square.glb-ffcff673461c03048e752b850f37a833.sc
 
 source_file="res://assets/3D/floor_square.glb"
 dest_files=["res://.godot/imported/floor_square.glb-ffcff673461c03048e752b850f37a833.scn"]
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes:liquidgame/assets/3D/floor_square.glb.import
+=======
+>>>>>>>> Stashed changes:liquidgame/assets/3D/floor_square.glb.import
+>>>>>>> Stashed changes
 
 [params]
 

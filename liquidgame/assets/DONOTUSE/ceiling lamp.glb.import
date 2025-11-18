@@ -3,6 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
+<<<<<<< Updated upstream
 uid="uid://dvpdhn5v1fhiy"
 <<<<<<< Updated upstream:liquidgame/assets/models_DONOTUSE/ceiling lamp.glb.import
 path="res://.godot/imported/ceiling lamp.glb-8338b6a03c59873e2d088ed7905d1347.scn"
@@ -12,13 +13,29 @@ path="res://.godot/imported/ceiling lamp.glb-8338b6a03c59873e2d088ed7905d1347.sc
 source_file="res://Assets/models_DONOTUSE/ceiling lamp.glb"
 dest_files=["res://.godot/imported/ceiling lamp.glb-8338b6a03c59873e2d088ed7905d1347.scn"]
 =======
+=======
+<<<<<<<< Updated upstream:liquidgame/Assets/3D/furniture/big door.glb.import
+uid="uid://bssj0y35hvfjl"
+path="res://.godot/imported/big door.glb-46f4ed4c99c58fd5fa2fd4f3e9b5240b.scn"
+
+[deps]
+
+source_file="res://assets/3D/furniture/big door.glb"
+dest_files=["res://.godot/imported/big door.glb-46f4ed4c99c58fd5fa2fd4f3e9b5240b.scn"]
+========
+uid="uid://dvpdhn5v1fhiy"
+>>>>>>> Stashed changes
 path="res://.godot/imported/ceiling lamp.glb-db7b3b68da10770e4b99bedb1e2f96a3.scn"
 
 [deps]
 
 source_file="res://assets/DONOTUSE/ceiling lamp.glb"
 dest_files=["res://.godot/imported/ceiling lamp.glb-db7b3b68da10770e4b99bedb1e2f96a3.scn"]
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes:liquidgame/assets/DONOTUSE/ceiling lamp.glb.import
+=======
+>>>>>>>> Stashed changes:liquidgame/assets/DONOTUSE/ceiling lamp.glb.import
+>>>>>>> Stashed changes
 
 [params]
 

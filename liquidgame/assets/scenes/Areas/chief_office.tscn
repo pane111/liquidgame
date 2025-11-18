@@ -11,6 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://bmowaffmhu6wr" path="res://assets/3D/simple_room.fbx" id="2_778lu"]
 [ext_resource type="PackedScene" uid="uid://boxgeamjeq4oh" path="res://assets/scenes/boss.tscn" id="3_kryq4"]
 [ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="4_wsh1s"]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 [node name="Office" type="Node3D" node_paths=PackedStringArray("start_point")]
@@ -38,6 +41,7 @@ size = Vector3(7, 2, 2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [node name="ceiling lamp" parent="." instance=ExtResource("4_ikgp8")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.176, 0.332)
 
@@ -52,6 +56,11 @@ spot_range = 15.0
 
 [node name="InteractableObject" parent="." instance=ExtResource("5_t21ei")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2, 0, 0)
+=======
+[node name="Ceiling Lamp" parent="." instance=ExtResource("4_wsh1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5326324, 0.5159688)
+isFlickering = true
+>>>>>>> Stashed changes
 =======
 [node name="Ceiling Lamp" parent="." instance=ExtResource("4_wsh1s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5326324, 0.5159688)

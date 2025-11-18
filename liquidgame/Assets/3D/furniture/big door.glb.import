@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://deinp27j5p8jh"
-path="res://.godot/imported/wallpiece corner out.glb-16ca82501f34ebc8f61e67634039ac0b.scn"
+uid="uid://bd74gtx5k4yl4"
+path="res://.godot/imported/big door.glb-ccea1e3ef4c3626c4b3f280e6fc30d5a.scn"
 
 [deps]
 
-source_file="res://Assets/3D/furniture/wallpiece corner out.glb"
-dest_files=["res://.godot/imported/wallpiece corner out.glb-16ca82501f34ebc8f61e67634039ac0b.scn"]
+source_file="res://Assets/3D/furniture/big door.glb"
+dest_files=["res://.godot/imported/big door.glb-ccea1e3ef4c3626c4b3f280e6fc30d5a.scn"]
 
 [params]
 

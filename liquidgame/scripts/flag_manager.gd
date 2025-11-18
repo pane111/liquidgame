@@ -1,7 +1,7 @@
 extends Node
 
 @export var characters: Dictionary[String,Character]
-
+@export var billboarding = true
 
 var int_flags = {
 	"test_int": 1

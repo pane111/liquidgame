@@ -15,3 +15,4 @@ characters = Dictionary[String, ExtResource("2_3pq6a")]({
 "hammerdog": ExtResource("4_k7fmi"),
 "jellyfish": ExtResource("5_bgwsq")
 })
+billboarding = false

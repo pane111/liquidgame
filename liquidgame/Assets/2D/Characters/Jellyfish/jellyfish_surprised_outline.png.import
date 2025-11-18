@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://42155et3omw"
-path="res://.godot/imported/jellyfish_surprised_outline.png-99131aa8bf0d72d2139e9c375de22d05.ctex"
+path="res://.godot/imported/jellyfish_surprised_outline.png-8e9feaf8ac66b763d8c23aa770012dee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/2D/Characters/Jellyfish/jellyfish_surprised_outline.png"
-dest_files=["res://.godot/imported/jellyfish_surprised_outline.png-99131aa8bf0d72d2139e9c375de22d05.ctex"]
+source_file="res://Assets/2D/Characters/Jellyfish/jellyfish_surprised_outline.png"
+dest_files=["res://.godot/imported/jellyfish_surprised_outline.png-8e9feaf8ac66b763d8c23aa770012dee.ctex"]
 
 [params]
 

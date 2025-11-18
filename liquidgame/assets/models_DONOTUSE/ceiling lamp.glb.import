@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dvpdhn5v1fhiy"
-path="res://.godot/imported/ceiling lamp.glb-26305fc63cd54a90978f3bede41225fc.scn"
+path="res://.godot/imported/ceiling lamp.glb-8338b6a03c59873e2d088ed7905d1347.scn"
 
 [deps]
 
-source_file="res://assets/models_DONOTUSE/ceiling lamp.glb"
-dest_files=["res://.godot/imported/ceiling lamp.glb-26305fc63cd54a90978f3bede41225fc.scn"]
+source_file="res://Assets/models_DONOTUSE/ceiling lamp.glb"
+dest_files=["res://.godot/imported/ceiling lamp.glb-8338b6a03c59873e2d088ed7905d1347.scn"]
 
 [params]
 

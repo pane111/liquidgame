@@ -8,6 +8,10 @@ func _ready() -> void:
 	$Color.texture = character.normal_color
 	$Shading.texture = character.normal_shading
 	$Shading.modulate = Color("ee82ee")
+	$Outline.billboard = FlagManager.billboarding
+	$Color.billboard = FlagManager.billboarding
+	$Shading.billboard = FlagManager.billboarding
+	$Color.material_overlay = character.material
 	
 func _on_interact():
 	get_node("/root/MainGame").dialogue_anim(dialogue,character)

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b04pshwcy136n" path="res://Assets/Scenes/npc.gd" id="1_i11t0"]
 [ext_resource type="Resource" uid="uid://cubcvo3fk2bdo" path="res://Dialogue/test3.dialogue" id="2_i11t0"]
-[ext_resource type="Resource" uid="uid://g81w3gn65vgy" path="res://Resources/Characters/hammer_dog.tres" id="3_oicip"]
+[ext_resource type="Resource" uid="uid://cbavpy0d0fw6y" path="res://Resources/Characters/hammer_dog.tres" id="3_oicip"]
 [ext_resource type="Texture2D" uid="uid://dguggyhmksw2j" path="res://Assets/2D/Characters/Bentley/bentley_outline.png" id="4_3kqfy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_peea3"]
@@ -62,19 +62,20 @@ shape = SubResource("BoxShape3D_peea3")
 pixel_size = 0.003
 billboard = 1
 texture_filter = 2
-render_priority = 2
+render_priority = 3
 texture = ExtResource("4_3kqfy")
 
 [node name="Color" type="Sprite3D" parent="."]
 pixel_size = 0.003
 billboard = 1
 texture_filter = 2
+render_priority = 1
 
 [node name="Shading" type="Sprite3D" parent="."]
 pixel_size = 0.003
 billboard = 1
 texture_filter = 2
-render_priority = 1
+render_priority = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

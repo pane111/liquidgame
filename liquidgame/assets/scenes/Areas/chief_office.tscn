@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://e2jsi1qqdh75"]
 
-[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/Areas/area.gd" id="1_43v3l"]
-[ext_resource type="PackedScene" uid="uid://bmowaffmhu6wr" path="res://assets/3D/simple_room.fbx" id="2_778lu"]
-[ext_resource type="PackedScene" uid="uid://boxgeamjeq4oh" path="res://assets/scenes/boss.tscn" id="3_kryq4"]
-[ext_resource type="PackedScene" uid="uid://dvpdhn5v1fhiy" path="res://assets/models_DONOTUSE/ceiling lamp.glb" id="4_ikgp8"]
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_43v3l"]
+[ext_resource type="PackedScene" uid="uid://bmowaffmhu6wr" path="res://Assets/3D/simple_room.fbx" id="2_778lu"]
+[ext_resource type="PackedScene" uid="uid://boxgeamjeq4oh" path="res://Assets/Scenes/boss.tscn" id="3_kryq4"]
+[ext_resource type="PackedScene" uid="uid://dvpdhn5v1fhiy" path="res://Assets/models_DONOTUSE/ceiling lamp.glb" id="4_ikgp8"]
 
 [node name="Office" type="Node3D" node_paths=PackedStringArray("start_point")]
 script = ExtResource("1_43v3l")

@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://boxgeamjeq4oh"]
+[gd_scene load_steps=12 format=3 uid="uid://boxgeamjeq4oh"]
 
 [ext_resource type="Script" uid="uid://b04pshwcy136n" path="res://Assets/Scenes/npc.gd" id="1_4ydte"]
 [ext_resource type="Resource" uid="uid://cnm6xwfh4ffjx" path="res://Dialogue/test_boss.dialogue" id="2_4ydte"]
 [ext_resource type="Resource" uid="uid://4sr2jq5cauvk" path="res://Resources/Characters/boss.tres" id="3_jjjqd"]
-[ext_resource type="Texture2D" uid="uid://dguggyhmksw2j" path="res://Assets/2D/Characters/Bentley/bentley_outline.png" id="4_vdxs0"]
-[ext_resource type="Material" path="res://Assets/standard_nondither.tres" id="5_jjjqd"]
+[ext_resource type="Texture2D" uid="uid://djeive56sug14" path="res://Assets/2D/Characters/Boss/boss_outline.png" id="4_n4cuc"]
+[ext_resource type="Texture2D" uid="uid://emrf7p6e0eyg" path="res://Assets/2D/Characters/Boss/boss_color.png" id="5_vdxs0"]
+[ext_resource type="Texture2D" uid="uid://bus1dj1eci46t" path="res://Assets/2D/Characters/Boss/boss_shading.png" id="6_r0q3e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_peea3"]
 size = Vector3(1, 3, 1)
@@ -60,24 +61,25 @@ metadata/_edit_group_ = true
 shape = SubResource("BoxShape3D_peea3")
 
 [node name="Outline" type="Sprite3D" parent="."]
+flip_h = true
 pixel_size = 0.003
-billboard = 1
 texture_filter = 2
-render_priority = 2
-texture = ExtResource("4_vdxs0")
+render_priority = 3
+texture = ExtResource("4_n4cuc")
 
 [node name="Color" type="Sprite3D" parent="."]
-material_override = ExtResource("5_jjjqd")
-gi_mode = 0
+flip_h = true
 pixel_size = 0.003
-billboard = 1
-texture_filter = 2
-
-[node name="Shading" type="Sprite3D" parent="."]
-pixel_size = 0.003
-billboard = 1
 texture_filter = 2
 render_priority = 1
+texture = ExtResource("5_vdxs0")
+
+[node name="Shading" type="Sprite3D" parent="."]
+flip_h = true
+pixel_size = 0.003
+texture_filter = 2
+render_priority = 2
+texture = ExtResource("6_r0q3e")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

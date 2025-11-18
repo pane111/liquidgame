@@ -62,19 +62,20 @@ shape = SubResource("BoxShape3D_peea3")
 pixel_size = 0.003
 billboard = 1
 texture_filter = 2
-render_priority = 2
+render_priority = 3
 texture = ExtResource("3_q3a62")
 
 [node name="Color" type="Sprite3D" parent="."]
 pixel_size = 0.003
 billboard = 1
 texture_filter = 2
+render_priority = 1
 
 [node name="Shading" type="Sprite3D" parent="."]
 pixel_size = 0.003
 billboard = 1
 texture_filter = 2
-render_priority = 1
+render_priority = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

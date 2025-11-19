@@ -101,7 +101,6 @@ _data = {
 
 [node name="MainGame" type="Node"]
 script = ExtResource("1_0qls7")
-_default_area = "uid://d0e0mekr4kpgs"
 
 [node name="Player" parent="." instance=ExtResource("1_3nrmw")]
 panning_speed = Vector2(3, 30)

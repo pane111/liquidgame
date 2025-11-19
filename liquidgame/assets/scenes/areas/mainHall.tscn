@@ -17,7 +17,7 @@ rotation_lim = Vector2(30, 30)
 area_name = "Entrance Hall"
 
 [node name="PlayerStartPosition" type="Node3D" parent="."]
-transform = Transform3D(-0.98480755, 0, 0.17364827, 0, 1, 0, -0.17364827, 0, -0.98480755, 1.0409364, 1.6644682, -8.253537)
+transform = Transform3D(-0.98480755, 0, 0.17364827, 0, 1, 0, -0.17364827, 0, -0.98480755, 1.041, 2, -8.254)
 
 [node name="Area Geometry" type="Node3D" parent="."]
 

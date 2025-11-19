@@ -10,7 +10,7 @@
 [node name="TestRoom" type="Node3D" node_paths=PackedStringArray("start_point")]
 script = ExtResource("1_f0qnb")
 start_point = NodePath("PlayerStartPoint")
-rotation_lim = Vector2(45, 0)
+rotation_lim = Vector2(0, 45)
 area_name = "Test Room"
 
 [node name="PlayerStartPoint" type="Node3D" parent="."]

@@ -1,6 +1,18 @@
 extends Node
 
-@export_file("*.tscn") var _default_area: String
+var locations = {
+	"_entrance_hall": "res://assets/scenes/areas/mainHall.tscn",
+	"_office" : "res://assets/scenes/areas/office.tscn",
+	"_boss_office" : "res://assets/scenes/areas/bossOffice.tscn",
+	"_staircase" : "res://assets/scenes/areas/test_room.tscn",
+	"_basement_hallway" : "res://assets/scenes/areas/test_room.tscn",
+	"_cooling_room" : "res://assets/scenes/areas/test_room.tscn",
+	"_fabricator_room" : "res://assets/scenes/areas/test_room.tscn",
+	"_roof" : "res://assets/scenes/areas/test_room.tscn",
+	"_break_room" : "res://assets/scenes/areas/test_room.tscn",
+	"_test" : "res://assets/scenes/areas/test_room.tscn",
+}
+
 var current_area
 var prev_area
 var main_game_node
@@ -11,7 +23,7 @@ signal finished_dialogue
 func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
 	player = $Player
-	load_new_area(load(_default_area))
+	load_new_area(load(locations["_entrance_hall"]))
 	
 func dialogue_anim(dia: DialogueResource, char: Character = null):
 	if char != null:
@@ -43,7 +55,7 @@ func set_surprised_expression():
 	$CanvasLayer/DialoguePanel/CharSprite/Color.texture = cur_char.surprised_color
 	$CanvasLayer/DialoguePanel/CharSprite/Shading.texture = cur_char.surprised_shading
 	
-func _unhandled_input(_event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click"):
 		$CanvasLayer/RClickMenu.hide()
 		if inter_obj != null:
@@ -53,6 +65,28 @@ func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("rclick"):
 		$CanvasLayer/RClickMenu.position = get_viewport().get_mouse_position()
 		$CanvasLayer/RClickMenu.visible = !$CanvasLayer/RClickMenu.visible
+	if Input.is_action_just_pressed("number"):
+		match event.keycode:
+			KEY_0:
+				load_new_area(load(locations["_test"]))
+			KEY_1:
+				load_new_area(load(locations["_entrance_hall"]))
+			KEY_2:
+				load_new_area(load(locations["_office"]))
+			KEY_3:
+				load_new_area(load(locations["_boss_office"]))
+			KEY_4:
+				load_new_area(load(locations["_staircase"]))
+			KEY_5:
+				load_new_area(load(locations["_basement_hallway"]))
+			KEY_6:
+				load_new_area(load(locations["_cooling_room"]))
+			KEY_7:
+				load_new_area(load(locations["_fabricator_room"]))
+			KEY_8:
+				load_new_area(load(locations["_roof"]))
+			KEY_9:
+				load_new_area(load(locations["_break_room"]))
 	
 func load_new_area(area: PackedScene):
 	if area != null:
@@ -67,8 +101,6 @@ func load_new_area(area: PackedScene):
 		player.rotation_degrees = current_area.start_point.rotation_degrees
 		player.init_rot = current_area.start_point.rotation_degrees
 		player.panning_limit = current_area.rotation_lim
-	
-
 
 func _on_go_back_button_down() -> void:
 	$CanvasLayer/RClickMenu.hide()

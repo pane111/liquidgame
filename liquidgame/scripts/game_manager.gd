@@ -5,7 +5,7 @@ var locations = {
 	"_office" : "res://assets/scenes/areas/office.tscn",
 	"_boss_office" : "res://assets/scenes/areas/bossOffice.tscn",
 	"_staircase" : "res://assets/scenes/areas/test_room.tscn",
-	"_basement_hallway" : "res://assets/scenes/areas/test_room.tscn",
+	"_basement_hallway" : "res://assets/scenes/areas/basement_hallway.tscn",
 	"_cooling_room" : "res://assets/scenes/areas/test_room.tscn",
 	"_fabricator_room" : "res://assets/scenes/areas/test_room.tscn",
 	"_roof" : "res://assets/scenes/areas/test_room.tscn",

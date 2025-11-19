@@ -16,9 +16,9 @@ func _ready():
 	lightObject = get_node(\"Lights\")
 	_flickerIntervall = flickerIntervall;
 
-func _process(_delta):
+func _process(delta):
 	if isFlickering:
-		flickerIntervall -= _delta;
+		flickerIntervall -= delta;
 		if flickerIntervall <= 0:
 			_flicker();
 
@@ -28,13 +28,12 @@ func _flicker():
 		lightObject.visible = true;
 		await get_tree().create_timer(flickerSpeed).timeout
 		lightObject.visible = false;
-		await get_tree().create_timer(flickerSpeed * 0.5).timeout
+		await get_tree().create_timer(flickerSpeed).timeout
 		lightObject.visible = true;
-		await get_tree().create_timer(flickerSpeed * 0.4).timeout
+		await get_tree().create_timer(flickerSpeed).timeout
 		lightObject.visible = false;
-		await get_tree().create_timer(flickerSpeed * 0.4).timeout
+		await get_tree().create_timer(flickerSpeed).timeout
 		lightObject.visible = true;
-		await get_tree().create_timer(flickerSpeed * 1.25).timeout
 		flickerIntervall = _flickerIntervall;
 "
 
@@ -57,8 +56,6 @@ spot_angle_attenuation = 0.110526316
 
 [node name="Point" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.21574998, 0)
-visible = false
-light_energy = 1.5
 omni_range = 1.545
 
 [node name="Spot2" type="SpotLight3D" parent="Lights"]

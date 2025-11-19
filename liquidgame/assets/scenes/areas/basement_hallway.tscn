@@ -1,0 +1,167 @@
+[gd_scene load_steps=11 format=3 uid="uid://1airqduoass5"]
+
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_367hl"]
+[ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_kecdp"]
+[ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://assets/3D/furniture/wallpiece.glb" id="3_1vlgq"]
+[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://assets/3D/furniture/statue stand.glb" id="4_4ocfb"]
+[ext_resource type="PackedScene" uid="uid://deinp27j5p8jh" path="res://assets/3D/furniture/wallpiece corner out.glb" id="6_367hl"]
+[ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://assets/3D/dark.tres" id="6_d3o22"]
+[ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="7_b77vr"]
+[ext_resource type="PackedScene" uid="uid://c4vofq6t61gir" path="res://assets/3D/floor_tiles.glb" id="7_kecdp"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xpgxh"]
+
+[node name="MainHall" type="Node3D" node_paths=PackedStringArray("start_point")]
+script = ExtResource("1_367hl")
+start_point = NodePath("PlayerStartPosition")
+rotation_lim = Vector2(0, 5)
+area_name = "Basement Hallway"
+
+[node name="PlayerStartPosition" type="Node3D" parent="."]
+transform = Transform3D(0.99999964, 0, 0, 0, 1, 0, 0, 0, 0.99999964, -4.061, 3.5, 7.75)
+
+[node name="Area Geometry" type="Node3D" parent="."]
+
+[node name="MI_Floor" type="MeshInstance3D" parent="Area Geometry"]
+transform = Transform3D(12.940358, 0, 0, 0, 1, 0, 0, 0, 12.0517435, 0, 0, 0)
+visible = false
+mesh = SubResource("PlaneMesh_jmlkm")
+
+[node name="MI_Ceiling" type="MeshInstance3D" parent="Area Geometry"]
+transform = Transform3D(14.003677, -0.00086313894, -0.013687709, -0.012076841, -1.0003781, 0.015148634, -0.008587822, -0.0006778114, -22.340683, -0.051, 7, 0.116)
+mesh = SubResource("PlaneMesh_jmlkm")
+
+[node name="MI_Wall" type="MeshInstance3D" parent="Area Geometry"]
+transform = Transform3D(4.6510215, 0, 0, 0, -4.371139e-08, -7.834727, 0, 1, -3.424668e-07, -3.7222137, 2, -18.884552)
+mesh = SubResource("PlaneMesh_jmlkm")
+
+[node name="MI_Wall2" type="MeshInstance3D" parent="Area Geometry"]
+transform = Transform3D(4.754993, 0, 0, 0, -4.371139e-08, 8.547281, 0, -1, -3.7361355e-07, -4.0860133, 2, 10)
+mesh = SubResource("PlaneMesh_jmlkm")
+
+[node name="MI_Wall3" type="MeshInstance3D" parent="Area Geometry"]
+transform = Transform3D(-3.857235e-07, -0.9963236, 0, 8.824325, -4.355069e-08, 0, 0, 0, 15.146119, -0.97925425, 2.0000005, -4.703128)
+mesh = SubResource("PlaneMesh_jmlkm")
+
+[node name="MI_Wall4" type="MeshInstance3D" parent="Area Geometry"]
+transform = Transform3D(-3.567235e-07, 1, 0, -8.160882, -4.371139e-08, 0, 0, 0, 14.8815155, -6.864481, 2, -4.941167)
+mesh = SubResource("PlaneMesh_jmlkm")
+
+[node name="wallpiece corner in" parent="Area Geometry" instance=ExtResource("2_kecdp")]
+transform = Transform3D(0.8999995, 0.0007765308, 0.00055141264, -0.0007761639, 0.89999944, -0.00061018753, -0.000551929, 0.0006097206, 0.8999997, -6.619874, 0.0009021759, 9.7486)
+
+[node name="wallpiece corner in3" parent="Area Geometry" instance=ExtResource("2_kecdp")]
+transform = Transform3D(-3.934025e-08, 0, -0.90000004, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -6.619874, 0.0009021759, -18.630608)
+
+[node name="wallpiece corner in4" parent="Area Geometry" instance=ExtResource("2_kecdp")]
+transform = Transform3D(-0.9, 0, -7.86805e-08, 0, 0.9, 0, 7.86805e-08, 0, -0.90000004, -1.1839094, 0.0009021759, -18.630608)
+
+[node name="wallpiece11" parent="Area Geometry" instance=ExtResource("3_1vlgq")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -6.6185484, -9.536743e-07, 2.5916085)
+
+[node name="wallpiece12" parent="Area Geometry" instance=ExtResource("3_1vlgq")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -6.6185484, -9.536743e-07, -0.9783912)
+
+[node name="wallpiece14" parent="Area Geometry" instance=ExtResource("3_1vlgq")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -6.6185484, -9.536743e-07, -7.9759607)
+
+[node name="wallpiece15" parent="Area Geometry" instance=ExtResource("3_1vlgq")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -6.6185484, -9.536743e-07, -11.519391)
+
+[node name="wallpiece19" parent="Area Geometry" instance=ExtResource("3_1vlgq")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -6.6185484, -9.536743e-07, -15.08843)
+
+[node name="wallpiece16" parent="Area Geometry" instance=ExtResource("3_1vlgq")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -1.184, -9.536743e-07, -8.298506)
+
+[node name="wallpiece20" parent="Area Geometry" instance=ExtResource("3_1vlgq")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -1.184, -9.536743e-07, -15.08843)
+
+[node name="wallpiece18" parent="Area Geometry" instance=ExtResource("3_1vlgq")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -1.184, -9.536743e-07, -1.4327426)
+
+[node name="wallpiece21" parent="Area Geometry" instance=ExtResource("3_1vlgq")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -1.184, -9.536743e-07, -5.001782)
+
+[node name="statue stand" parent="Area Geometry" instance=ExtResource("4_4ocfb")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 8.035306, 0.015681505, 8.044935)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area Geometry"]
+transform = Transform3D(1, 0, 0, 0, 0.72478026, 0, 0, 0, 1.0004045, -6.8419256, 3.4344954, 1.6454415)
+material_override = ExtResource("6_d3o22")
+mesh = SubResource("BoxMesh_xpgxh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area Geometry"]
+transform = Transform3D(0.54760396, 0, 0, 0, 9.312745, 0, 0, 0, 0.35689285, -6.8419256, 7.3484926, 1.6454415)
+material_override = ExtResource("6_d3o22")
+mesh = SubResource("BoxMesh_xpgxh")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Area Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1.8643179, 0, 0, 0, 1.2870194, -0.9140928, 4.101775, -7.7799144)
+material_override = ExtResource("6_d3o22")
+mesh = SubResource("BoxMesh_xpgxh")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Area Geometry"]
+transform = Transform3D(0.54760396, 0, 0, 0, 9.312745, 0, 0, 0, 0.35689285, -0.9140928, 7.3484926, -7.7799144)
+material_override = ExtResource("6_d3o22")
+mesh = SubResource("BoxMesh_xpgxh")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Area Geometry"]
+transform = Transform3D(0.54760396, 0, 0, 0, -8.5924444e-07, -0.3083192, 0, 19.657223, -1.34770595e-08, -0.83945227, 6.2315555, 2.1005557)
+material_override = ExtResource("6_d3o22")
+mesh = SubResource("BoxMesh_xpgxh")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Area Geometry"]
+transform = Transform3D(0.54760396, 0, 0, 0, -1.2966167e-06, -0.3050877, 0, 29.663136, -1.3335806e-08, -6.9038095, 6.2315555, -13.182863)
+material_override = ExtResource("6_d3o22")
+mesh = SubResource("BoxMesh_xpgxh")
+
+[node name="wallpiece corner out" parent="Area Geometry" instance=ExtResource("6_367hl")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -1.184, 0, 0.18435466)
+
+[node name="wallpiece corner out2" parent="Area Geometry" instance=ExtResource("6_367hl")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -1.184, 0, -15.105168)
+
+[node name="wallpiece corner out3" parent="Area Geometry" instance=ExtResource("6_367hl")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -3.157228, 0, -20.413212)
+
+[node name="wallpiece corner out4" parent="Area Geometry" instance=ExtResource("6_367hl")]
+transform = Transform3D(-0.9, 0, -7.86805e-08, 0, 0.9, 0, 7.86805e-08, 0, -0.9, -6.566, 0, -18.631)
+
+[node name="wallpiece corner out5" parent="Area Geometry" instance=ExtResource("6_367hl")]
+transform = Transform3D(-0.9, 0, -7.86805e-08, 0, 0.9, 0, 7.86805e-08, 0, -0.9, -8.417971, 0, -6.039138)
+
+[node name="wallpiece corner out6" parent="Area Geometry" instance=ExtResource("6_367hl")]
+transform = Transform3D(-0.9, 0, -7.86805e-08, 0, 0.9, 0, 7.86805e-08, 0, -0.9, -8.417971, 0, 4.4688916)
+
+[node name="floor_tiles" parent="Area Geometry" instance=ExtResource("7_kecdp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9034574, -0.1, 1.0966074)
+
+[node name="floor_tiles2" parent="Area Geometry" instance=ExtResource("7_kecdp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9034574, -0.1, -16.904411)
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-0.9493025, 0.0909223, 0.30092838, 0.2796785, -0.19283056, 0.9405297, 0.14354305, 0.9770104, 0.15762538, -4.1464896, 5.5626287, 3.9566154)
+light_energy = 0.3
+
+[node name="Ceiling Lamp6" parent="Lighting" instance=ExtResource("7_b77vr")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.8453228, 5.576724, -15.914265)
+isFlickering = true
+flickerIntervall = 4.5
+
+[node name="Ceiling Lamp7" parent="Lighting" instance=ExtResource("7_b77vr")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.845, 5.577, -6.085)
+isFlickering = true
+flickerSpeed = 3.0
+flickerIntervall = 1.0
+
+[node name="Ceiling Lamp8" parent="Lighting" instance=ExtResource("7_b77vr")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.845, 5.577, 1.47)
+isFlickering = true
+flickerSpeed = 2.0
+flickerIntervall = 2.0

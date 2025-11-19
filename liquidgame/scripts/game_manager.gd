@@ -43,7 +43,7 @@ func set_surprised_expression():
 	$CanvasLayer/DialoguePanel/CharSprite/Color.texture = cur_char.surprised_color
 	$CanvasLayer/DialoguePanel/CharSprite/Shading.texture = cur_char.surprised_shading
 	
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click"):
 		$CanvasLayer/RClickMenu.hide()
 		if inter_obj != null:
@@ -66,6 +66,7 @@ func load_new_area(area: PackedScene):
 		player.global_position = current_area.start_point.position
 		player.rotation_degrees = current_area.start_point.rotation_degrees
 		player.init_rot = current_area.start_point.rotation_degrees
+		player.panning_limit = current_area.rotation_lim
 	
 
 

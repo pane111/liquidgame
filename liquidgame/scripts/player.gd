@@ -36,10 +36,10 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	if can_look:
-		var x_pan = panvec.normalized().x * panning_speed.y * delta * pan_mult
+		var x_pan = panvec.normalized().x * panning_speed.x * delta * pan_mult
 		rotation_degrees.x = lerp(rotation_degrees.x,rotation_degrees.x+x_pan,delta * easing)
-		rotation_degrees.x = clamp(rotation_degrees.x + x_pan,init_rot.x - panning_limit.x,init_rot.x + panning_limit.x)
-		var y_pan = panvec.normalized().y * panning_speed.x * delta * pan_mult
+		rotation_degrees.x = clamp(rotation_degrees.x + x_pan,init_rot.x,init_rot.x + panning_limit.x)
+		var y_pan = panvec.normalized().y * panning_speed.y * delta * pan_mult
 		rotation_degrees.y = lerp(rotation_degrees.y,rotation_degrees.y+y_pan,delta * easing)
 		rotation_degrees.y = clamp(rotation_degrees.y,init_rot.y - panning_limit.y,init_rot.y + panning_limit.y)
 	

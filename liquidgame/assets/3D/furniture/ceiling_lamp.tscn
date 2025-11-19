@@ -48,6 +48,7 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 
 [node name="Spot1" type="SpotLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.582847, 0)
+visible = false
 light_energy = 2717.5706
 spot_range = 4096.0
 spot_attenuation = 2.0
@@ -57,7 +58,7 @@ spot_angle_attenuation = 0.110526316
 [node name="Point" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.21574998, 0)
 visible = false
-light_energy = 100.0
+light_energy = 1.5
 omni_range = 1.545
 
 [node name="Spot2" type="SpotLight3D" parent="Lights"]

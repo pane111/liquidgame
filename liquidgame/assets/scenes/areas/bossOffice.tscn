@@ -19,7 +19,7 @@ rotation_lim = Vector2(0, 15)
 area_name = "Boss' Office"
 
 [node name="PlayerStartPosition" type="Node3D" parent="."]
-transform = Transform3D(-0.8582438, 0, -0.5132416, 0, 1, 0, 0.5132416, 0, -0.8582438, -3.226, 2, -5.45)
+transform = Transform3D(-0.8582438, 0, -0.5132416, 0, 1, 0, 0.5132416, 0, -0.8582438, -3.226, 2.5, -5.45)
 
 [node name="Area Geometry" type="Node3D" parent="."]
 

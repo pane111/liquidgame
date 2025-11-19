@@ -4,11 +4,11 @@ var locations = {
 	"_entrance_hall": "res://assets/scenes/areas/mainHall.tscn",
 	"_office" : "res://assets/scenes/areas/office.tscn",
 	"_boss_office" : "res://assets/scenes/areas/bossOffice.tscn",
-	"_staircase" : "res://assets/scenes/areas/test_room.tscn",
+	"_staircase" : "res://assets/scenes/areas/stairway.tscn",
 	"_basement_hallway" : "res://assets/scenes/areas/basement_hallway.tscn",
 	"_cooling_room" : "res://assets/scenes/areas/cooling_room.tscn",
 	"_fabricator_room" : "res://assets/scenes/areas/fabricator_room.tscn",
-	"_roof" : "res://assets/scenes/areas/test_room.tscn",
+	"_roof" : "res://assets/scenes/areas/roof.tscn",
 	"_break_room" : "res://assets/scenes/areas/test_room.tscn",
 	"_test" : "res://assets/scenes/areas/test_room.tscn",
 }

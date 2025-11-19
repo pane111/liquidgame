@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://d0e0mekr4kpgs"]
+[gd_scene load_steps=9 format=3 uid="uid://d0e0mekr4kpgs"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_jmlkm"]
-[ext_resource type="Material" uid="uid://cbhvmys6yvdfh" path="res://assets/3D/floor.tres" id="2_1qs6f"]
 [ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="2_qxnvn"]
 [ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="3_ehqxr"]
 [ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://assets/3D/furniture/wallpiece.glb" id="3_lsgol"]
@@ -33,7 +32,6 @@ mesh = SubResource("PlaneMesh_jmlkm")
 
 [node name="MI_Wall" type="MeshInstance3D" parent="Area Geometry"]
 transform = Transform3D(13.292644, 0, 0, 0, -4.371139e-08, -12.638078, 0, 1, -5.5242793e-07, 0, 2, -10)
-material_override = ExtResource("2_1qs6f")
 mesh = SubResource("PlaneMesh_jmlkm")
 
 [node name="MI_Wall2" type="MeshInstance3D" parent="Area Geometry"]

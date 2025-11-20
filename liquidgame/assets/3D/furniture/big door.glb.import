@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b0ngqo7v61jht"
-path="res://.godot/imported/big door.glb-ccea1e3ef4c3626c4b3f280e6fc30d5a.scn"
+path="res://.godot/imported/big door.glb-46f4ed4c99c58fd5fa2fd4f3e9b5240b.scn"
 
 [deps]
 
-source_file="res://Assets/3D/furniture/big door.glb"
-dest_files=["res://.godot/imported/big door.glb-ccea1e3ef4c3626c4b3f280e6fc30d5a.scn"]
+source_file="res://assets/3D/furniture/big door.glb"
+dest_files=["res://.godot/imported/big door.glb-46f4ed4c99c58fd5fa2fd4f3e9b5240b.scn"]
 
 [params]
 

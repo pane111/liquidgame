@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://deinp27j5p8jh"
-path="res://.godot/imported/wallpiece corner out.glb-484faf3b6f9c612bae110d4949d096df.scn"
+uid="uid://l0xxs4w8xflo"
+path="res://.godot/imported/railing.glb-53c7ac1fa55774b80a2bd208a3e1ba53.scn"
 
 [deps]
 
-source_file="res://assets/3D/furniture/wallpiece corner out.glb"
-dest_files=["res://.godot/imported/wallpiece corner out.glb-484faf3b6f9c612bae110d4949d096df.scn"]
+source_file="res://assets/3D/furniture/railing.glb"
+dest_files=["res://.godot/imported/railing.glb-53c7ac1fa55774b80a2bd208a3e1ba53.scn"]
 
 [params]
 

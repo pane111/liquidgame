@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dl6ydioelwyni"
-path="res://.godot/imported/hammer_dog_color.png-598a1e4da18301b4795d336018e6d1ff.ctex"
+path="res://.godot/imported/hammer_dog_color.png-a8f6235a6e300bee97bdc8dfc56e9b3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D/Characters/HammerDog/hammer_dog_color.png"
-dest_files=["res://.godot/imported/hammer_dog_color.png-598a1e4da18301b4795d336018e6d1ff.ctex"]
+source_file="res://assets/2D/Characters/HammerDog/hammer_dog_color.png"
+dest_files=["res://.godot/imported/hammer_dog_color.png-a8f6235a6e300bee97bdc8dfc56e9b3c.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dwp8cx2ei2dgj"]
+[gd_scene load_steps=11 format=3 uid="uid://dwp8cx2ei2dgj"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_mjg2f"]
 [ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_l6exm"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://2jmucn8q32qm" path="res://assets/3D/floor_square.glb" id="6_bbwqm"]
 [ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://assets/3D/dark.tres" id="6_mjg2f"]
 [ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="7_5xca8"]
+[ext_resource type="PackedScene" uid="uid://bxyec8samu5na" path="res://assets/3D/furniture/boss desk.glb" id="8_l6exm"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -120,6 +121,9 @@ transform = Transform3D(1, 0, 0, 0, 1.8643179, 0, 0, 0, 1.2870194, 9.822198, 4.1
 material_override = ExtResource("6_mjg2f")
 mesh = SubResource("BoxMesh_xpgxh")
 
+[node name="boss desk" parent="Area Geometry" instance=ExtResource("8_l6exm")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.714742, 0, 2.3854408)
+
 [node name="Lighting" type="Node3D" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
@@ -131,7 +135,7 @@ transform = Transform3D(-0.9703876, -0.11482409, -0.21251757, -0.23828408, 0.599
 light_energy = 1.1
 
 [node name="Ceiling Lamp" parent="Lighting" instance=ExtResource("7_5xca8")]
-transform = Transform3D(0.8911095, 0, 0.45378834, 0, 1, 0, -0.45378834, 0, 0.8911095, 0.366, 4, 1.781)
+transform = Transform3D(0.8911095, 0, 0.45378834, 0, 1, 0, -0.45378834, 0, 0.8911095, 0.366, 4.8353863, 1.781)
 
 [node name="Ceiling Lamp4" parent="Lighting" instance=ExtResource("7_5xca8")]
 transform = Transform3D(0.16611484, 0, 0.9861064, 0, 1, 0, -0.9861064, 0, 0.16611484, 7.1442537, 5.576724, -2.4842718)

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://deinp27j5p8jh"
-path="res://.godot/imported/wallpiece corner out.glb-484faf3b6f9c612bae110d4949d096df.scn"
+uid="uid://bxyec8samu5na"
+path="res://.godot/imported/boss desk.glb-7accaaacbd9ec611f99b1f54ec9750a5.scn"
 
 [deps]
 
-source_file="res://assets/3D/furniture/wallpiece corner out.glb"
-dest_files=["res://.godot/imported/wallpiece corner out.glb-484faf3b6f9c612bae110d4949d096df.scn"]
+source_file="res://assets/3D/furniture/boss desk.glb"
+dest_files=["res://.godot/imported/boss desk.glb-7accaaacbd9ec611f99b1f54ec9750a5.scn"]
 
 [params]
 

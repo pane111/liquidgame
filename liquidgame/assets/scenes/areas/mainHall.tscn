@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://Assets/3D/furniture/wallpiece.glb" id="3_lsgol"]
 [ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://Assets/3D/furniture/statue stand.glb" id="5_gcq5k"]
 [ext_resource type="PackedScene" uid="uid://b0ngqo7v61jht" path="res://Assets/3D/furniture/big door.glb" id="5_vvl6r"]
-[ext_resource type="PackedScene" uid="uid://c4vofq6t61gir" path="res://assets/3D/floor_tiles.glb" id="6_mrjob"]
+[ext_resource type="PackedScene" uid="uid://c4vofq6t61gir" path="res://Assets/3D/floor_tiles.glb" id="6_mrjob"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 

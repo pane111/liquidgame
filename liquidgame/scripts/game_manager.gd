@@ -51,9 +51,16 @@ func set_normal_expression():
 	$CanvasLayer/DialoguePanel/CharSprite/Shading.texture = cur_char.normal_shading
 	
 func set_surprised_expression():
+	$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "surprised"
 	$CanvasLayer/DialoguePanel/CharSprite/Outline.texture = cur_char.surprised_outline
 	$CanvasLayer/DialoguePanel/CharSprite/Color.texture = cur_char.surprised_color
 	$CanvasLayer/DialoguePanel/CharSprite/Shading.texture = cur_char.surprised_shading
+	
+func set_angry_expression():
+	$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "surprised"
+	$CanvasLayer/DialoguePanel/CharSprite/Outline.texture = cur_char.angry_outline
+	$CanvasLayer/DialoguePanel/CharSprite/Color.texture = cur_char.angry_color
+	$CanvasLayer/DialoguePanel/CharSprite/Shading.texture = cur_char.angry_shading
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click"):

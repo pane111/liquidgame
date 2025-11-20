@@ -1,0 +1,12 @@
+~ start
+{{FlagManager.char_name("sabrina")}}: I am {{FlagManager.char_name("sabrina")}}.
+{{FlagManager.char_name("sabrina")}}: What's up?
+- You lied
+	do set_surprised_expression()
+	{{FlagManager.char_name("sabrina")}}: Ah! I did!
+- Your fit is mad ugly
+	do set_angry_expression()
+	{{FlagManager.char_name("sabrina")}}: WHAT!?
+- Goodbye
+	{{FlagManager.char_name("sabrina")}}: Bye bye.
+=> END

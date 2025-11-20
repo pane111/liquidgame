@@ -9,6 +9,10 @@ extends Resource
 @export var surprised_outline: Texture2D
 @export var surprised_color: Texture2D
 @export var surprised_shading: Texture2D
+@export_category("Angry Expression")
+@export var angry_outline: Texture2D
+@export var angry_color: Texture2D
+@export var angry_shading: Texture2D
 @export_category("Other")
 @export var color: Color
 @export var c_name: String

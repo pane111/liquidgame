@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Character" load_steps=11 format=3 uid="uid://bpkxbi7yq0s6j"]
+
+[ext_resource type="Texture2D" uid="uid://dtmp1jm82tbps" path="res://Assets/2D/Characters/Sabrina/sabrina_angry_color.png" id="1_0whj4"]
+[ext_resource type="Script" uid="uid://dvcn684qc8ol5" path="res://Resources/Characters/character.gd" id="1_gyd02"]
+[ext_resource type="Texture2D" uid="uid://gok44iqwuhux" path="res://Assets/2D/Characters/Sabrina/sabrina_angry_outline.png" id="2_74mrh"]
+[ext_resource type="Texture2D" uid="uid://cstppvoqqm1g3" path="res://Assets/2D/Characters/Sabrina/sabrina_angry_shading.png" id="3_u8xch"]
+[ext_resource type="Texture2D" uid="uid://by01w15jh0y2f" path="res://Assets/2D/Characters/Sabrina/sabrina_color.png" id="4_xxfxc"]
+[ext_resource type="Texture2D" uid="uid://b3sbkm6ak8c82" path="res://Assets/2D/Characters/Sabrina/sabrina_outline.png" id="5_pgicw"]
+[ext_resource type="Texture2D" uid="uid://7t0s4qieta7a" path="res://Assets/2D/Characters/Sabrina/sabrina_shading.png" id="6_yd1yl"]
+[ext_resource type="Texture2D" uid="uid://b8iodg71b5pm5" path="res://Assets/2D/Characters/Sabrina/sabrina_surprised_color.png" id="8_kgoap"]
+[ext_resource type="Texture2D" uid="uid://bbridihwkr1hv" path="res://Assets/2D/Characters/Sabrina/sabrina_surprised_outline.png" id="9_tovny"]
+[ext_resource type="Texture2D" uid="uid://bv2qgg3dowhq5" path="res://Assets/2D/Characters/Sabrina/sabrina_surprised_shading.png" id="10_6uulb"]
+
+[resource]
+script = ExtResource("1_gyd02")
+normal_outline = ExtResource("5_pgicw")
+normal_color = ExtResource("4_xxfxc")
+normal_shading = ExtResource("6_yd1yl")
+surprised_outline = ExtResource("9_tovny")
+surprised_color = ExtResource("8_kgoap")
+surprised_shading = ExtResource("10_6uulb")
+angry_outline = ExtResource("2_74mrh")
+angry_color = ExtResource("1_0whj4")
+angry_shading = ExtResource("3_u8xch")
+color = Color(1, 0.4249097, 0, 1)
+c_name = "Sabrina"
+metadata/_custom_type_script = "uid://dvcn684qc8ol5"

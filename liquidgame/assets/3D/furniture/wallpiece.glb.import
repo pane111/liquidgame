@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b7daapp7nketh"
-path="res://.godot/imported/wallpiece.glb-6f136e745169451b401c7f89308aa80f.scn"
+path="res://.godot/imported/wallpiece.glb-592d4c61998bdcfe7538f7a3d97c3bcd.scn"
 
 [deps]
 
-source_file="res://assets/3D/furniture/wallpiece.glb"
-dest_files=["res://.godot/imported/wallpiece.glb-6f136e745169451b401c7f89308aa80f.scn"]
+source_file="res://Assets/3D/furniture/wallpiece.glb"
+dest_files=["res://.godot/imported/wallpiece.glb-592d4c61998bdcfe7538f7a3d97c3bcd.scn"]
 
 [params]
 

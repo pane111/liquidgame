@@ -20,12 +20,15 @@ var player
 var inter_obj
 var cur_char
 signal finished_dialogue
+signal finished_dialogue_hide
+var hide_after=false
 func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
 	player = $Player
 	load_new_area(load(locations["_entrance_hall"]))
 	
 func dialogue_anim(dia: DialogueResource, char: Character = null):
+	hide_after=false
 	if char != null:
 		player.can_look=false
 		$CanvasLayer/DialoguePanel.show()
@@ -61,6 +64,9 @@ func set_angry_expression():
 	$CanvasLayer/DialoguePanel/CharSprite/Outline.texture = cur_char.angry_outline
 	$CanvasLayer/DialoguePanel/CharSprite/Color.texture = cur_char.angry_color
 	$CanvasLayer/DialoguePanel/CharSprite/Shading.texture = cur_char.angry_shading
+	
+func hide_after_dialogue():
+	hide_after = true
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click"):

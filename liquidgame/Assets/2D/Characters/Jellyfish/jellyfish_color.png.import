@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b02ox06caa015"
-path.s3tc="res://.godot/imported/jellyfish_color.png-3b603f32f9bef884a5ea64710a2519e3.s3tc.ctex"
+path.s3tc="res://.godot/imported/jellyfish_color.png-d852cadb02ac5e15b8abfbe0cb324c13.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/2D/Characters/Jellyfish/jellyfish_color.png"
-dest_files=["res://.godot/imported/jellyfish_color.png-3b603f32f9bef884a5ea64710a2519e3.s3tc.ctex"]
+source_file="res://Assets/2D/Characters/Jellyfish/jellyfish_color.png"
+dest_files=["res://.godot/imported/jellyfish_color.png-d852cadb02ac5e15b8abfbe0cb324c13.s3tc.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0e0mekr4kpgs"]
+[gd_scene load_steps=10 format=3 uid="uid://d0e0mekr4kpgs"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_jmlkm"]
 [ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://Assets/3D/furniture/ceiling_lamp.tscn" id="2_qxnvn"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://Assets/3D/furniture/statue stand.glb" id="5_gcq5k"]
 [ext_resource type="PackedScene" uid="uid://b0ngqo7v61jht" path="res://Assets/3D/furniture/big door.glb" id="5_vvl6r"]
 [ext_resource type="PackedScene" uid="uid://c4vofq6t61gir" path="res://Assets/3D/floor_tiles.glb" id="6_mrjob"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="7_3x6pt"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -76,9 +77,6 @@ transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08
 [node name="wallpiece11" parent="Area Geometry" instance=ExtResource("3_lsgol")]
 transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -9.75, -9.536743e-07, 2.5916085)
 
-[node name="wallpiece12" parent="Area Geometry" instance=ExtResource("3_lsgol")]
-transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -9.75, -9.536743e-07, -0.9783912)
-
 [node name="wallpiece13" parent="Area Geometry" instance=ExtResource("3_lsgol")]
 transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -9.75, -9.536743e-07, -4.478391)
 
@@ -117,6 +115,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.332861, -0.09999857, 4.780
 
 [node name="floor_square6" parent="Area Geometry" instance=ExtResource("6_mrjob")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.332861, -0.09999857, -5.089717)
+
+[node name="Door" parent="Area Geometry" instance=ExtResource("7_3x6pt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.9, 2.4, -1)
+_goto = "uid://2m4mvq03m225"
 
 [node name="Lighting" type="Node3D" parent="."]
 

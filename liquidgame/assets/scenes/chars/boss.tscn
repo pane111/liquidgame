@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bus1dj1eci46t" path="res://Assets/2D/Characters/Boss/boss_shading.png" id="6_r0q3e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_peea3"]
-size = Vector3(1, 3, 1)
+size = Vector3(1.3000001, 5, 1)
 
 [sub_resource type="Animation" id="Animation_q3a62"]
 length = 0.001
@@ -58,25 +58,26 @@ metadata/_edit_group_ = true
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15000004, 0.20000017, 0)
 shape = SubResource("BoxShape3D_peea3")
 
 [node name="Outline" type="Sprite3D" parent="."]
 flip_h = true
-pixel_size = 0.003
+pixel_size = 0.006
 texture_filter = 2
 render_priority = 3
 texture = ExtResource("4_n4cuc")
 
 [node name="Color" type="Sprite3D" parent="."]
 flip_h = true
-pixel_size = 0.003
+pixel_size = 0.006
 texture_filter = 2
 render_priority = 1
 texture = ExtResource("5_vdxs0")
 
 [node name="Shading" type="Sprite3D" parent="."]
 flip_h = true
-pixel_size = 0.003
+pixel_size = 0.006
 texture_filter = 2
 render_priority = 2
 texture = ExtResource("6_r0q3e")

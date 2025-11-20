@@ -4,20 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://bljajgaxaw80b" path="res://Assets/2D/door.png" id="2_tdxg0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tdxg0"]
-size = Vector3(1.4, 3, 0.2)
+size = Vector3(3.2, 6, 0.2)
 
 [node name="Door" type="Node3D"]
 script = ExtResource("1_tdxg0")
 metadata/_edit_group_ = true
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-pixel_size = 0.003
+pixel_size = 0.006
+render_priority = 1
 texture = ExtResource("2_tdxg0")
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 0, 2.9802322e-08)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.940697e-08, 0, 2.9802322e-08)
 shape = SubResource("BoxShape3D_tdxg0")
 
 [connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]

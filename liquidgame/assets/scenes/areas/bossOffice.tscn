@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://dwp8cx2ei2dgj"]
+[gd_scene load_steps=12 format=3 uid="uid://dwp8cx2ei2dgj"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_mjg2f"]
 [ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://Assets/3D/furniture/wallpiece corner in.glb" id="2_l6exm"]
 [ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://Assets/3D/furniture/wallpiece.glb" id="3_4v4c4"]
 [ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://Assets/3D/furniture/statue stand.glb" id="5_frx7a"]
-[ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://assets/3D/floor_planks.glb" id="6_bbwqm"]
+[ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://Assets/3D/floor_planks.glb" id="6_bbwqm"]
 [ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://Assets/3D/dark.tres" id="6_mjg2f"]
 [ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://Assets/3D/furniture/ceiling_lamp.tscn" id="7_5xca8"]
 [ext_resource type="PackedScene" uid="uid://bxyec8samu5na" path="res://Assets/3D/furniture/boss desk.glb" id="8_l6exm"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="9_4xt5x"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -74,7 +75,7 @@ transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08
 transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 9.742, -9.536743e-07, 1.0226953)
 
 [node name="wallpiece9" parent="Area Geometry" instance=ExtResource("3_4v4c4")]
-transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 9.742, 0, -5.551)
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 9.742, 0, -6.551)
 
 [node name="wallpiece10" parent="Area Geometry" instance=ExtResource("3_4v4c4")]
 transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -6.6185484, -9.536743e-07, 6.1816087)
@@ -140,3 +141,7 @@ transform = Transform3D(0.8911095, 0, 0.45378834, 0, 1, 0, -0.45378834, 0, 0.891
 [node name="Ceiling Lamp4" parent="Lighting" instance=ExtResource("7_5xca8")]
 transform = Transform3D(0.16611484, 0, 0.9861064, 0, 1, 0, -0.9861064, 0, 0.16611484, 7.1442537, 5.576724, -2.4842718)
 flickerIntervall = 4.5
+
+[node name="Door" parent="." instance=ExtResource("9_4xt5x")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.9, 3, -2.7)
+_goto = "uid://2m4mvq03m225"

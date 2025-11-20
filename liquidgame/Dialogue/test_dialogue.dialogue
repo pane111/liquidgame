@@ -8,4 +8,7 @@ do set_normal_expression()
 	{{FlagManager.char_name("Bentley")}}: Hello
 - Bye Bentley
 	{{FlagManager.char_name("Bentley")}}: Bye
+- Disappear forever
+	{{FlagManager.char_name("Bentley")}}: Okay!
+	do hide_after_dialogue()
 => END

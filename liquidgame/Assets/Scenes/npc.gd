@@ -17,7 +17,19 @@ func _on_interact():
 	get_node("/root/MainGame").dialogue_anim(dialogue,character)
 	$AnimationPlayer.current_animation="disappear"
 	await get_node("/root/MainGame").finished_dialogue
+	if get_node("/root/MainGame").hide_after:
+		$Area3D.input_ray_pickable = false
+	else:
+		$AnimationPlayer.current_animation="appear"
+
+func disappear():
+	$Area3D.input_ray_pickable = false
+	$AnimationPlayer.current_animation="disappear"
+
+func appear():
 	$AnimationPlayer.current_animation="appear"
+	await $AnimationPlayer.animation_finished
+	$Area3D.input_ray_pickable = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

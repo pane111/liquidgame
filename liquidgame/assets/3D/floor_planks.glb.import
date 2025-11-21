@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bc3xrh6rd5tg3"
-path="res://.godot/imported/floor_planks.glb-46bb57e13dae26fe00e155801302aef2.scn"
+path="res://.godot/imported/floor_planks.glb-795850875c474718f2cf7bdc0ea98c27.scn"
 
 [deps]
 
-source_file="res://Assets/3D/floor_planks.glb"
-dest_files=["res://.godot/imported/floor_planks.glb-46bb57e13dae26fe00e155801302aef2.scn"]
+source_file="res://assets/3D/floor_planks.glb"
+dest_files=["res://.godot/imported/floor_planks.glb-795850875c474718f2cf7bdc0ea98c27.scn"]
 
 [params]
 

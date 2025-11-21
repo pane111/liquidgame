@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Evidence" load_steps=3 format=3 uid="uid://dd5y3fu73dsw2"]
+
+[ext_resource type="Texture2D" uid="uid://4plohelxxqg6" path="res://Assets/2D/knife.png" id="1_6v4m1"]
+[ext_resource type="Script" uid="uid://8kbtb2yinplx" path="res://Resources/Evidence/evidence.gd" id="1_ufjt2"]
+
+[resource]
+script = ExtResource("1_ufjt2")
+e_name = "Kitchen Knife"
+e_sprite = ExtResource("1_6v4m1")
+e_desc = "It's sharp..."
+metadata/_custom_type_script = "uid://8kbtb2yinplx"

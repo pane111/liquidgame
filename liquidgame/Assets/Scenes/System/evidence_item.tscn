@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://hugcybvj4ew4"]
+
+[ext_resource type="Script" uid="uid://dt8pt1ysgxr8s" path="res://Assets/Scenes/System/evidence_item.gd" id="1_uxvf3"]
+[ext_resource type="Theme" uid="uid://4hg2sp3stq0y" path="res://Resources/iced_theme.tres" id="2_x5ypp"]
+[ext_resource type="Texture2D" uid="uid://cdr5pgijdwvb3" path="res://Assets/2D/evidence_placeholder.png" id="3_1iw58"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33jy8"]
+content_margin_right = 12.0
+bg_color = Color(0.1333, 0.27670494, 0.43, 1)
+border_width_left = 2
+border_width_top = 6
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_bottom_right = 16
+corner_detail = 20
+
+[node name="EvidenceItem" type="PanelContainer"]
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_33jy8")
+script = ExtResource("1_uxvf3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme = ExtResource("2_x5ypp")
+theme_override_constants/separation = 4
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_1iw58")
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Evidence Item"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

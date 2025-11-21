@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Character" load_steps=9 format=3 uid="uid://d2vw1loiemyw8"]
+[gd_resource type="Resource" script_class="Character" load_steps=8 format=3 uid="uid://d2vw1loiemyw8"]
 
 [ext_resource type="Script" uid="uid://dvcn684qc8ol5" path="res://Resources/Characters/character.gd" id="1_msbws"]
 [ext_resource type="Texture2D" uid="uid://b02ox06caa015" path="res://Assets/2D/Characters/Jellyfish/jellyfish_color.png" id="1_wbh5h"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://dtqecbc1rfh5" path="res://Assets/2D/Characters/Jellyfish/jellyfish_surprised_color.png" id="5_f80dx"]
 [ext_resource type="Texture2D" uid="uid://42155et3omw" path="res://Assets/2D/Characters/Jellyfish/jellyfish_surprised_outline.png" id="6_qfo3l"]
 [ext_resource type="Texture2D" uid="uid://goetxl8boxox" path="res://Assets/2D/Characters/Jellyfish/jellyfish_surprised_shading.png" id="7_bvrft"]
-[ext_resource type="AudioStream" uid="uid://b6ew3uf1jac7p" path="res://audio/sfx/hm.wav" id="8_xkvku"]
 
 [resource]
 script = ExtResource("1_msbws")
@@ -19,5 +18,4 @@ surprised_color = ExtResource("5_f80dx")
 surprised_shading = ExtResource("7_bvrft")
 color = Color(1, 0.9390932, 0, 1)
 c_name = "Jellyfish"
-voice = ExtResource("8_xkvku")
 metadata/_custom_type_script = "uid://dvcn684qc8ol5"

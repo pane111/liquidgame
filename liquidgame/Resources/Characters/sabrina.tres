@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Character" load_steps=12 format=3 uid="uid://bpkxbi7yq0s6j"]
+[gd_resource type="Resource" script_class="Character" load_steps=11 format=3 uid="uid://bpkxbi7yq0s6j"]
 
 [ext_resource type="Texture2D" uid="uid://dtmp1jm82tbps" path="res://Assets/2D/Characters/Sabrina/sabrina_angry_color.png" id="1_0whj4"]
 [ext_resource type="Script" uid="uid://dvcn684qc8ol5" path="res://Resources/Characters/character.gd" id="1_gyd02"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://b8iodg71b5pm5" path="res://Assets/2D/Characters/Sabrina/sabrina_surprised_color.png" id="8_kgoap"]
 [ext_resource type="Texture2D" uid="uid://bbridihwkr1hv" path="res://Assets/2D/Characters/Sabrina/sabrina_surprised_outline.png" id="9_tovny"]
 [ext_resource type="Texture2D" uid="uid://bv2qgg3dowhq5" path="res://Assets/2D/Characters/Sabrina/sabrina_surprised_shading.png" id="10_6uulb"]
-[ext_resource type="AudioStream" uid="uid://b6ew3uf1jac7p" path="res://audio/sfx/hm.wav" id="11_74mrh"]
 
 [resource]
 script = ExtResource("1_gyd02")
@@ -25,5 +24,4 @@ angry_color = ExtResource("1_0whj4")
 angry_shading = ExtResource("3_u8xch")
 color = Color(1, 0.4249097, 0, 1)
 c_name = "Sabrina"
-voice = ExtResource("11_74mrh")
 metadata/_custom_type_script = "uid://dvcn684qc8ol5"

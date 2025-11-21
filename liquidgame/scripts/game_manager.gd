@@ -23,14 +23,25 @@ signal finished_dialogue
 signal finished_dialogue_hide
 var hide_after=false
 
+var ev_open=false
+var can_open_ev=true
+
 @export var voice_pitch_lower = 0.2
 @export var voice_pitch_higher = 0.1
+@export var ev_item_scene: PackedScene
 
 func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
 	player = $Player
 	load_new_area(load(locations["_entrance_hall"]),false)
-	
+	set_evidence()
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("rclick") && can_open_ev:
+		if !ev_open:
+			open_evidence_menu()
+		else:
+			close_evidence_menu()
+		
 	
 func dialogue_anim(dia: DialogueResource, char: Character = null):
 	hide_after=false
@@ -62,6 +73,27 @@ func set_normal_expression():
 	$CanvasLayer/DialoguePanel/CharSprite/Outline.texture = cur_char.normal_outline
 	$CanvasLayer/DialoguePanel/CharSprite/Color.texture = cur_char.normal_color
 	$CanvasLayer/DialoguePanel/CharSprite/Shading.texture = cur_char.normal_shading
+
+func open_evidence_menu():
+	$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "evidence_on"
+	$CanvasLayer/DialoguePanel/EvidenceList.show()
+	ev_open=true
+
+func close_evidence_menu():
+	$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "evidence_off"
+	await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
+	$CanvasLayer/DialoguePanel/EvidenceList.hide()
+	ev_open=false
+	
+func set_evidence():
+	for c in $CanvasLayer/DialoguePanel/EvidenceList/EvidenceItems.get_children():
+		$CanvasLayer/DialoguePanel/EvidenceList/EvidenceItems.remove_child(c)
+		c.queue_free()
+	for key in FlagManager.evidence:
+		var item = FlagManager.evidence[key]
+		var new_listitem = ev_item_scene.instantiate()
+		new_listitem.set_item(item)
+		$CanvasLayer/DialoguePanel/EvidenceList/EvidenceItems.add_child(new_listitem)
 	
 func set_surprised_expression():
 	$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "surprised"

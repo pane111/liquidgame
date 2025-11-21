@@ -1,0 +1,78 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://4hg2sp3stq0y"]
+
+[ext_resource type="FontFile" uid="uid://dfdux2637350e" path="res://RacingSansOne-Regular.ttf" id="1_fg7oq"]
+[ext_resource type="StyleBox" uid="uid://qxvkh3bwo5ca" path="res://Resources/hud/disabled_box.tres" id="2_2jmpk"]
+[ext_resource type="StyleBox" uid="uid://dran8hmyn3ad4" path="res://Resources/hud/hovered_box.tres" id="3_4e51g"]
+[ext_resource type="StyleBox" uid="uid://c5qhm5ev8qr11" path="res://Resources/hud/dark_box.tres" id="4_2jmpk"]
+[ext_resource type="StyleBox" uid="uid://xkor77j2kf2g" path="res://Resources/hud/standard_box.tres" id="4_toivl"]
+[ext_resource type="StyleBox" uid="uid://b5d7hw2ijb561" path="res://Resources/hud/clicked_box.tres" id="5_gt4ac"]
+
+[sub_resource type="FontVariation" id="FontVariation_fg7oq"]
+base_font = ExtResource("1_fg7oq")
+variation_embolden = 1.2
+
+[sub_resource type="FontVariation" id="FontVariation_2jmpk"]
+base_font = ExtResource("1_fg7oq")
+variation_embolden = 1.2
+variation_transform = Transform2D(1, 0.2, 0, 1, 0, 0)
+
+[sub_resource type="FontVariation" id="FontVariation_4e51g"]
+base_font = ExtResource("1_fg7oq")
+variation_transform = Transform2D(1, 0.2, 0, 1, 0, 0)
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_fg7oq")
+Button/styles/disabled = ExtResource("2_2jmpk")
+Button/styles/focus = ExtResource("3_4e51g")
+Button/styles/hover = ExtResource("3_4e51g")
+Button/styles/normal = ExtResource("4_2jmpk")
+Button/styles/pressed = ExtResource("5_gt4ac")
+Panel/styles/panel = ExtResource("4_toivl")
+PanelContainer/styles/panel = ExtResource("4_2jmpk")
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_outline_color = Color(0.10976695, 0.5903995, 1, 1)
+RichTextLabel/colors/font_selected_color = Color(0, 0, 0, 0)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0.3529412)
+RichTextLabel/colors/selection_color = Color(0.101960786, 0.101960786, 1, 0.5764706)
+RichTextLabel/colors/table_border = Color(0, 0, 0, 0)
+RichTextLabel/colors/table_even_row_bg = Color(0, 0, 0, 0)
+RichTextLabel/colors/table_odd_row_bg = Color(0, 0, 0, 0)
+RichTextLabel/constants/line_separation = 0
+RichTextLabel/constants/paragraph_separation = 0
+RichTextLabel/constants/shadow_offset_x = 2
+RichTextLabel/constants/shadow_offset_y = 2
+RichTextLabel/constants/shadow_outline_size = 1
+RichTextLabel/constants/strikethrough_alpha = 100
+RichTextLabel/constants/table_h_separation = 3
+RichTextLabel/constants/table_v_separation = 3
+RichTextLabel/constants/text_highlight_h_padding = 3
+RichTextLabel/constants/text_highlight_v_padding = 3
+RichTextLabel/constants/underline_alpha = 100
+RichTextLabel/font_sizes/bold_font_size = 24
+RichTextLabel/font_sizes/bold_italics_font_size = 24
+RichTextLabel/font_sizes/italics_font_size = 24
+RichTextLabel/font_sizes/mono_font_size = 24
+RichTextLabel/font_sizes/normal_font_size = 24
+RichTextLabel/fonts/bold_font = SubResource("FontVariation_fg7oq")
+RichTextLabel/fonts/bold_italics_font = SubResource("FontVariation_2jmpk")
+RichTextLabel/fonts/italics_font = SubResource("FontVariation_4e51g")
+RichTextLabel/fonts/mono_font = ExtResource("1_fg7oq")
+RichTextLabel/fonts/normal_font = ExtResource("1_fg7oq")

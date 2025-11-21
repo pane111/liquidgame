@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://6jwyshv4pv0f"]
+[gd_scene load_steps=18 format=3 uid="uid://6jwyshv4pv0f"]
 
 [ext_resource type="Script" uid="uid://b6ui0seb11adj" path="res://scripts/game_manager.gd" id="1_0qls7"]
 [ext_resource type="PackedScene" uid="uid://cij3m80i3u2v3" path="res://Assets/Scenes/player.tscn" id="1_3nrmw"]
@@ -128,6 +128,63 @@ _data = {
 &"surprised": SubResource("Animation_7abc5")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7abc5"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_hg5cd"]
+resource_name = "fade_black_in"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_v5jgx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_t25hs"]
+resource_name = "fade_black_out"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_33jy8"]
+_data = {
+&"RESET": SubResource("Animation_v5jgx"),
+&"fade_black_in": SubResource("Animation_hg5cd"),
+&"fade_black_out": SubResource("Animation_t25hs")
+}
+
 [node name="MainGame" type="Node"]
 script = ExtResource("1_0qls7")
 
@@ -218,5 +275,20 @@ layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 text = "Go Back"
+
+[node name="Fade" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7abc5")
+
+[node name="FadeAnim" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_33jy8")
+}
+autoplay = "fade_black_out"
 
 [connection signal="button_down" from="CanvasLayer/RClickMenu/GoBack" to="." method="_on_go_back_button_down"]

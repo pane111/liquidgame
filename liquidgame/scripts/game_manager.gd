@@ -25,7 +25,7 @@ var hide_after=false
 func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
 	player = $Player
-	load_new_area(load(locations["_entrance_hall"]))
+	load_new_area(load(locations["_entrance_hall"]),false)
 	
 func dialogue_anim(dia: DialogueResource, char: Character = null):
 	hide_after=false
@@ -101,8 +101,12 @@ func _unhandled_input(event: InputEvent) -> void:
 			KEY_9:
 				load_new_area(load(locations["_break_room"]))
 	
-func load_new_area(area: PackedScene):
+func load_new_area(area: PackedScene, fade = true):
 	if area != null:
+		if fade:
+			$CanvasLayer/FadeAnim.current_animation = "fade_black_in"
+			player.can_look=false
+			await $CanvasLayer/FadeAnim.animation_finished
 		var new_area = area.instantiate()
 		if current_area != null:
 			current_area.queue_free()
@@ -114,6 +118,10 @@ func load_new_area(area: PackedScene):
 		player.rotation_degrees = current_area.start_point.rotation_degrees
 		player.init_rot = current_area.start_point.rotation_degrees
 		player.panning_limit = current_area.rotation_lim
+		if fade:
+			$CanvasLayer/FadeAnim.current_animation = "fade_black_out"
+			await $CanvasLayer/FadeAnim.animation_finished
+			player.can_look=true
 
 func _on_go_back_button_down() -> void:
 	$CanvasLayer/RClickMenu.hide()

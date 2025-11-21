@@ -74,7 +74,7 @@ number={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogue/magazine.dialogue", "res://Dialogue/test2.dialogue", "res://Dialogue/test3.dialogue", "res://Dialogue/test_angry.dialogue", "res://Dialogue/test_boss.dialogue", "res://Dialogue/test_dialogue.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogue/magazine.dialogue", "res://Dialogue/test2.dialogue", "res://Dialogue/test3.dialogue", "res://Dialogue/test_angry.dialogue", "res://Dialogue/test_boss.dialogue", "res://Dialogue/test_dialogue.dialogue", "res://Dialogue/hector.dialogue")
 
 [rendering]
 

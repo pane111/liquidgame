@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bcmef0ssdl2lc"]
+[gd_scene load_steps=12 format=3 uid="uid://bcmef0ssdl2lc"]
 
 [ext_resource type="Script" uid="uid://b04pshwcy136n" path="res://Assets/Scenes/npc.gd" id="1_vpvhg"]
 [ext_resource type="Resource" uid="uid://beuxdixiuboyl" path="res://Dialogue/test_angry.dialogue" id="2_vpvhg"]
 [ext_resource type="Resource" uid="uid://bpkxbi7yq0s6j" path="res://Resources/Characters/sabrina.tres" id="3_xdyro"]
-[ext_resource type="Texture2D" uid="uid://dguggyhmksw2j" path="res://Assets/2D/Characters/Bentley/bentley_outline.png" id="4_ya3n0"]
+[ext_resource type="Texture2D" uid="uid://b3sbkm6ak8c82" path="res://Assets/2D/Characters/Sabrina/sabrina_outline.png" id="4_s6ct4"]
+[ext_resource type="Texture2D" uid="uid://by01w15jh0y2f" path="res://Assets/2D/Characters/Sabrina/sabrina_color.png" id="5_ya3n0"]
+[ext_resource type="Texture2D" uid="uid://7t0s4qieta7a" path="res://Assets/2D/Characters/Sabrina/sabrina_shading.png" id="6_cq0r4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_peea3"]
 size = Vector3(1, 5, 1)
@@ -47,7 +49,7 @@ _data = {
 &"disappear": SubResource("Animation_laeim")
 }
 
-[node name="Sabrina" type="Node3D" groups=["interactable"]]
+[node name="sabrina" type="Node3D" groups=["interactable"]]
 script = ExtResource("1_vpvhg")
 dialogue = ExtResource("2_vpvhg")
 character = ExtResource("3_xdyro")
@@ -61,24 +63,23 @@ shape = SubResource("BoxShape3D_peea3")
 [node name="Outline" type="Sprite3D" parent="."]
 flip_h = true
 pixel_size = 0.006
-billboard = 1
 texture_filter = 2
 render_priority = 3
-texture = ExtResource("4_ya3n0")
+texture = ExtResource("4_s6ct4")
 
 [node name="Color" type="Sprite3D" parent="."]
 flip_h = true
 pixel_size = 0.006
-billboard = 1
 texture_filter = 2
 render_priority = 1
+texture = ExtResource("5_ya3n0")
 
 [node name="Shading" type="Sprite3D" parent="."]
 flip_h = true
 pixel_size = 0.006
-billboard = 1
 texture_filter = 2
 render_priority = 2
+texture = ExtResource("6_cq0r4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

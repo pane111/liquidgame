@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by01w15jh0y2f"
-path.s3tc="res://.godot/imported/sabrina_color.png-06a90342919fe1c74024b776118088f1.s3tc.ctex"
+uid="uid://dtr4nxineoycr"
+path.s3tc="res://.godot/imported/hector_outline.png-6f54bfbcee9f3e4e26c4b40912c0ca99.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/2D/Characters/Sabrina/sabrina_color.png"
-dest_files=["res://.godot/imported/sabrina_color.png-06a90342919fe1c74024b776118088f1.s3tc.ctex"]
+source_file="res://Assets/2D/Characters/Hector/hector_outline.png"
+dest_files=["res://.godot/imported/hector_outline.png-6f54bfbcee9f3e4e26c4b40912c0ca99.s3tc.ctex"]
 
 [params]
 

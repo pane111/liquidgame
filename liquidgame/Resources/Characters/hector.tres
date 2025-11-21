@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Character" load_steps=5 format=3 uid="uid://5tatmk3s0v8c"]
+
+[ext_resource type="Script" uid="uid://dvcn684qc8ol5" path="res://Resources/Characters/character.gd" id="1_duwfh"]
+[ext_resource type="Texture2D" uid="uid://lb7aah0ocw7c" path="res://Assets/2D/Characters/Hector/hector_color.png" id="1_m1c1r"]
+[ext_resource type="Texture2D" uid="uid://dtr4nxineoycr" path="res://Assets/2D/Characters/Hector/hector_outline.png" id="2_7giu8"]
+[ext_resource type="Texture2D" uid="uid://do3y2ng7r434n" path="res://Assets/2D/Characters/Hector/hector_shading.png" id="3_h0ixe"]
+
+[resource]
+script = ExtResource("1_duwfh")
+normal_outline = ExtResource("2_7giu8")
+normal_color = ExtResource("1_m1c1r")
+normal_shading = ExtResource("3_h0ixe")
+color = Color(0.70623547, 0.6254458, 0.9914735, 1)
+c_name = "Hector"
+metadata/_custom_type_script = "uid://dvcn684qc8ol5"

@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://draw7n7tnksc2"]
+[gd_scene load_steps=12 format=3 uid="uid://draw7n7tnksc2"]
 
 [ext_resource type="Script" uid="uid://b04pshwcy136n" path="res://Assets/Scenes/npc.gd" id="1_i11t0"]
 [ext_resource type="Resource" uid="uid://cubcvo3fk2bdo" path="res://Dialogue/test3.dialogue" id="2_i11t0"]
 [ext_resource type="Resource" uid="uid://cbavpy0d0fw6y" path="res://Resources/Characters/hammer_dog.tres" id="3_oicip"]
-[ext_resource type="Texture2D" uid="uid://dguggyhmksw2j" path="res://Assets/2D/Characters/Bentley/bentley_outline.png" id="4_3kqfy"]
+[ext_resource type="Texture2D" uid="uid://fy1pkrrgxl16" path="res://Assets/2D/Characters/HammerDog/hammer_dog_outline.png" id="4_rfnk1"]
+[ext_resource type="Texture2D" uid="uid://dl6ydioelwyni" path="res://Assets/2D/Characters/HammerDog/hammer_dog_color.png" id="5_nhjbv"]
+[ext_resource type="Texture2D" uid="uid://bkkkbnrs0bmqy" path="res://Assets/2D/Characters/HammerDog/hammer_dog_shading.png" id="6_jm3i4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_peea3"]
 size = Vector3(1, 5, 1)
@@ -61,22 +63,21 @@ shape = SubResource("BoxShape3D_peea3")
 
 [node name="Outline" type="Sprite3D" parent="."]
 pixel_size = 0.006
-billboard = 1
 texture_filter = 2
 render_priority = 3
-texture = ExtResource("4_3kqfy")
+texture = ExtResource("4_rfnk1")
 
 [node name="Color" type="Sprite3D" parent="."]
 pixel_size = 0.006
-billboard = 1
 texture_filter = 2
 render_priority = 1
+texture = ExtResource("5_nhjbv")
 
 [node name="Shading" type="Sprite3D" parent="."]
 pixel_size = 0.006
-billboard = 1
 texture_filter = 2
 render_priority = 2
+texture = ExtResource("6_jm3i4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

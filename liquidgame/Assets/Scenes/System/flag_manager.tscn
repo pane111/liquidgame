@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cw6qadey7cnh4"]
+[gd_scene load_steps=9 format=3 uid="uid://cw6qadey7cnh4"]
 
 [ext_resource type="Script" uid="uid://wrug3eu6ks5x" path="res://scripts/flag_manager.gd" id="1_skr22"]
 [ext_resource type="Script" uid="uid://dvcn684qc8ol5" path="res://Resources/Characters/character.gd" id="2_3pq6a"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://d2vw1loiemyw8" path="res://Resources/Characters/jellyfish.tres" id="5_bgwsq"]
 [ext_resource type="Resource" uid="uid://4sr2jq5cauvk" path="res://Resources/Characters/boss.tres" id="6_uubbq"]
 [ext_resource type="Resource" uid="uid://bpkxbi7yq0s6j" path="res://Resources/Characters/sabrina.tres" id="7_k7fmi"]
+[ext_resource type="Resource" uid="uid://5tatmk3s0v8c" path="res://Resources/Characters/hector.tres" id="8_bgwsq"]
 
 [node name="FlagManager" type="Node"]
 script = ExtResource("1_skr22")
@@ -14,6 +15,7 @@ characters = Dictionary[String, ExtResource("2_3pq6a")]({
 "Bentley": ExtResource("3_uubbq"),
 "boss": ExtResource("6_uubbq"),
 "hammerdog": ExtResource("4_k7fmi"),
+"hector": ExtResource("8_bgwsq"),
 "jellyfish": ExtResource("5_bgwsq"),
 "sabrina": ExtResource("7_k7fmi")
 })

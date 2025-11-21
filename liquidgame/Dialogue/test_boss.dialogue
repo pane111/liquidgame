@@ -7,5 +7,8 @@
 	{{FlagManager.char_name("boss")}}: This is so sad!
 - You need to fire Bentley
 	{{FlagManager.char_name("boss")}}: Will do!
+- Call me, I lost my phone
+	do set_angry_expression()
+	{{FlagManager.char_name("boss")}}: Am calling you rn
 
 => END

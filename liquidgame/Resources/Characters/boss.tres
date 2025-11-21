@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="Character" load_steps=9 format=3 uid="uid://4sr2jq5cauvk"]
+[gd_resource type="Resource" script_class="Character" load_steps=12 format=3 uid="uid://4sr2jq5cauvk"]
 
 [ext_resource type="Script" uid="uid://dvcn684qc8ol5" path="res://Resources/Characters/character.gd" id="1_bmmf2"]
 [ext_resource type="Material" uid="uid://b0bnukmdsjnyr" path="res://Assets/standard_nondither.tres" id="1_mnuca"]
 [ext_resource type="Texture2D" uid="uid://emrf7p6e0eyg" path="res://Assets/2D/Characters/Boss/boss_color.png" id="1_nxw30"]
+[ext_resource type="Texture2D" uid="uid://nsysf1akx2kq" path="res://Assets/2D/Characters/Boss/boss_phone_color.png" id="1_ywdhr"]
+[ext_resource type="Texture2D" uid="uid://dvtr1rbkdfp8k" path="res://Assets/2D/Characters/Boss/boss_phone_outline.png" id="2_6lq41"]
 [ext_resource type="Texture2D" uid="uid://djeive56sug14" path="res://Assets/2D/Characters/Boss/boss_outline.png" id="2_mnuca"]
+[ext_resource type="Texture2D" uid="uid://ygy0enqhr787" path="res://Assets/2D/Characters/Boss/boss_phone_shading.png" id="3_0b3pc"]
 [ext_resource type="Texture2D" uid="uid://bus1dj1eci46t" path="res://Assets/2D/Characters/Boss/boss_shading.png" id="3_f8vaj"]
 [ext_resource type="Texture2D" uid="uid://babn66uilomf4" path="res://Assets/2D/Characters/Boss/boss_surprised_color.png" id="5_dn865"]
 [ext_resource type="Texture2D" uid="uid://pi3pqgoh1i36" path="res://Assets/2D/Characters/Boss/boss_surprised_outline.png" id="6_ywdhr"]
@@ -17,6 +20,9 @@ normal_shading = ExtResource("3_f8vaj")
 surprised_outline = ExtResource("6_ywdhr")
 surprised_color = ExtResource("5_dn865")
 surprised_shading = ExtResource("7_6lq41")
+angry_outline = ExtResource("2_6lq41")
+angry_color = ExtResource("1_ywdhr")
+angry_shading = ExtResource("3_0b3pc")
 color = Color(1, 0, 0, 1)
 c_name = "The Boss"
 material = ExtResource("1_mnuca")

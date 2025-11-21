@@ -23,7 +23,7 @@ func _ready() -> void:
 		$Outline.texture = character.normal_outline
 		$Color.texture = character.normal_color
 		$Shading.texture = character.normal_shading
-		$Shading.modulate = Color("ee82ee")
+		$Shading.modulate = Color("f4b3f4")
 		$Outline.billboard = FlagManager.billboarding
 		$Color.billboard = FlagManager.billboarding
 		$Shading.billboard = FlagManager.billboarding

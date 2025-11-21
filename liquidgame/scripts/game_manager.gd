@@ -23,7 +23,8 @@ signal finished_dialogue
 signal finished_dialogue_hide
 var hide_after=false
 
-@export var voice_pitch_range = 0.2
+@export var voice_pitch_lower = 0.2
+@export var voice_pitch_higher = 0.1
 
 func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
@@ -54,7 +55,7 @@ func dialogue_anim(dia: DialogueResource, char: Character = null):
 		DialogueManager.show_example_dialogue_balloon(dia,"start")
 		await DialogueManager.dialogue_ended
 func play_voice():
-	var random_pitch = randf_range(1-voice_pitch_range,1+voice_pitch_range)
+	var random_pitch = randf_range(1-voice_pitch_lower,1+voice_pitch_higher)
 	$VoicePlayer.pitch_scale = random_pitch
 	$VoicePlayer.play()
 func set_normal_expression():

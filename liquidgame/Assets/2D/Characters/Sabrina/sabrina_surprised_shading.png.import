@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv2qgg3dowhq5"
-path="res://.godot/imported/sabrina_surprised_shading.png-21baab610ab2e3e919358c0a1e919fa3.ctex"
+path="res://.godot/imported/sabrina_surprised_shading.png-258a147db86f8b270009339fe59c59e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D/Characters/Sabrina/sabrina_surprised_shading.png"
-dest_files=["res://.godot/imported/sabrina_surprised_shading.png-21baab610ab2e3e919358c0a1e919fa3.ctex"]
+source_file="res://assets/2D/Characters/Sabrina/sabrina_surprised_shading.png"
+dest_files=["res://.godot/imported/sabrina_surprised_shading.png-258a147db86f8b270009339fe59c59e4.ctex"]
 
 [params]
 

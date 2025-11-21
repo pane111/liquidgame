@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://brk45c6acql25"]
+[gd_scene load_steps=13 format=3 uid="uid://brk45c6acql25"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_41o4p"]
 [ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_yn8ay"]
@@ -8,6 +8,7 @@
 [ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://assets/3D/dark.tres" id="6_m43gv"]
 [ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="7_x0men"]
 [ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="8_wt7sn"]
+[ext_resource type="PackedScene" uid="uid://dnvv222mvxat1" path="res://assets/3D/furniture/stair.glb" id="9_871ti"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -23,7 +24,7 @@ rotation_lim = Vector2(10, 10)
 area_name = "Stairway"
 
 [node name="PlayerStartPosition" type="Node3D" parent="."]
-transform = Transform3D(-4.3711374e-08, 0, 0.99999964, 0, 1, 0, -0.99999964, 0, -4.3711374e-08, 15.267, 3, -4.109)
+transform = Transform3D(-4.3711374e-08, 0, 0.99999964, 0, 1, 0, -0.99999964, 0, -4.3711374e-08, 15.267, 2.5, -4.343012)
 
 [node name="Area Geometry" type="Node3D" parent="."]
 
@@ -77,6 +78,48 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 4.2099724, 0, -0.017143
 [node name="wallpiece21" parent="Area Geometry" instance=ExtResource("3_871ti")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 7.611017, 0, -0.01714325)
 
+[node name="stair" parent="Area Geometry" instance=ExtResource("9_871ti")]
+transform = Transform3D(-0.8, 0, -6.9938224e-08, 0, 0.8, 0, 6.9938224e-08, 0, -0.8, 3.8780837, 0.339118, -1.9655906)
+
+[node name="stair2" parent="Area Geometry" instance=ExtResource("9_871ti")]
+transform = Transform3D(-0.8, 0, -6.9938224e-08, 0, 0.8, 0, 6.9938224e-08, 0, -0.8, 2.8219194, 1.1294016, -1.9655906)
+
+[node name="stair3" parent="Area Geometry" instance=ExtResource("9_871ti")]
+transform = Transform3D(-0.8, 0, -6.9938224e-08, 0, 0.8, 0, 6.9938224e-08, 0, -0.8, 1.5970008, 1.8688046, -1.9655906)
+
+[node name="stair4" parent="Area Geometry" instance=ExtResource("9_871ti")]
+transform = Transform3D(-0.8, 0, -6.9938224e-08, 0, 0.8, 0, 6.9938224e-08, 0, -0.8, 0.65444756, 2.5811224, -1.9655906)
+
+[node name="stair5" parent="Area Geometry" instance=ExtResource("9_871ti")]
+transform = Transform3D(-0.8, 0, -6.9938224e-08, 0, 0.8, 0, 6.9938224e-08, 0, -0.8, -0.5082483, 3.383928, -1.9655906)
+
+[node name="stair6" parent="Area Geometry" instance=ExtResource("9_871ti")]
+transform = Transform3D(-0.8, 0, -6.9938224e-08, 0, 0.8, 0, 6.9938224e-08, 0, -0.8, -1.6430798, 4.189356, -1.9655906)
+
+[node name="stair7" parent="Area Geometry" instance=ExtResource("9_871ti")]
+transform = Transform3D(-0.8, 0, -6.9938224e-08, 0, 0.8, 0, 6.9938224e-08, 0, -0.8, -2.6235824, 4.892717, -1.9655906)
+
+[node name="stair8" parent="Area Geometry" instance=ExtResource("9_871ti")]
+transform = Transform3D(0.8, 0, 1.3987645e-07, 0, 0.8, 0, -1.3987645e-07, 0, 0.8, -2.652196, -4.847726, -6.4433193)
+
+[node name="stair9" parent="Area Geometry" instance=ExtResource("9_871ti")]
+transform = Transform3D(0.8, 0, 1.3987645e-07, 0, 0.8, 0, -1.3987645e-07, 0, 0.8, -1.5960317, -4.057442, -6.4433193)
+
+[node name="stair10" parent="Area Geometry" instance=ExtResource("9_871ti")]
+transform = Transform3D(0.8, 0, 1.3987645e-07, 0, 0.8, 0, -1.3987645e-07, 0, 0.8, -0.37111306, -3.3180394, -6.4433193)
+
+[node name="stair11" parent="Area Geometry" instance=ExtResource("9_871ti")]
+transform = Transform3D(0.8, 0, 1.3987645e-07, 0, 0.8, 0, -1.3987645e-07, 0, 0.8, 0.5714402, -2.6057215, -6.4433193)
+
+[node name="stair12" parent="Area Geometry" instance=ExtResource("9_871ti")]
+transform = Transform3D(0.8, 0, 1.3987645e-07, 0, 0.8, 0, -1.3987645e-07, 0, 0.8, 1.7341361, -1.8029158, -6.4433193)
+
+[node name="stair13" parent="Area Geometry" instance=ExtResource("9_871ti")]
+transform = Transform3D(0.8, 0, 1.3987645e-07, 0, 0.8, 0, -1.3987645e-07, 0, 0.8, 2.8689675, -0.997488, -6.44332)
+
+[node name="stair14" parent="Area Geometry" instance=ExtResource("9_871ti")]
+transform = Transform3D(0.8, 0, 1.3987645e-07, 0, 0.8, 0, -1.3987645e-07, 0, 0.8, 3.8494701, -0.294127, -6.44332)
+
 [node name="wallpiece22" parent="Area Geometry" instance=ExtResource("3_871ti")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 15.016675, 0, -0.01714325)
 
@@ -127,3 +170,11 @@ flickerIntervall = 4.5
 [node name="Door" parent="." instance=ExtResource("8_wt7sn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2, 3, 0.2)
 _goto = "uid://2m4mvq03m225"
+
+[node name="Door2" parent="." instance=ExtResource("8_wt7sn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.9458046, -2.1254463, -6.6065373)
+_goto = "uid://1airqduoass5"
+
+[node name="Door3" parent="." instance=ExtResource("8_wt7sn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.9458046, 9.263048, -0.59290457)
+_goto = "uid://cxa6uqhmdl5of"

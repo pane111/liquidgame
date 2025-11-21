@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://csp3070m2ok0"]
+[gd_scene load_steps=12 format=3 uid="uid://csp3070m2ok0"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_2f5xl"]
 [ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_06o6r"]
@@ -7,6 +7,7 @@
 [ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://assets/3D/dark.tres" id="5_u30et"]
 [ext_resource type="PackedScene" uid="uid://deinp27j5p8jh" path="res://assets/3D/furniture/wallpiece corner out.glb" id="6_5l87e"]
 [ext_resource type="PackedScene" uid="uid://c4vofq6t61gir" path="res://assets/3D/floor_tiles.glb" id="7_oqwn7"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="8_06o6r"]
 [ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="8_apx5d"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
@@ -147,6 +148,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.89998, -0.1, 2.167187)
 
 [node name="floor_tiles4" parent="Area Geometry" instance=ExtResource("7_oqwn7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.89998, -0.1, -15.833832)
+
+[node name="Door" parent="Area Geometry" instance=ExtResource("8_06o6r")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.0461798, 2.574233, -11.647473)
+_goto = "uid://1airqduoass5"
 
 [node name="Lighting" type="Node3D" parent="."]
 

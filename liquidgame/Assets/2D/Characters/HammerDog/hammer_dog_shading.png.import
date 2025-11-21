@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkkkbnrs0bmqy"
-path.s3tc="res://.godot/imported/hammer_dog_shading.png-487210dd5152622dcd2746bad326f0b7.s3tc.ctex"
+path.s3tc="res://.godot/imported/hammer_dog_shading.png-bb996464c8448c9c7e8a858939acd966.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/2D/Characters/HammerDog/hammer_dog_shading.png"
-dest_files=["res://.godot/imported/hammer_dog_shading.png-487210dd5152622dcd2746bad326f0b7.s3tc.ctex"]
+source_file="res://assets/2D/Characters/HammerDog/hammer_dog_shading.png"
+dest_files=["res://.godot/imported/hammer_dog_shading.png-bb996464c8448c9c7e8a858939acd966.s3tc.ctex"]
 
 [params]
 

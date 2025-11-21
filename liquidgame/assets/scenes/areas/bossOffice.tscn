@@ -1,15 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://dwp8cx2ei2dgj"]
+[gd_scene load_steps=14 format=3 uid="uid://dwp8cx2ei2dgj"]
 
-[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_mjg2f"]
-[ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://Assets/3D/furniture/wallpiece corner in.glb" id="2_l6exm"]
-[ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://Assets/3D/furniture/wallpiece.glb" id="3_4v4c4"]
-[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://Assets/3D/furniture/statue stand.glb" id="5_frx7a"]
-[ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://Assets/3D/floor_planks.glb" id="6_bbwqm"]
-[ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://Assets/3D/dark.tres" id="6_mjg2f"]
-[ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://Assets/3D/furniture/ceiling_lamp.tscn" id="7_5xca8"]
-[ext_resource type="PackedScene" uid="uid://bxyec8samu5na" path="res://Assets/3D/furniture/boss desk.glb" id="8_l6exm"]
-[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="9_4xt5x"]
-[ext_resource type="PackedScene" uid="uid://ciuokm66b1rv7" path="res://Assets/Scenes/interactable_object.tscn" id="10_ucbwp"]
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_mjg2f"]
+[ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_l6exm"]
+[ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://assets/3D/furniture/wallpiece.glb" id="3_4v4c4"]
+[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://assets/3D/furniture/statue stand.glb" id="5_frx7a"]
+[ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://assets/3D/floor_planks.glb" id="6_bbwqm"]
+[ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://assets/3D/dark.tres" id="6_mjg2f"]
+[ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="7_5xca8"]
+[ext_resource type="PackedScene" uid="uid://bg6wm7466snf1" path="res://assets/3D/furniture/window.glb" id="8_frx7a"]
+[ext_resource type="PackedScene" uid="uid://bxyec8samu5na" path="res://assets/3D/furniture/boss desk.glb" id="8_l6exm"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="9_4xt5x"]
+[ext_resource type="PackedScene" uid="uid://ciuokm66b1rv7" path="res://assets/scenes/interactable_object.tscn" id="10_ucbwp"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -125,6 +126,12 @@ mesh = SubResource("BoxMesh_xpgxh")
 
 [node name="boss desk" parent="Area Geometry" instance=ExtResource("8_l6exm")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.714742, 0, 2.3854408)
+
+[node name="window" parent="Area Geometry" instance=ExtResource("8_frx7a")]
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 2.9398649, 5.3073964, 9.615323)
+
+[node name="window2" parent="Area Geometry" instance=ExtResource("8_frx7a")]
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, -0.9947665, 5.3073964, 9.615323)
 
 [node name="Lighting" type="Node3D" parent="."]
 

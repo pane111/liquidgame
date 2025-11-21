@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cxlpm3gdlhi18"]
+[gd_scene load_steps=12 format=3 uid="uid://cxlpm3gdlhi18"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_kgu68"]
 [ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_gxcno"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://deinp27j5p8jh" path="res://assets/3D/furniture/wallpiece corner out.glb" id="6_v2v6d"]
 [ext_resource type="PackedScene" uid="uid://c4vofq6t61gir" path="res://assets/3D/floor_tiles.glb" id="7_vb6b1"]
 [ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="8_cb811"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="9_gxcno"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -185,3 +186,7 @@ flickerIntervall = 3.0
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10.822582, 6.6658916, -14.045418)
 flickerSpeed = 1.5
 flickerIntervall = 3.0
+
+[node name="Door" parent="." instance=ExtResource("9_gxcno")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.0174837, 2.777506, -11.713124)
+_goto = "uid://1airqduoass5"

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtr4nxineoycr"
-path.s3tc="res://.godot/imported/hector_outline.png-6f54bfbcee9f3e4e26c4b40912c0ca99.s3tc.ctex"
+path.s3tc="res://.godot/imported/hector_outline.png-92ef2f6d5fdd1719a9161df63e54de9b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/2D/Characters/Hector/hector_outline.png"
-dest_files=["res://.godot/imported/hector_outline.png-6f54bfbcee9f3e4e26c4b40912c0ca99.s3tc.ctex"]
+source_file="res://assets/2D/Characters/Hector/hector_outline.png"
+dest_files=["res://.godot/imported/hector_outline.png-92ef2f6d5fdd1719a9161df63e54de9b.s3tc.ctex"]
 
 [params]
 

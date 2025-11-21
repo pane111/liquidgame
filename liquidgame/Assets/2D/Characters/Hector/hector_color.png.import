@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lb7aah0ocw7c"
-path.s3tc="res://.godot/imported/hector_color.png-5fd7f7eb64765199d0690b35ed70d859.s3tc.ctex"
+path.s3tc="res://.godot/imported/hector_color.png-78bb1f71240886af78df45cafb50495c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/2D/Characters/Hector/hector_color.png"
-dest_files=["res://.godot/imported/hector_color.png-5fd7f7eb64765199d0690b35ed70d859.s3tc.ctex"]
+source_file="res://assets/2D/Characters/Hector/hector_color.png"
+dest_files=["res://.godot/imported/hector_color.png-78bb1f71240886af78df45cafb50495c.s3tc.ctex"]
 
 [params]
 

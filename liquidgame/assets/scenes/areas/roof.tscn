@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxa6uqhmdl5of"]
+[gd_scene load_steps=8 format=3 uid="uid://cxa6uqhmdl5of"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_ruyus"]
 [ext_resource type="PackedScene" uid="uid://l0xxs4w8xflo" path="res://assets/3D/furniture/railing.glb" id="4_axv30"]
 [ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://assets/3D/furniture/statue stand.glb" id="4_t07o4"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="5_a5tku"]
 [ext_resource type="PackedScene" uid="uid://c4vofq6t61gir" path="res://assets/3D/floor_tiles.glb" id="7_ky54k"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
@@ -109,3 +110,7 @@ shadow_opacity = 0.4
 [node name="DirectionalLight3D3" type="DirectionalLight3D" parent="Lighting"]
 transform = Transform3D(0.29950482, -0.1969219, -0.9335518, -0.8369241, -0.52402735, -0.15796696, -0.45809945, 0.8286238, -0.32175738, -4.1464896, 28.717892, -15.682976)
 shadow_opacity = 0.5
+
+[node name="Door" parent="Lighting" instance=ExtResource("5_a5tku")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.750832, 2.8019743, -19.4989)
+_goto = "uid://brk45c6acql25"

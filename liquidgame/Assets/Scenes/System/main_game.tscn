@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://6jwyshv4pv0f"]
+[gd_scene load_steps=26 format=3 uid="uid://6jwyshv4pv0f"]
 
 [ext_resource type="Script" uid="uid://b6ui0seb11adj" path="res://scripts/game_manager.gd" id="1_0qls7"]
 [ext_resource type="PackedScene" uid="uid://cij3m80i3u2v3" path="res://Assets/Scenes/player.tscn" id="1_3nrmw"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://874s8oworhil" path="res://Assets/2D/hud_area_label.png" id="7_hg5cd"]
 [ext_resource type="Theme" uid="uid://4hg2sp3stq0y" path="res://Resources/iced_theme.tres" id="7_t25hs"]
 [ext_resource type="PackedScene" uid="uid://hugcybvj4ew4" path="res://Assets/Scenes/System/evidence_item.tscn" id="8_t25hs"]
+[ext_resource type="StyleBox" uid="uid://wll4sgrmkeeu" path="res://Resources/Evidence/ev_item_style.tres" id="9_jvbpl"]
+[ext_resource type="Texture2D" uid="uid://cdr5pgijdwvb3" path="res://Assets/2D/evidence_placeholder.png" id="10_hkbjw"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_d0c4d"]
 material = ExtResource("6_a0er8")
@@ -43,38 +45,38 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CharSprite:position")
+tracks/2/path = NodePath("CharSprite:position:x")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(640, 559)]
+"update": 1,
+"values": [640.0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("CharSprite:position:x")
+tracks/3/path = NodePath("EvLayer/EvidenceList:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [640.0]
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("EvidenceList:scale")
+tracks/4/path = NodePath("CharSprite:position:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
+"update": 1,
+"values": [559.0]
 }
 
 [sub_resource type="Animation" id="Animation_0qls7"]
@@ -137,19 +139,19 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CharSprite:position")
+tracks/0/path = NodePath("CharSprite:position:y")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.03333334, 0.2),
+"times": PackedFloat32Array(0, 0.033333335, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(640, 559), Vector2(640, 464.99), Vector2(640, 559)]
+"values": [473.7886, 473.7886, 559.0]
 }
 
 [sub_resource type="Animation" id="Animation_33jy8"]
 resource_name = "evidence_on"
-length = 0.6
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -157,7 +159,7 @@ tracks/0/path = NodePath("CharSprite:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [640.0, 350.0]
@@ -165,11 +167,11 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("EvidenceList:scale")
+tracks/1/path = NodePath("EvLayer/EvidenceList:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.33, 0.6),
+"times": PackedFloat32Array(0, 0.16666667, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(1.001358e-05, 1), Vector2(1e-05, 1), Vector2(1, 1)]
@@ -193,7 +195,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("EvidenceList:scale")
+tracks/1/path = NodePath("EvLayer/EvidenceList:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -212,6 +214,18 @@ _data = {
 &"evidence_on": SubResource("Animation_33jy8"),
 &"surprised": SubResource("Animation_7abc5")
 }
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q51aq"]
+bg_color = Color(1, 0.35760865, 0.630946, 1)
+skew = Vector2(-0.06, 0)
+border_width_left = 2
+border_width_top = 6
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_bottom_right = 4
+corner_detail = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7abc5"]
 bg_color = Color(0, 0, 0, 1)
@@ -333,9 +347,11 @@ libraries = {
 &"": SubResource("AnimationLibrary_7abc5")
 }
 
-[node name="EvidenceList" type="ScrollContainer" parent="CanvasLayer/DialoguePanel"]
+[node name="EvLayer" type="CanvasLayer" parent="CanvasLayer/DialoguePanel"]
+layer = 101
+
+[node name="EvidenceList" type="ScrollContainer" parent="CanvasLayer/DialoguePanel/EvLayer"]
 visible = false
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -347,13 +363,55 @@ offset_right = 125.0
 offset_bottom = 87.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
 
-[node name="EvidenceItems" type="VBoxContainer" parent="CanvasLayer/DialoguePanel/EvidenceList"]
+[node name="EvidenceItems" type="VBoxContainer" parent="CanvasLayer/DialoguePanel/EvLayer/EvidenceList"]
 layout_mode = 2
 theme = ExtResource("7_t25hs")
 
-[node name="EvidenceItem" parent="CanvasLayer/DialoguePanel/EvidenceList/EvidenceItems" instance=ExtResource("8_t25hs")]
+[node name="EvidenceItem" parent="CanvasLayer/DialoguePanel/EvLayer/EvidenceList/EvidenceItems" instance=ExtResource("8_t25hs")]
 layout_mode = 2
+theme_override_styles/panel = ExtResource("9_jvbpl")
+
+[node name="ItemDetails" type="PanelContainer" parent="CanvasLayer/DialoguePanel/EvLayer"]
+visible = false
+offset_left = 764.0
+offset_top = 71.0
+offset_right = 1221.0
+offset_bottom = 373.0
+theme_override_styles/panel = ExtResource("9_jvbpl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DialoguePanel/EvLayer/ItemDetails"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer"]
+layout_mode = 2
+
+[node name="ItemSprite" type="TextureRect" parent="CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_hkbjw")
+
+[node name="ItemName" type="Label" parent="CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Evidence Item
+"
+
+[node name="ItemDesc" type="Label" parent="CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "This is where the item description goes."
+
+[node name="PresentButton" type="Button" parent="CanvasLayer/DialoguePanel/EvLayer"]
+visible = false
+custom_minimum_size = Vector2(160, 60)
+offset_left = 1002.0
+offset_top = 357.0
+offset_right = 1202.0
+offset_bottom = 417.0
+theme = ExtResource("7_t25hs")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q51aq")
+text = "PRESENT"
 
 [node name="AreaLabel" type="Label" parent="CanvasLayer"]
 custom_minimum_size = Vector2(155, 30)
@@ -397,7 +455,6 @@ offset_bottom = 8.0
 text = "Go Back"
 
 [node name="Fade" type="Panel" parent="CanvasLayer"]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

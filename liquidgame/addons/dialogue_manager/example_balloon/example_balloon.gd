@@ -211,3 +211,7 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 
 #endregion
+
+
+func _on_evidence_button_pressed() -> void:
+	get_node("/root/MainGame").toggle_ev()

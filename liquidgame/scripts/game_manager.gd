@@ -22,6 +22,7 @@ var cur_char
 signal finished_dialogue
 signal finished_dialogue_hide
 var hide_after=false
+var in_dialogue=false
 
 var ev_open=false
 var can_open_ev=true
@@ -37,10 +38,7 @@ func _ready() -> void:
 	set_evidence()
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("rclick") && can_open_ev:
-		if !ev_open:
-			open_evidence_menu()
-		else:
-			close_evidence_menu()
+		toggle_ev()
 		
 	
 func dialogue_anim(dia: DialogueResource, char: Character = null):
@@ -52,16 +50,21 @@ func dialogue_anim(dia: DialogueResource, char: Character = null):
 		
 		$VoicePlayer.stream = cur_char.voice
 		set_normal_expression()
+		in_dialogue=true
 		$CanvasLayer/DialoguePanel/CharSprite/Shading.self_modulate = char.color
 		$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "dialogue_start"
 		await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
 		var balloon = DialogueManager.show_example_dialogue_balloon(dia,"start")
 		await DialogueManager.dialogue_ended
+		if ev_open:
+			close_evidence_menu()
+			await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
 		$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "dialogue_end"
 		await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
 		$CanvasLayer/DialoguePanel.hide()
 		player.can_look=true
 		finished_dialogue.emit()
+		in_dialogue=false
 	else:
 		DialogueManager.show_example_dialogue_balloon(dia,"start")
 		await DialogueManager.dialogue_ended
@@ -69,6 +72,15 @@ func play_voice():
 	var random_pitch = randf_range(1-voice_pitch_lower,1+voice_pitch_higher)
 	$VoicePlayer.pitch_scale = random_pitch
 	$VoicePlayer.play()
+	
+func ev_detail(evidence: Evidence):
+		$CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer/HBoxContainer/ItemSprite.texture = evidence.e_sprite
+		$CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer/HBoxContainer/ItemName.text = evidence.e_name
+		$CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer/ItemDesc.text = evidence.e_desc
+		$CanvasLayer/DialoguePanel/EvLayer/ItemDetails.show()
+		if in_dialogue:
+			$CanvasLayer/DialoguePanel/EvLayer/PresentButton.show()
+
 func set_normal_expression():
 	$CanvasLayer/DialoguePanel/CharSprite/Outline.texture = cur_char.normal_outline
 	$CanvasLayer/DialoguePanel/CharSprite/Color.texture = cur_char.normal_color
@@ -76,24 +88,33 @@ func set_normal_expression():
 
 func open_evidence_menu():
 	$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "evidence_on"
-	$CanvasLayer/DialoguePanel/EvidenceList.show()
+	$CanvasLayer/DialoguePanel/EvLayer/EvidenceList.show()
 	ev_open=true
 
 func close_evidence_menu():
+	$CanvasLayer/DialoguePanel/EvLayer/ItemDetails.hide()
+	$CanvasLayer/DialoguePanel/EvLayer/PresentButton.hide()
 	$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "evidence_off"
 	await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
-	$CanvasLayer/DialoguePanel/EvidenceList.hide()
+	$CanvasLayer/DialoguePanel/EvLayer/EvidenceList.hide()
 	ev_open=false
-	
+
+func toggle_ev():
+	if ev_open:
+		close_evidence_menu()
+	else:
+		open_evidence_menu()
+
+
 func set_evidence():
-	for c in $CanvasLayer/DialoguePanel/EvidenceList/EvidenceItems.get_children():
-		$CanvasLayer/DialoguePanel/EvidenceList/EvidenceItems.remove_child(c)
+	for c in $CanvasLayer/DialoguePanel/EvLayer/EvidenceList/EvidenceItems.get_children():
+		$CanvasLayer/DialoguePanel/EvLayer/EvidenceList/EvidenceItems.remove_child(c)
 		c.queue_free()
 	for key in FlagManager.evidence:
 		var item = FlagManager.evidence[key]
 		var new_listitem = ev_item_scene.instantiate()
 		new_listitem.set_item(item)
-		$CanvasLayer/DialoguePanel/EvidenceList/EvidenceItems.add_child(new_listitem)
+		$CanvasLayer/DialoguePanel/EvLayer/EvidenceList/EvidenceItems.add_child(new_listitem)
 	
 func set_surprised_expression():
 	$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "surprised"

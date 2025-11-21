@@ -1,11 +1,11 @@
 [gd_resource type="Theme" load_steps=10 format=3 uid="uid://4hg2sp3stq0y"]
 
 [ext_resource type="FontFile" uid="uid://dfdux2637350e" path="res://RacingSansOne-Regular.ttf" id="1_fg7oq"]
-[ext_resource type="StyleBox" uid="uid://qxvkh3bwo5ca" path="res://resources/hud/disabled_box.tres" id="2_2jmpk"]
-[ext_resource type="StyleBox" uid="uid://dran8hmyn3ad4" path="res://resources/hud/hovered_box.tres" id="3_4e51g"]
-[ext_resource type="StyleBox" uid="uid://c5qhm5ev8qr11" path="res://resources/hud/dark_box.tres" id="4_2jmpk"]
-[ext_resource type="StyleBox" uid="uid://xkor77j2kf2g" path="res://resources/hud/standard_box.tres" id="4_toivl"]
-[ext_resource type="StyleBox" uid="uid://b5d7hw2ijb561" path="res://resources/hud/clicked_box.tres" id="5_gt4ac"]
+[ext_resource type="StyleBox" uid="uid://qxvkh3bwo5ca" path="res://Resources/hud/disabled_box.tres" id="2_2jmpk"]
+[ext_resource type="StyleBox" uid="uid://dran8hmyn3ad4" path="res://Resources/hud/hovered_box.tres" id="3_4e51g"]
+[ext_resource type="StyleBox" uid="uid://c5qhm5ev8qr11" path="res://Resources/hud/dark_box.tres" id="4_2jmpk"]
+[ext_resource type="StyleBox" uid="uid://xkor77j2kf2g" path="res://Resources/hud/standard_box.tres" id="4_toivl"]
+[ext_resource type="StyleBox" uid="uid://b5d7hw2ijb561" path="res://Resources/hud/clicked_box.tres" id="5_gt4ac"]
 
 [sub_resource type="FontVariation" id="FontVariation_fg7oq"]
 base_font = ExtResource("1_fg7oq")

@@ -160,7 +160,7 @@ libraries = {
 }
 autoplay = "progress"
 
-[node name="Button" type="Button" parent="Balloon"]
+[node name="EvidenceButton" type="Button" parent="Balloon"]
 custom_minimum_size = Vector2(200, 55)
 layout_mode = 1
 anchors_preset = 8
@@ -183,3 +183,4 @@ unique_name_in_owner = true
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
+[connection signal="pressed" from="Balloon/EvidenceButton" to="." method="_on_evidence_button_pressed"]

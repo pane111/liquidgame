@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dwp8cx2ei2dgj"]
+[gd_scene load_steps=15 format=3 uid="uid://dwp8cx2ei2dgj"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_mjg2f"]
 [ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_l6exm"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bxyec8samu5na" path="res://assets/3D/furniture/boss desk.glb" id="8_l6exm"]
 [ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="9_4xt5x"]
 [ext_resource type="PackedScene" uid="uid://ciuokm66b1rv7" path="res://assets/scenes/interactable_object.tscn" id="10_ucbwp"]
+[ext_resource type="PackedScene" uid="uid://deinp27j5p8jh" path="res://assets/3D/furniture/wallpiece corner out.glb" id="12_bbwqm"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -77,7 +78,7 @@ transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08
 transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 9.742, -9.536743e-07, 1.0226953)
 
 [node name="wallpiece9" parent="Area Geometry" instance=ExtResource("3_4v4c4")]
-transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 9.742, 0, -6.551)
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 9.742, 0, -6.2348223)
 
 [node name="wallpiece10" parent="Area Geometry" instance=ExtResource("3_4v4c4")]
 transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -6.6185484, -9.536743e-07, 6.1816087)
@@ -132,6 +133,12 @@ transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08
 
 [node name="window2" parent="Area Geometry" instance=ExtResource("8_frx7a")]
 transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, -0.9947665, 5.3073964, 9.615323)
+
+[node name="wallpiece corner out" parent="Area Geometry" instance=ExtResource("12_bbwqm")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 11.547606, 0, -1.0678072)
+
+[node name="wallpiece corner out2" parent="Area Geometry" instance=ExtResource("12_bbwqm")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 9.729465, 0, -6.140792)
 
 [node name="Lighting" type="Node3D" parent="."]
 

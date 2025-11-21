@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://brk45c6acql25"]
+[gd_scene load_steps=14 format=3 uid="uid://brk45c6acql25"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_41o4p"]
 [ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_yn8ay"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="7_x0men"]
 [ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="8_wt7sn"]
 [ext_resource type="PackedScene" uid="uid://dnvv222mvxat1" path="res://assets/3D/furniture/stair.glb" id="9_871ti"]
+[ext_resource type="PackedScene" uid="uid://ccphc3py16d8s" path="res://assets/3D/furniture/picture frame.glb" id="10_na71v"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -178,3 +179,6 @@ _goto = "uid://1airqduoass5"
 [node name="Door3" parent="." instance=ExtResource("8_wt7sn")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.9458046, 9.263048, -0.59290457)
 _goto = "uid://cxa6uqhmdl5of"
+
+[node name="picture frame" parent="." instance=ExtResource("10_na71v")]
+transform = Transform3D(-1.7484556e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.7484556e-08, 7.461955, 3.8485851, 0.38237298)

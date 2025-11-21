@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://2m4mvq03m225"]
+[gd_scene load_steps=13 format=3 uid="uid://2m4mvq03m225"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_g5cb2"]
 [ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_qat77"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="7_co8ub"]
 [ext_resource type="PackedScene" uid="uid://dq4edvq41md8e" path="res://assets/3D/furniture/office desk.glb" id="7_qat77"]
 [ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="9_kwwsv"]
+[ext_resource type="PackedScene" uid="uid://deinp27j5p8jh" path="res://assets/3D/furniture/wallpiece corner out.glb" id="10_l5htk"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -179,9 +180,27 @@ transform = Transform3D(0.16611484, 0, 0.9861064, 0, 1, 0, -0.9861064, 0, 0.1661
 flickerIntervall = 4.5
 
 [node name="Door" parent="." instance=ExtResource("9_kwwsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 3, 9.9)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.7056253, 2.9999998, 9.911457)
 _goto = "uid://dwp8cx2ei2dgj"
 
 [node name="Door2" parent="." instance=ExtResource("9_kwwsv")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.8, 3, -4.5000005)
 _goto = "uid://brk45c6acql25"
+
+[node name="wallpiece corner out" parent="." instance=ExtResource("10_l5htk")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 5.1711264, 0, 9.749)
+
+[node name="wallpiece corner out2" parent="." instance=ExtResource("10_l5htk")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 0.01078856, 0, 11.559877)
+
+[node name="wallpiece corner out3" parent="." instance=ExtResource("10_l5htk")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -6.619, 0, -1.0755513)
+
+[node name="wallpiece corner out4" parent="." instance=ExtResource("10_l5htk")]
+transform = Transform3D(-0.9, 0, -7.86805e-08, 0, 0.9, 0, 7.86805e-08, 0, -0.9, -8.405317, 0, -6.2149076)
+
+[node name="wallpiece corner out5" parent="." instance=ExtResource("10_l5htk")]
+transform = Transform3D(-0.9, 0, -7.86805e-08, 0, 0.9, 0, 7.86805e-08, 0, -0.9, -0.24766716, 0, -18.631)
+
+[node name="wallpiece corner out6" parent="." instance=ExtResource("10_l5htk")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 4.938381, 0, -20.45509)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d0e0mekr4kpgs"]
+[gd_scene load_steps=14 format=3 uid="uid://d0e0mekr4kpgs"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_jmlkm"]
 [ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://Assets/3D/furniture/ceiling_lamp.tscn" id="2_qxnvn"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://d1rer83pecrxf" path="res://Assets/Scenes/chars/hector.tscn" id="8_6i13h"]
 [ext_resource type="PackedScene" uid="uid://boxgeamjeq4oh" path="res://Assets/Scenes/chars/boss.tscn" id="9_n7ok7"]
 [ext_resource type="PackedScene" uid="uid://bcmef0ssdl2lc" path="res://Assets/Scenes/chars/sabrina.tscn" id="10_jl5h5"]
+[ext_resource type="PackedScene" uid="uid://brq5dbdg3620b" path="res://Assets/Scenes/invisible_object.tscn" id="12_jl5h5"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -157,3 +158,6 @@ transform = Transform3D(0.68997335, 0, -0.72383475, 0, 1, 0, 0.72383475, 0, 0.68
 [node name="Ceiling Lamp4" parent="Lighting" instance=ExtResource("2_qxnvn")]
 transform = Transform3D(0.647987, 0, 0.7616514, 0, 1, 0, -0.7616514, 0, 0.647987, 4, 5.576724, -4)
 flickerIntervall = 4.5
+
+[node name="InteractableObject" parent="." instance=ExtResource("12_jl5h5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6, 9.5)

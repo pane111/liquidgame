@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://ciuokm66b1rv7"]
+[gd_scene load_steps=14 format=3 uid="uid://brq5dbdg3620b"]
 
-[ext_resource type="Script" uid="uid://ccdksva50f377" path="res://scripts/interactable_object.gd" id="1_1nq8h"]
-[ext_resource type="Texture2D" uid="uid://bjnt8dmgspygd" path="res://Assets/2D/magazine.png" id="2_32a84"]
-[ext_resource type="Resource" uid="uid://ile712ulquc5" path="res://Dialogue/magazine.dialogue" id="2_t7t0a"]
-[ext_resource type="Texture2D" uid="uid://cfnypd7ctwhbu" path="res://Assets/2D/sparkle_1.png" id="4_q5v3f"]
-[ext_resource type="Texture2D" uid="uid://bl6a76hes627y" path="res://Assets/2D/sparkle_2.png" id="5_qyl6k"]
+[ext_resource type="Script" uid="uid://ccdksva50f377" path="res://scripts/interactable_object.gd" id="1_txr7o"]
+[ext_resource type="Resource" uid="uid://c6k2ylaia8e5v" path="res://Dialogue/wall.dialogue" id="2_txr7o"]
+[ext_resource type="Texture2D" uid="uid://bjnt8dmgspygd" path="res://Assets/2D/magazine.png" id="3_l0vdi"]
+[ext_resource type="Texture2D" uid="uid://uj07lbuskgc3" path="res://Assets/2D/star_1.png" id="4_p2d6k"]
+[ext_resource type="Texture2D" uid="uid://bk6ouqgvghawn" path="res://Assets/2D/star_2.png" id="5_l0vdi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t7t0a"]
 
@@ -48,22 +48,22 @@ _data = {
 &"hover": SubResource("Animation_32a84")
 }
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pxmtl"]
-atlas = ExtResource("4_q5v3f")
-region = Rect2(0, 0, 256, 256)
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8ou6"]
+atlas = ExtResource("4_p2d6k")
+region = Rect2(0, 0, 124, 124)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ey0a"]
-atlas = ExtResource("5_qyl6k")
-region = Rect2(0, 0, 256, 256)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4spcb"]
+atlas = ExtResource("5_l0vdi")
+region = Rect2(0, 0, 124, 124)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qkq5t"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pxmtl")
+"texture": SubResource("AtlasTexture_a8ou6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4ey0a")
+"texture": SubResource("AtlasTexture_4spcb")
 }],
 "loop": true,
 "name": &"default",
@@ -71,13 +71,14 @@ animations = [{
 }]
 
 [node name="InteractableObject" type="Node3D" groups=["interactable"]]
-script = ExtResource("1_1nq8h")
-dialogue = ExtResource("2_t7t0a")
+script = ExtResource("1_txr7o")
+dialogue = ExtResource("2_txr7o")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
+visible = false
 pixel_size = 0.003
 render_priority = 1
-texture = ExtResource("2_32a84")
+texture = ExtResource("3_l0vdi")
 
 [node name="Area3D" type="Area3D" parent="."]
 
@@ -91,12 +92,12 @@ libraries = {
 autoplay = "hover"
 
 [node name="Sparkle" type="AnimatedSprite3D" parent="."]
-visible = false
+modulate = Color(1, 1, 0.5803922, 1)
 billboard = 1
 render_priority = 4
 sprite_frames = SubResource("SpriteFrames_qkq5t")
 autoplay = "default"
-frame_progress = 0.41935974
+frame_progress = 0.20218088
 
 [connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
 [connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]

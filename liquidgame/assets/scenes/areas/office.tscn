@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://2m4mvq03m225"]
 
-[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_g5cb2"]
-[ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://Assets/3D/furniture/wallpiece corner in.glb" id="2_qat77"]
-[ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://Assets/3D/furniture/wallpiece.glb" id="3_wecor"]
-[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://Assets/3D/furniture/statue stand.glb" id="4_l5htk"]
-[ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://Assets/3D/floor_planks.glb" id="5_5kemi"]
-[ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://Assets/3D/dark.tres" id="6_lgt0n"]
-[ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://Assets/3D/furniture/ceiling_lamp.tscn" id="7_co8ub"]
-[ext_resource type="PackedScene" uid="uid://dq4edvq41md8e" path="res://Assets/3D/furniture/office desk.glb" id="7_qat77"]
-[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="9_kwwsv"]
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_g5cb2"]
+[ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_qat77"]
+[ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://assets/3D/furniture/wallpiece.glb" id="3_wecor"]
+[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://assets/3D/furniture/statue stand.glb" id="4_l5htk"]
+[ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://assets/3D/floor_planks.glb" id="5_5kemi"]
+[ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://assets/3D/dark.tres" id="6_lgt0n"]
+[ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="7_co8ub"]
+[ext_resource type="PackedScene" uid="uid://dq4edvq41md8e" path="res://assets/3D/furniture/office desk.glb" id="7_qat77"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="9_kwwsv"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -100,10 +100,10 @@ transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08
 visible = false
 
 [node name="floor_square" parent="Area Geometry" instance=ExtResource("5_5kemi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9063873, -0.09999857, 5.6130056)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.015296, -0.09999857, 5.6130056)
 
 [node name="floor_square2" parent="Area Geometry" instance=ExtResource("5_5kemi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9063873, -0.09999857, -4.257123)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.015296, -0.09999857, -4.257123)
 
 [node name="floor_square3" parent="Area Geometry" instance=ExtResource("5_5kemi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6988038, -0.09999857, 5.6130056)
@@ -118,7 +118,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.332861, -0.09999857, 5.613
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.332861, -0.09999857, -4.257123)
 
 [node name="floor_square7" parent="Area Geometry" instance=ExtResource("5_5kemi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9063873, -0.09999857, -14.113526)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.015296, -0.09999857, -14.113526)
 
 [node name="floor_square8" parent="Area Geometry" instance=ExtResource("5_5kemi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6988038, -0.09999857, -14.113526)

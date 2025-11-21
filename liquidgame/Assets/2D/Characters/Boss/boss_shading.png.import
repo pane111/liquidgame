@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bus1dj1eci46t"
-path.s3tc="res://.godot/imported/boss_shading.png-20bbc0b91424acd02f8f946206695c51.s3tc.ctex"
+path.s3tc="res://.godot/imported/boss_shading.png-9684ddc89325332295a9206f9766a523.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/2D/Characters/Boss/boss_shading.png"
-dest_files=["res://.godot/imported/boss_shading.png-20bbc0b91424acd02f8f946206695c51.s3tc.ctex"]
+source_file="res://assets/2D/Characters/Boss/boss_shading.png"
+dest_files=["res://.godot/imported/boss_shading.png-9684ddc89325332295a9206f9766a523.s3tc.ctex"]
 
 [params]
 

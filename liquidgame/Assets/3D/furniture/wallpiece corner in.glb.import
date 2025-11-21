@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b6va648b3w0dq"
-path="res://.godot/imported/wallpiece corner in.glb-565d78ed7d659db3345a81b713269858.scn"
+path="res://.godot/imported/wallpiece corner in.glb-4e0c41e323b8f6d410a95881a097412e.scn"
 
 [deps]
 
-source_file="res://Assets/3D/furniture/wallpiece corner in.glb"
-dest_files=["res://.godot/imported/wallpiece corner in.glb-565d78ed7d659db3345a81b713269858.scn"]
+source_file="res://assets/3D/furniture/wallpiece corner in.glb"
+dest_files=["res://.godot/imported/wallpiece corner in.glb-4e0c41e323b8f6d410a95881a097412e.scn"]
 
 [params]
 

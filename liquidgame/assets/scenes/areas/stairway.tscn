@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=3 uid="uid://brk45c6acql25"]
 
-[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_41o4p"]
-[ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://Assets/3D/furniture/wallpiece corner in.glb" id="2_yn8ay"]
-[ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://Assets/3D/furniture/wallpiece.glb" id="3_871ti"]
-[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://Assets/3D/furniture/statue stand.glb" id="4_na71v"]
-[ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://Assets/3D/floor_planks.glb" id="5_ttrrm"]
-[ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://Assets/3D/dark.tres" id="6_m43gv"]
-[ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://Assets/3D/furniture/ceiling_lamp.tscn" id="7_x0men"]
-[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="8_wt7sn"]
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_41o4p"]
+[ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_yn8ay"]
+[ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://assets/3D/furniture/wallpiece.glb" id="3_871ti"]
+[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://assets/3D/furniture/statue stand.glb" id="4_na71v"]
+[ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://assets/3D/floor_planks.glb" id="5_ttrrm"]
+[ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://assets/3D/dark.tres" id="6_m43gv"]
+[ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="7_x0men"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="8_wt7sn"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -16,6 +16,7 @@
 [sub_resource type="BoxMesh" id="BoxMesh_41o4p"]
 
 [node name="MainHall" type="Node3D" node_paths=PackedStringArray("start_point")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014738083, -1.6183147, 0.28108978)
 script = ExtResource("1_41o4p")
 start_point = NodePath("PlayerStartPosition")
 rotation_lim = Vector2(10, 10)
@@ -93,7 +94,7 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.449664, -0.09999857, -4.257123)
 
 [node name="floor_square3" parent="Area Geometry" instance=ExtResource("5_ttrrm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.749664, -0.09999857, -4.257123)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.153984, -0.09999859, -4.257123)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Area Geometry"]
 transform = Transform3D(-4.371139e-08, 0, 1.2870194, 0, 1.8643178, 0, -0.99999994, 0, -5.62574e-08, 4.124434, 4.118753, 0.1853919)

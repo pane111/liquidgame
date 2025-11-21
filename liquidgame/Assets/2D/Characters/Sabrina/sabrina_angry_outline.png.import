@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gok44iqwuhux"
-path="res://.godot/imported/sabrina_angry_outline.png-b7484986d7ce3aec3f8471bfaa11c967.ctex"
+path="res://.godot/imported/sabrina_angry_outline.png-d46bcff3daca78691daf188a3bd80da2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/2D/Characters/Sabrina/sabrina_angry_outline.png"
-dest_files=["res://.godot/imported/sabrina_angry_outline.png-b7484986d7ce3aec3f8471bfaa11c967.ctex"]
+source_file="res://Assets/2D/Characters/Sabrina/sabrina_angry_outline.png"
+dest_files=["res://.godot/imported/sabrina_angry_outline.png-d46bcff3daca78691daf188a3bd80da2.ctex"]
 
 [params]
 

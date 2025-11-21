@@ -4,12 +4,12 @@ importer="dialogue_manager"
 importer_version=15
 type="Resource"
 uid="uid://beuxdixiuboyl"
-path="res://.godot/imported/test_angry.dialogue-c57cb1694d743bd9be7d16adf768eb87.tres"
+path="res://.godot/imported/test_angry.dialogue-08465fcf4bb1e3abc92590d8fed392af.tres"
 
 [deps]
 
-source_file="res://dialogue/test_angry.dialogue"
-dest_files=["res://.godot/imported/test_angry.dialogue-c57cb1694d743bd9be7d16adf768eb87.tres"]
+source_file="res://Dialogue/test_angry.dialogue"
+dest_files=["res://.godot/imported/test_angry.dialogue-08465fcf4bb1e3abc92590d8fed392af.tres"]
 
 [params]
 

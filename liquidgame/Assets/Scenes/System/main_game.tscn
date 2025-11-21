@@ -1,11 +1,11 @@
 [gd_scene load_steps=18 format=3 uid="uid://6jwyshv4pv0f"]
 
 [ext_resource type="Script" uid="uid://b6ui0seb11adj" path="res://scripts/game_manager.gd" id="1_0qls7"]
-[ext_resource type="PackedScene" uid="uid://cij3m80i3u2v3" path="res://assets/scenes/player.tscn" id="1_3nrmw"]
-[ext_resource type="Texture2D" uid="uid://dguggyhmksw2j" path="res://assets/2D/Characters/Bentley/bentley_outline.png" id="3_0qls7"]
-[ext_resource type="Texture2D" uid="uid://cxlbrxhcw1ed7" path="res://assets/2D/Characters/Bentley/bentley_color.png" id="4_7abc5"]
-[ext_resource type="Texture2D" uid="uid://vc2lfmsnr87w" path="res://assets/2D/Characters/Bentley/bentley_shading.png" id="5_hg5cd"]
-[ext_resource type="Material" uid="uid://ds1bdlmk28323" path="res://shaders/dither_background.tres" id="6_a0er8"]
+[ext_resource type="PackedScene" uid="uid://cij3m80i3u2v3" path="res://Assets/Scenes/player.tscn" id="1_3nrmw"]
+[ext_resource type="Texture2D" uid="uid://dguggyhmksw2j" path="res://Assets/2D/Characters/Bentley/bentley_outline.png" id="3_0qls7"]
+[ext_resource type="Texture2D" uid="uid://cxlbrxhcw1ed7" path="res://Assets/2D/Characters/Bentley/bentley_color.png" id="4_7abc5"]
+[ext_resource type="Texture2D" uid="uid://vc2lfmsnr87w" path="res://Assets/2D/Characters/Bentley/bentley_shading.png" id="5_hg5cd"]
+[ext_resource type="Material" path="res://shaders/dither_background.tres" id="6_a0er8"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_d0c4d"]
 material = ExtResource("6_a0er8")
@@ -131,6 +131,21 @@ _data = {
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7abc5"]
 bg_color = Color(0, 0, 0, 1)
 
+[sub_resource type="Animation" id="Animation_v5jgx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_hg5cd"]
 resource_name = "fade_black_in"
 length = 0.4
@@ -145,21 +160,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_v5jgx"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Fade:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_t25hs"]

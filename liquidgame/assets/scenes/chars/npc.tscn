@@ -49,7 +49,7 @@ _data = {
 &"disappear": SubResource("Animation_laeim")
 }
 
-[node name="NPC" type="Node3D" groups=["interactable"]]
+[node name="bentley" type="Node3D" groups=["interactable"]]
 script = ExtResource("1_peea3")
 dialogue = ExtResource("2_7a58h")
 character = ExtResource("3_laeim")

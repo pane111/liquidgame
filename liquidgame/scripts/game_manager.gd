@@ -22,10 +22,14 @@ var cur_char
 signal finished_dialogue
 signal finished_dialogue_hide
 var hide_after=false
+
+@export var voice_pitch_range = 0.2
+
 func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
 	player = $Player
 	load_new_area(load(locations["_entrance_hall"]),false)
+	
 	
 func dialogue_anim(dia: DialogueResource, char: Character = null):
 	hide_after=false
@@ -33,11 +37,13 @@ func dialogue_anim(dia: DialogueResource, char: Character = null):
 		player.can_look=false
 		$CanvasLayer/DialoguePanel.show()
 		cur_char = char
+		
+		$VoicePlayer.stream = cur_char.voice
 		set_normal_expression()
 		$CanvasLayer/DialoguePanel/CharSprite/Shading.self_modulate = char.color
 		$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "dialogue_start"
 		await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
-		DialogueManager.show_example_dialogue_balloon(dia,"start")
+		var balloon = DialogueManager.show_example_dialogue_balloon(dia,"start")
 		await DialogueManager.dialogue_ended
 		$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "dialogue_end"
 		await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
@@ -47,7 +53,10 @@ func dialogue_anim(dia: DialogueResource, char: Character = null):
 	else:
 		DialogueManager.show_example_dialogue_balloon(dia,"start")
 		await DialogueManager.dialogue_ended
-	
+func play_voice():
+	var random_pitch = randf_range(1-voice_pitch_range,1+voice_pitch_range)
+	$VoicePlayer.pitch_scale = random_pitch
+	$VoicePlayer.play()
 func set_normal_expression():
 	$CanvasLayer/DialoguePanel/CharSprite/Outline.texture = cur_char.normal_outline
 	$CanvasLayer/DialoguePanel/CharSprite/Color.texture = cur_char.normal_color
@@ -124,6 +133,8 @@ func load_new_area(area: PackedScene, fade = true):
 			$CanvasLayer/FadeAnim.current_animation = "fade_black_out"
 			await $CanvasLayer/FadeAnim.animation_finished
 			player.can_look=true
+
+
 
 func _on_go_back_button_down() -> void:
 	$CanvasLayer/RClickMenu.hide()

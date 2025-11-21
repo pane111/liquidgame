@@ -1,11 +1,11 @@
 [gd_scene load_steps=18 format=3 uid="uid://6jwyshv4pv0f"]
 
 [ext_resource type="Script" uid="uid://b6ui0seb11adj" path="res://scripts/game_manager.gd" id="1_0qls7"]
-[ext_resource type="PackedScene" uid="uid://cij3m80i3u2v3" path="res://assets/scenes/player.tscn" id="1_3nrmw"]
-[ext_resource type="Texture2D" uid="uid://dguggyhmksw2j" path="res://assets/2D/Characters/Bentley/bentley_outline.png" id="3_0qls7"]
-[ext_resource type="Texture2D" uid="uid://cxlbrxhcw1ed7" path="res://assets/2D/Characters/Bentley/bentley_color.png" id="4_7abc5"]
-[ext_resource type="Texture2D" uid="uid://vc2lfmsnr87w" path="res://assets/2D/Characters/Bentley/bentley_shading.png" id="5_hg5cd"]
-[ext_resource type="Material" uid="uid://ds1bdlmk28323" path="res://shaders/dither_background.tres" id="6_a0er8"]
+[ext_resource type="PackedScene" uid="uid://cij3m80i3u2v3" path="res://Assets/Scenes/player.tscn" id="1_3nrmw"]
+[ext_resource type="Texture2D" uid="uid://dguggyhmksw2j" path="res://Assets/2D/Characters/Bentley/bentley_outline.png" id="3_0qls7"]
+[ext_resource type="Texture2D" uid="uid://cxlbrxhcw1ed7" path="res://Assets/2D/Characters/Bentley/bentley_color.png" id="4_7abc5"]
+[ext_resource type="Texture2D" uid="uid://vc2lfmsnr87w" path="res://Assets/2D/Characters/Bentley/bentley_shading.png" id="5_hg5cd"]
+[ext_resource type="Material" path="res://shaders/dither_background.tres" id="6_a0er8"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_d0c4d"]
 material = ExtResource("6_a0er8")
@@ -290,5 +290,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_33jy8")
 }
 autoplay = "fade_black_out"
+
+[node name="VoicePlayer" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="button_down" from="CanvasLayer/RClickMenu/GoBack" to="." method="_on_go_back_button_down"]

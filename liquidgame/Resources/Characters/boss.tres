@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Character" load_steps=12 format=3 uid="uid://4sr2jq5cauvk"]
+[gd_resource type="Resource" script_class="Character" load_steps=13 format=3 uid="uid://4sr2jq5cauvk"]
 
 [ext_resource type="Script" uid="uid://dvcn684qc8ol5" path="res://Resources/Characters/character.gd" id="1_bmmf2"]
 [ext_resource type="Material" uid="uid://b0bnukmdsjnyr" path="res://Assets/standard_nondither.tres" id="1_mnuca"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://babn66uilomf4" path="res://Assets/2D/Characters/Boss/boss_surprised_color.png" id="5_dn865"]
 [ext_resource type="Texture2D" uid="uid://pi3pqgoh1i36" path="res://Assets/2D/Characters/Boss/boss_surprised_outline.png" id="6_ywdhr"]
 [ext_resource type="Texture2D" uid="uid://cde2ltxujbojh" path="res://Assets/2D/Characters/Boss/boss_surprised_shading.png" id="7_6lq41"]
+[ext_resource type="AudioStream" uid="uid://b6ew3uf1jac7p" path="res://audio/sfx/hm.wav" id="12_6lq41"]
 
 [resource]
 script = ExtResource("1_bmmf2")
@@ -26,4 +27,5 @@ angry_shading = ExtResource("3_0b3pc")
 color = Color(1, 0, 0, 1)
 c_name = "The Boss"
 material = ExtResource("1_mnuca")
+voice = ExtResource("12_6lq41")
 metadata/_custom_type_script = "uid://dvcn684qc8ol5"

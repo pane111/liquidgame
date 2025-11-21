@@ -17,3 +17,4 @@ extends Resource
 @export var color: Color
 @export var c_name: String
 @export var material: StandardMaterial3D
+@export var voice: AudioStream

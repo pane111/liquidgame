@@ -73,8 +73,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		$CanvasLayer/RClickMenu.hide()
 		if inter_obj != null:
 			inter_obj._on_interact()
+			AudioManager._play_sound("clickSuccess")
 		else:
 			print_debug("You clicked on nothing")
+			AudioManager._play_sound("clickFail")
 	if Input.is_action_just_pressed("rclick"):
 		$CanvasLayer/RClickMenu.position = get_viewport().get_mouse_position()
 		$CanvasLayer/RClickMenu.visible = !$CanvasLayer/RClickMenu.visible

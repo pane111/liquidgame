@@ -1,6 +1,14 @@
-[gd_resource type="AudioStreamInteractive" load_steps=0 format=3 uid="uid://d2kacbhud72j0"]
+[gd_resource type="AudioStreamInteractive" load_steps=3 format=3 uid="uid://d2kacbhud72j0"]
+
+[ext_resource type="AudioStream" uid="uid://d2mnfgrkph1gu" path="res://audio/music/lu_underwatercavelvl_intro.wav" id="1_7bbce"]
+[ext_resource type="AudioStream" uid="uid://e00gcrffv2k4" path="res://audio/music/lu_underwatercavelvl_loop.wav" id="2_b5nsw"]
 
 [resource]
-clip_count = 1
-clip_0/name = &""
-clip_0/auto_advance = 0
+clip_count = 2
+clip_0/name = &"main_intro"
+clip_0/stream = ExtResource("1_7bbce")
+clip_0/auto_advance = 1
+clip_0/next_clip = 1
+clip_1/name = &"main_loop"
+clip_1/stream = ExtResource("2_b5nsw")
+clip_1/auto_advance = 0

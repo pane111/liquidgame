@@ -32,3 +32,5 @@ volume_db = -8.0
 autoplay = true
 
 [node name="SFXStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="finished" from="MusicStreamPlayer" to="." method="_on_music_stream_player_finished"]

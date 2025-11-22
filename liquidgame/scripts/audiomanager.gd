@@ -22,3 +22,7 @@ func resume_music():
 
 func _stop_music():
 	musicPlayer.stop()
+
+
+func _on_music_stream_player_finished() -> void:
+	musicPlayer.play() # Looping idk

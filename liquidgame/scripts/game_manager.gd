@@ -92,12 +92,15 @@ func dialogue_anim(dia: DialogueResource, char: Character = null):
 		await DialogueManager.dialogue_ended
 		in_dialogue=false
 		if queued:
+			queued=false
 			cur_char = queued_char
 			dialogue_anim(queued_dia,queued_char)
 func play_voice():
 	var random_pitch = randf_range(1-voice_pitch_lower,1+voice_pitch_higher)
 	$VoicePlayer.pitch_scale = random_pitch
 	$VoicePlayer.play()
+func set_player_voice():
+	$VoicePlayer.stream = player_voice
 	
 func link_dialogue(dia: String, char: String):
 	queued_dia = load(dia)

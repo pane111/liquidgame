@@ -15,12 +15,20 @@ do set_normal_expression()
 	do FlagManager.set_weak_point("Kitchen Knife")
 	{{FlagManager.char_name("Bentley")}}: I'll get real surprised if you show me a knife right now!
 	if FlagManager.caught:
+		do shock_effect()
 		do set_surprised_expression()
 		{{FlagManager.char_name("Bentley")}}: Oh my god! You have a knife! I'm scared!
 		do FlagManager.set_weak_point("")
 		{{FlagManager.char_name("Bentley")}}: Don't stab me, it would be really bad!
 		{{FlagManager.char_name("Bentley")}}: I'm gonna go call the boss now!
-		do link_dialogue("res://Dialogue/boss_test_2.dialogue","res://Resources/Characters/boss.tres")
+		- Go on, call him
+			{{FlagManager.char_name("Bentley")}}: You bet I will!
+			do link_dialogue("res://Dialogue/boss_test_2.dialogue","res://Resources/Characters/boss.tres")
+		- Regain your composure
+			do regain()
+			do set_normal_expression()
+			{{FlagManager.char_name("Bentley")}}: Okay i'm fine again
+		
 	else: 
 		{{FlagManager.char_name("Bentley")}}: Now it's too late
 => END

@@ -226,6 +226,10 @@ func shock_effect():
 	$CanvasLayer/FadeAnim.current_animation="flash_white"
 	AudioManager._play_sound("crash")
 	AudioManager._switch_music("caught")
+func regain():
+	$CanvasLayer/FadeAnim.current_animation="flash_white"
+	AudioManager._play_sound("regain")
+	AudioManager._switch_music("main")
 
 func _on_present_button_pressed() -> void:
 	if cur_ev.e_name == FlagManager.weak_point:
@@ -234,7 +238,6 @@ func _on_present_button_pressed() -> void:
 		close_evidence_menu()
 		await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
 		presented.emit()
-		shock_effect()
 	else:
 		print_debug("Wrong evidence/no weak point")
 		FlagManager.caught=false

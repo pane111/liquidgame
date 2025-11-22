@@ -17,8 +17,8 @@ func set_weak_point(val):
 	weak_point = val
 	caught=false
 
-func add_evidence(name: String, ev: Evidence):
-	evidence[name] = ev
+func add_evidence(name: String, ev: String):
+	evidence[name] = load(ev)
 	
 func remove_evidence(name: String):
 	evidence[name] = null

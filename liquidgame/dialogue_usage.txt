@@ -1,0 +1,11 @@
+Useful functions for dialogue:
+	- To use a colored character name -> {{FlagManager.char_name("name")}} (must set up character in flag manager first!)
+	- Set expressions -> do set_surprised_expression() / do set_normal_expression() / do set_angry_expression()
+	- Link dialogue (immediately start dialogue after previous one ends) -> do link_dialogue("link_to_dialogue_file","link_to_character_file") (right click the file and click copy path)
+	- Add evidence -> do FlagManager.add_evidence("name","link_to_evidence_file")
+	- Remove evidence -> do FlagManager.remove_evidence("name")
+	- Setting flags -> do FlagManager.set_int("name",value) / do FlagManager.set_str("name","value")
+	- Checking flags -> if FlagManager.get_int("name") / get_str("name") == expected_value
+	- Set up weak point -> do FlagManager.set_weak_point("name"), make sure to set weak point to "" afterwards
+	- Shocked effect (screen flash, shatter sound, caught music) -> do shock_effect()
+	- Regain composure (return to normal music) -> do regain()

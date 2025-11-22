@@ -12,6 +12,7 @@ var locations = {
 	"_break_room" : "res://assets/scenes/areas/test_room.tscn",
 	"_test" : "res://assets/scenes/areas/test_room.tscn",
 }
+@export var teleportationAllowed = false
 
 var current_area
 var prev_area
@@ -188,7 +189,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("rclick"):
 		$CanvasLayer/RClickMenu.position = get_viewport().get_mouse_position()
 		$CanvasLayer/RClickMenu.visible = !$CanvasLayer/RClickMenu.visible
-	if Input.is_action_just_pressed("number"):
+	if Input.is_action_just_pressed("number") && teleportationAllowed:
 		match event.keycode:
 			KEY_0:
 				load_new_area(load(locations["_test"]))

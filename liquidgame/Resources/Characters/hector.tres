@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://lb7aah0ocw7c" path="res://Assets/2D/Characters/Hector/hector_color.png" id="1_m1c1r"]
 [ext_resource type="Texture2D" uid="uid://dtr4nxineoycr" path="res://Assets/2D/Characters/Hector/hector_outline.png" id="2_7giu8"]
 [ext_resource type="Texture2D" uid="uid://do3y2ng7r434n" path="res://Assets/2D/Characters/Hector/hector_shading.png" id="3_h0ixe"]
-[ext_resource type="AudioStream" uid="uid://b6ew3uf1jac7p" path="res://audio/sfx/hm.wav" id="5_7giu8"]
+[ext_resource type="AudioStream" uid="uid://cg154a8nqxl5q" path="res://audio/sfx/hm3.wav" id="5_7giu8"]
 
 [resource]
 script = ExtResource("1_duwfh")

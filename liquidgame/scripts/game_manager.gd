@@ -32,12 +32,14 @@ var cur_ev
 @export var voice_pitch_lower = 0.2
 @export var voice_pitch_higher = 0.1
 @export var ev_item_scene: PackedScene
+@export var player_voice: AudioStream
 
 func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
 	player = $Player
 	load_new_area(load(locations["_entrance_hall"]),false)
 	set_evidence()
+	$VoicePlayer.stream = player_voice
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("rclick") && can_open_ev:
 		toggle_ev()
@@ -68,6 +70,7 @@ func dialogue_anim(dia: DialogueResource, char: Character = null):
 		player.can_look=true
 		finished_dialogue.emit()
 		in_dialogue=false
+		$VoicePlayer.stream = player_voice
 	else:
 		DialogueManager.show_example_dialogue_balloon(dia,"start")
 		await DialogueManager.dialogue_ended

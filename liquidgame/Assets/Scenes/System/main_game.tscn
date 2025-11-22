@@ -7,11 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://cxlbrxhcw1ed7" path="res://assets/2D/Characters/Bentley/bentley_color.png" id="4_7abc5"]
 [ext_resource type="Texture2D" uid="uid://vc2lfmsnr87w" path="res://assets/2D/Characters/Bentley/bentley_shading.png" id="5_hg5cd"]
 [ext_resource type="Material" uid="uid://ds1bdlmk28323" path="res://shaders/dither_background.tres" id="6_a0er8"]
-[ext_resource type="Texture2D" uid="uid://c3t33p4cdy65s" path="res://Assets/2D/hud_area_label.png" id="7_hg5cd"]
+[ext_resource type="Texture2D" uid="uid://c3t33p4cdy65s" path="res://assets/2D/hud_area_label.png" id="7_hg5cd"]
 [ext_resource type="Theme" uid="uid://4hg2sp3stq0y" path="res://resources/iced_theme.tres" id="7_t25hs"]
 [ext_resource type="PackedScene" uid="uid://hugcybvj4ew4" path="res://assets/scenes/System/evidence_item.tscn" id="8_t25hs"]
 [ext_resource type="StyleBox" uid="uid://wll4sgrmkeeu" path="res://resources/Evidence/ev_item_style.tres" id="9_jvbpl"]
-[ext_resource type="Texture2D" uid="uid://crllyvcyendsc" path="res://Assets/2D/evidence_placeholder.png" id="10_hkbjw"]
+[ext_resource type="Texture2D" uid="uid://crllyvcyendsc" path="res://assets/2D/evidence_placeholder.png" id="10_hkbjw"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_d0c4d"]
 material = ExtResource("6_a0er8")

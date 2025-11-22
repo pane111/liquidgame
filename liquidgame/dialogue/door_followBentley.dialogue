@@ -1,4 +1,7 @@
 ~ start
-You: (I should follow {{FlagManager.char_name("bentley")}} into the entrance hall.)
-You: (He said it's the door to my right.)
+if FlagManager.get_int("tutorial") == 2
+	You: (I should follow {{FlagManager.char_name("bentley")}} into the entrance hall.)
+	You: (He said it's the door to my right.)
+else
+	You: (I should talk to {{FlagManager.char_name("bentley")}}.)
 => END

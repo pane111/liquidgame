@@ -3,9 +3,9 @@
 {{FlagManager.char_name("Bentley")}}: New Accountant? You realize what this is, right? It’s like you’ve been invited to a five-star-cruise...
 do AudioManager.pause_music()
 {{FlagManager.char_name("Bentley")}}: on a sinking ship.
-do AudioManager.resume_music()
 do set_angry_expression(false)
 {{FlagManager.char_name("Bentley")}}: In other words, you hit the jackpot!
+do AudioManager.resume_music()
 - What do you mean?
 do set_normal_expression()
 {{FlagManager.char_name("Bentley")}}: Well... This company won't exist much longer.

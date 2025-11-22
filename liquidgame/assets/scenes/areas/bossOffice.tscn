@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://dwp8cx2ei2dgj"]
+[gd_scene load_steps=20 format=3 uid="uid://dwp8cx2ei2dgj"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_mjg2f"]
-[ext_resource type="Resource" uid="uid://qd0s1q3h336k" path="res://Dialogue/tutorial/boss_1.dialogue" id="2_ifk5x"]
+[ext_resource type="Resource" uid="uid://qd0s1q3h336k" path="res://dialogue/tutorial/boss_1.dialogue" id="2_ifk5x"]
 [ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_l6exm"]
 [ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://assets/3D/furniture/wallpiece.glb" id="3_4v4c4"]
 [ext_resource type="Resource" uid="uid://4sr2jq5cauvk" path="res://resources/characters/boss.tres" id="3_vodc6"]
@@ -15,7 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://ciuokm66b1rv7" path="res://assets/scenes/interactable_object.tscn" id="10_ucbwp"]
 [ext_resource type="PackedScene" uid="uid://deinp27j5p8jh" path="res://assets/3D/furniture/wallpiece corner out.glb" id="12_bbwqm"]
 [ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://assets/scenes/chars/npc.tscn" id="13_g1odx"]
-[ext_resource type="Resource" uid="uid://dguohllnuhqm3" path="res://Dialogue/tutorial/bentley_introduction.dialogue" id="16_vodc6"]
+[ext_resource type="Texture2D" uid="uid://bjnt8dmgspygd" path="res://assets/2D/magazine.png" id="15_w55y7"]
+[ext_resource type="Resource" uid="uid://dguohllnuhqm3" path="res://dialogue/tutorial/bentley_introduction.dialogue" id="16_vodc6"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -170,6 +171,7 @@ _goto = "uid://2m4mvq03m225"
 
 [node name="InteractableObject" parent="." instance=ExtResource("10_ucbwp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8999999, 1)
+image = ExtResource("15_w55y7")
 
 [node name="bentley" parent="." instance=ExtResource("13_g1odx")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 8, 2.5, 0)

@@ -37,6 +37,7 @@
 		{{FlagManager.char_name("Bentley")}}: But hey, it'll be over soon, and we're gonna get our separation pay!
 		{{FlagManager.char_name("Bentley")}}: Can't wait for that, hahahah. I promised some friends I'd get them drinks.
 		{{FlagManager.char_name("Bentley")}}: ...Well, let's check out the entrance hall next. It's to your right. I'll be waiting.
+		do FlagManager.set_int("tutorial",2)
 - (Pretend he's not there)
 	{{FlagManager.char_name("Bentley")}}: ...
 	{{FlagManager.char_name("Bentley")}}: ......

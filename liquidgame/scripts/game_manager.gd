@@ -88,7 +88,12 @@ func dialogue_anim(dia: DialogueResource, char: Character = null):
 			dialogue_anim(queued_dia,queued_char)
 	else:
 		DialogueManager.show_example_dialogue_balloon(dia,"start")
+		in_dialogue=true
 		await DialogueManager.dialogue_ended
+		in_dialogue=false
+		if queued:
+			cur_char = queued_char
+			dialogue_anim(queued_dia,queued_char)
 func play_voice():
 	var random_pitch = randf_range(1-voice_pitch_lower,1+voice_pitch_higher)
 	$VoicePlayer.pitch_scale = random_pitch
@@ -159,7 +164,12 @@ func set_angry_expression(animate = true):
 	$CanvasLayer/DialoguePanel/CharSprite/Outline.texture = cur_char.angry_outline
 	$CanvasLayer/DialoguePanel/CharSprite/Color.texture = cur_char.angry_color
 	$CanvasLayer/DialoguePanel/CharSprite/Shading.texture = cur_char.angry_shading
-	
+
+func show_objects():
+	current_area.show_all()
+func hide_objects():
+	current_area.hide_all()
+
 func hide_after_dialogue():
 	hide_after = true
 	
@@ -222,7 +232,8 @@ func load_new_area(area: PackedScene, fade = true):
 			await $CanvasLayer/FadeAnim.animation_finished
 			player.can_look=true
 
-
+func set_char_voice(name):
+	$VoicePlayer.stream = FlagManager.characters[name].voice
 
 func _on_go_back_button_down() -> void:
 	$CanvasLayer/RClickMenu.hide()
@@ -232,6 +243,15 @@ func shock_effect():
 	$CanvasLayer/FadeAnim.current_animation="flash_white"
 	AudioManager._play_sound("crash")
 	AudioManager._switch_music("caught")
+func flash():
+	$CanvasLayer/FadeAnim.current_animation="flash_white"
+	AudioManager._play_sound("crash")
+
+func blackout():
+	$CanvasLayer/Fade.self_modulate = Color.BLACK
+func restore_light():
+	$CanvasLayer/Fade.self_modulate = Color.TRANSPARENT
+
 func regain():
 	$CanvasLayer/FadeAnim.current_animation="flash_white"
 	AudioManager._play_sound("regain")

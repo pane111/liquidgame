@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Evidence" load_steps=3 format=3 uid="uid://5mxsmevw6pu4"]
+
+[ext_resource type="Script" uid="uid://8kbtb2yinplx" path="res://Resources/Evidence/evidence.gd" id="1_jhjj2"]
+[ext_resource type="Texture2D" uid="uid://cdk71g6d02owj" path="res://Assets/2D/card.png" id="1_ttyi4"]
+
+[resource]
+script = ExtResource("1_jhjj2")
+e_name = "Employee Card"
+e_sprite = ExtResource("1_ttyi4")
+e_desc = "It's got my name and picture on it, which proves I'm an employee here!"
+metadata/_custom_type_script = "uid://8kbtb2yinplx"

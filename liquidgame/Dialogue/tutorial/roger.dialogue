@@ -1,0 +1,17 @@
+~ start
+...
+Where the head of the bird used to be, the lifeless body of a man is hanging...
+do set_char_voice("annabell")
+{{FlagManager.char_name("annabell")}}: ...
+do set_char_voice("hammerdog")
+{{FlagManager.char_name("hammerdog")}}: What...? Is that... Roger!? H-how!?
+do set_char_voice("cilly")
+{{FlagManager.char_name("cilly")}}: Ohmygod. Ohmygod. Ohmygod!!!
+do set_char_voice("boss")
+{{FlagManager.char_name("boss")}}: Oh no... Oh no, no, no, no, no... I... I have a phone call to make...
+do set_char_voice("bentley")
+{{FlagManager.char_name("bentley")}}: I... I'm feeling lightheaded.
+do FlagManager.set_int("tutorial",3)
+do FlagManager.add_evidence("bird","res://Resources/Evidence/bird.tres")
+do load_path("res://Assets/Scenes/Areas/roof.tscn")
+=> END

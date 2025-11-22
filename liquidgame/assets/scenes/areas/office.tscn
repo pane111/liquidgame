@@ -236,11 +236,10 @@ flag_val_int_max = 1
 transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 0, 1.4, -11)
 dialogue = ExtResource("16_4hk68")
 req_flag = "tutorial"
-flag_val_int_min = 1
 flag_val_int_max = 2
 
 [node name="jellyfish" parent="." instance=ExtResource("17_oxvit")]
-transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -5, 2.5000002, -1)
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -5, 2.5000002, -1)
 dialogue = ExtResource("18_xpqa2")
-flag_val_int_min = 1
-flag_val_int_max = 2
+req_flag = "tutorial"
+flag_val_int_max = 3

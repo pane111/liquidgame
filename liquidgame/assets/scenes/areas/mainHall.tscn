@@ -1,29 +1,39 @@
-[gd_scene load_steps=18 format=3 uid="uid://d0e0mekr4kpgs"]
+[gd_scene load_steps=22 format=3 uid="uid://d0e0mekr4kpgs"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_jmlkm"]
+[ext_resource type="Resource" uid="uid://b6b2kjr6mvnv8" path="res://Dialogue/tutorial/bentley_entrancehall.dialogue" id="2_3giwn"]
 [ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://Assets/3D/furniture/ceiling_lamp.tscn" id="2_qxnvn"]
 [ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://Assets/3D/furniture/wallpiece corner in.glb" id="3_ehqxr"]
+[ext_resource type="Resource" uid="uid://bv7h2kjpir13h" path="res://Resources/Characters/bentley.tres" id="3_gr1qg"]
 [ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://Assets/3D/furniture/wallpiece.glb" id="3_lsgol"]
 [ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://Assets/3D/furniture/statue stand.glb" id="5_gcq5k"]
 [ext_resource type="PackedScene" uid="uid://b0ngqo7v61jht" path="res://Assets/3D/furniture/big door.glb" id="5_vvl6r"]
 [ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="7_3x6pt"]
-[ext_resource type="PackedScene" uid="uid://d1rer83pecrxf" path="res://Assets/Scenes/chars/hector.tscn" id="8_6i13h"]
 [ext_resource type="PackedScene" uid="uid://boxgeamjeq4oh" path="res://Assets/Scenes/chars/boss.tscn" id="9_n7ok7"]
 [ext_resource type="PackedScene" uid="uid://bcmef0ssdl2lc" path="res://Assets/Scenes/chars/sabrina.tscn" id="10_jl5h5"]
 [ext_resource type="PackedScene" uid="uid://brq5dbdg3620b" path="res://Assets/Scenes/invisible_object.tscn" id="12_jl5h5"]
-[ext_resource type="PackedScene" uid="uid://bvf05hufk17ws" path="res://assets/3D/statues/ice_bird_full.glb" id="13_nrtr3"]
-[ext_resource type="PackedScene" uid="uid://ctct382p1xew6" path="res://assets/3D/statues/ice_bird_body.glb" id="14_kawtl"]
-[ext_resource type="PackedScene" uid="uid://mdgi7r08f7se" path="res://assets/3D/statues/ice_bird_head.glb" id="15_kxwgw"]
+[ext_resource type="PackedScene" uid="uid://bvf05hufk17ws" path="res://Assets/3D/statues/ice_bird_full.glb" id="13_nrtr3"]
+[ext_resource type="PackedScene" uid="uid://ctct382p1xew6" path="res://Assets/3D/statues/ice_bird_body.glb" id="14_kawtl"]
+[ext_resource type="PackedScene" uid="uid://draw7n7tnksc2" path="res://Assets/Scenes/chars/hammerdog.tscn" id="15_gqm0q"]
+[ext_resource type="Resource" uid="uid://5w10cf8uiqx3" path="res://Dialogue/tutorial/ice_bird.dialogue" id="15_gr1qg"]
+[ext_resource type="PackedScene" uid="uid://mdgi7r08f7se" path="res://Assets/3D/statues/ice_bird_head.glb" id="15_kxwgw"]
 [ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://Assets/3D/floor_planks.glb" id="15_xmpfl"]
-[ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://Assets/Scenes/chars/npc.tscn" id="16_j6bpp"]
+[ext_resource type="PackedScene" uid="uid://cllj6ollcip14" path="res://Assets/Scenes/chars/jellyfish.tscn" id="16_kqyth"]
+[ext_resource type="PackedScene" uid="uid://c6gm7vsn7euwn" path="res://Assets/Scenes/roger.tscn" id="20_kqyth"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
-[node name="MainHall" type="Node3D" node_paths=PackedStringArray("start_point")]
+[node name="MainHall" type="Node3D" node_paths=PackedStringArray("start_point", "to_hide", "to_show")]
 script = ExtResource("1_jmlkm")
 start_point = NodePath("PlayerStartPosition")
 rotation_lim = Vector2(30, 30)
 area_name = "Entrance Hall"
+req_flag = "tutorial"
+flag_val_int = 2
+init_dialogue = ExtResource("2_3giwn")
+init_char = ExtResource("3_gr1qg")
+to_hide = [NodePath("ice_bird_full")]
+to_show = [NodePath("spawnthings")]
 
 [node name="PlayerStartPosition" type="Node3D" parent="."]
 transform = Transform3D(-0.98480755, 0, 0.17364827, 0, 1, 0, -0.17364827, 0, -0.98480755, 1.041, 2.5, -8.254)
@@ -106,15 +116,6 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.182739, 0.015681505,
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.9, 2.4, -1)
 _goto = "uid://2m4mvq03m225"
 
-[node name="Hector" parent="Area Geometry" instance=ExtResource("8_6i13h")]
-transform = Transform3D(0.9556595, 0, -0.294474, 0, 1, 0, 0.294474, 0, 0.9556595, -3.0807233, 1.5848355, 4.188747)
-
-[node name="boss" parent="Area Geometry" instance=ExtResource("9_n7ok7")]
-transform = Transform3D(0.73342144, 0, -0.6797742, 0, 1, 0, 0.6797742, 0, 0.73342144, -5.8946075, 2.1649923, 1.1491938)
-
-[node name="Sabrina" parent="Area Geometry" instance=ExtResource("10_jl5h5")]
-transform = Transform3D(0.84782606, 0, 0.53027445, 0, 1, 0, -0.53027445, 0, 0.84782606, 5.820513, 1.4459493, 1)
-
 [node name="Lighting" type="Node3D" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
@@ -153,18 +154,8 @@ light_energy = 18.0
 spot_range = 11.522658
 spot_angle = 37.576374
 
-[node name="InteractableObject" parent="." instance=ExtResource("12_jl5h5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6, 9.5)
-
 [node name="ice_bird_full" parent="." instance=ExtResource("13_nrtr3")]
 transform = Transform3D(-0.31058294, 0, 1.159111, 0, 1.1999999, 0, -1.159111, 0, -0.31058294, -0.2209953, 8.855078, 2.6255193)
-
-[node name="ice_bird_body" parent="." instance=ExtResource("14_kawtl")]
-transform = Transform3D(-0.31058288, 0, 1.1591109, 0, 1.1999999, 0, -1.1591109, 0, -0.31058288, -0.2209953, 8.855078, 2.6255193)
-visible = false
-
-[node name="ice_bird_head" parent="." instance=ExtResource("15_kxwgw")]
-transform = Transform3D(-0.51797396, 0, 1.0824524, 0, 1.1999999, 0, -1.0824524, 0, -0.51797396, 2.4075232, 0, -0.9293647)
 
 [node name="floor_square" parent="." instance=ExtResource("15_xmpfl")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.645752, -0.09999857, -8.392063)
@@ -193,5 +184,35 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10.
 [node name="floor_square9" parent="." instance=ExtResource("15_xmpfl")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10.08078, -0.09999857, 7.0471034)
 
-[node name="bentley" parent="." instance=ExtResource("16_j6bpp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.6, 0)
+[node name="InteractableObject2" parent="." instance=ExtResource("12_jl5h5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 9, 1)
+dialogue = ExtResource("15_gr1qg")
+destroy = true
+
+[node name="spawnthings" type="Node3D" parent="."]
+visible = false
+
+[node name="boss" parent="spawnthings" instance=ExtResource("9_n7ok7")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -3, 2.8, -1)
+clickable = false
+
+[node name="hammerdog" parent="spawnthings" instance=ExtResource("15_gqm0q")]
+transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, 5.3, 3, 2)
+clickable = false
+
+[node name="jellyfish" parent="spawnthings" instance=ExtResource("16_kqyth")]
+transform = Transform3D(-0.49999985, 0, -0.8660255, 0, 1, 0, 0.8660255, 0, -0.49999985, 7, 2.5, 0)
+clickable = false
+
+[node name="sabrina" parent="spawnthings" instance=ExtResource("10_jl5h5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 1.4, 1)
+clickable = false
+
+[node name="ice_bird_head" parent="spawnthings" instance=ExtResource("15_kxwgw")]
+transform = Transform3D(-0.51797396, 0, 1.0824524, 0, 1.1999999, 0, -1.0824524, 0, -0.51797396, 2.4075232, 0, -0.9293647)
+
+[node name="ice_bird_body" parent="spawnthings" instance=ExtResource("14_kawtl")]
+transform = Transform3D(-0.31058288, 0, 1.1591109, 0, 1.1999999, 0, -1.1591109, 0, -0.31058288, -0.2209953, 8.855078, 2.6255193)
+
+[node name="InteractableObject" parent="spawnthings" instance=ExtResource("20_kqyth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 7.6, 2)

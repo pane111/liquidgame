@@ -1,0 +1,38 @@
+~ start
+{{FlagManager.char_name("Bentley")}}: It's just, like, incredible isn’t it? I’m not even sure how they made one this big.
+{{FlagManager.char_name("Bentley")}}: ...
+{{FlagManager.char_name("Bentley")}}: Well, uh, that's kind of it. That was my tour.
+{{FlagManager.char_name("Bentley")}}: There's also the roof, which is empty, and the basement, which, uh, there's no reason to go there. None at all!
+{{FlagManager.char_name("Bentley")}}: ...Okay, fine, I'm a bit scared of basements. In general. If you want, you can go down there. But I'm not taking a single step down.
+{{FlagManager.char_name("Bentley")}}: Hmm... Seems the boss is still busy. Guess that means you've got some time to explore around and talk to your colleagues, heh.
+{{FlagManager.char_name("Bentley")}}: You'll get to know everyone eventually. It's just a matter of, you know...
+do set_angry_expression(false)
+{{FlagManager.char_name("Bentley")}}: ...breaking the ice.
+{{FlagManager.char_name("Bentley")}}: Hahaha! I'm sorry. Anyway--
+do flash()
+do blackout()
+do AudioManager.pause_music()
+do set_surprised_expression()
+{{FlagManager.char_name("Bentley")}}: WAAAAAHHHH!!!
+do set_normal_expression()
+{{FlagManager.char_name("Bentley")}}: ...
+{{FlagManager.char_name("Bentley")}}: Hey, i-it's okay, don't be scared. Just the lights, haha. 
+do AudioManager._play_sound("thud")
+do wait(2)
+do show_objects()
+do hide_objects()
+do set_surprised_expression()
+{{FlagManager.char_name("Bentley")}}: WOAH! W-w-w-what was that!?
+{{FlagManager.char_name("Bentley")}}: A-are you okay!?
+do set_normal_expression()
+{{FlagManager.char_name("Bentley")}}: Sheesh... Where the hell is {{FlagManager.char_name("hammerdog")}}?
+{{FlagManager.char_name("Bentley")}}: Someone's gotta fix the lights ASAP...
+do restore_light()
+do set_char_voice("hammerdog")
+{{FlagManager.char_name("hammerdog")}}: What's going on? What was that noise?
+do set_char_voice("boss")
+{{FlagManager.char_name("boss")}}: No... It can't be... My... MY PRECIOUS STATUE!
+do set_char_voice("annabell")
+{{FlagManager.char_name("annabell")}}: ...
+{{FlagManager.char_name("annabell")}}: Look up.
+=> END

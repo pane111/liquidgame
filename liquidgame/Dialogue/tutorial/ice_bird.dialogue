@@ -1,0 +1,5 @@
+~ start
+Above you soars a giant bird... Forever frozen in its movement, you cannot decide whether it looks free or trapped.
+...Until you notice the thick rope attached to its wings. The sculpture is beautiful, but something about it seems... off. It makes you feel uneasy...
+do link_dialogue("res://Dialogue/tutorial/bentley_after_bird.dialogue","res://Resources/Characters/bentley.tres")
+=> END

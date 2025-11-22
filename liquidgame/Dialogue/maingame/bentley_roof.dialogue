@@ -1,0 +1,28 @@
+~ start
+{{FlagManager.char_name("Bentley")}}: ...
+{{FlagManager.char_name("Bentley")}}: Hey, you found me!
+{{FlagManager.char_name("Bentley")}}: ...That, uh, sounds like I was hiding from you...
+{{FlagManager.char_name("Bentley")}}: Which I was not! Just to be clear!
+{{FlagManager.char_name("Bentley")}}: ...
+{{FlagManager.char_name("Bentley")}}: Well, I was sorta hiding, but not from you, per se.
+{{FlagManager.char_name("Bentley")}}: This is just kinda where I go to wind down, you know? I'm the only one who comes up here...
+{{FlagManager.char_name("Bentley")}}: I guess it's just, uh, a good place to be alone with your thoughts, I suppose.
+{{FlagManager.char_name("Bentley")}}: And hey, you can smoke here too, hah. You, uh, want one?
+- Yeah, thanks man.
+	{{FlagManager.char_name("Bentley")}}: Haha, smoking is the best, isn't it?
+	(You notice an ashtray with two brands of cigarettes in it...)
+	(...Interesting.)
+	do FlagManager.add_evidence("ashtray","res://Resources/Evidence/ashtray.tres")
+	(The ashtray was added to the evidence.)
+	{{FlagManager.char_name("Bentley")}}: Yeaaah... It's awesome... *COUGH* *COUGH*
+	do set_surprised_expression()
+	{{FlagManager.char_name("Bentley")}}: *COUGH* Aaaugh! *COUGH*
+	do set_normal_expression()
+	{{FlagManager.char_name("Bentley")}}: I'm, uh, I'm fine!
+- No, I don't smoke.
+	{{FlagManager.char_name("Bentley")}}: Haha, I hear ya. Smoking is terrible. That's why I don't do it. But I keep them around because people like them, ya know?
+{{FlagManager.char_name("Bentley")}}: ...
+{{FlagManager.char_name("Bentley")}}: So... How are you holding up?
+{{FlagManager.char_name("Bentley")}}: ...Er, I guess that might be a dumb question, considering everything...
+{{FlagManager.char_name("Bentley")}}: Ugh. Just forget I asked...
+=> END

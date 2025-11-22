@@ -13,6 +13,18 @@ extends Node3D
 @export var init_dialogue: DialogueResource
 @export var init_char: Character
 
+@export var to_hide: Array[Node3D]
+@export var to_show: Array[Node3D]
+
+
+func hide_all():
+	for obj in to_hide:
+		obj.hide()
+
+func show_all():
+	for obj in to_show:
+		obj.show()
+
 func _ready() -> void:
 	var startdia = true
 	if req_flag != "" && req_flag!= null: # Check if the NPC has a required flag

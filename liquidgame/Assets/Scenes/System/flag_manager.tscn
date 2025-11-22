@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cw6qadey7cnh4"]
+[gd_scene load_steps=11 format=3 uid="uid://cw6qadey7cnh4"]
 
 [ext_resource type="Script" uid="uid://wrug3eu6ks5x" path="res://scripts/flag_manager.gd" id="1_skr22"]
 [ext_resource type="Script" uid="uid://dvcn684qc8ol5" path="res://Resources/Characters/character.gd" id="2_3pq6a"]
@@ -9,8 +9,7 @@
 [ext_resource type="Resource" uid="uid://bpkxbi7yq0s6j" path="res://Resources/Characters/sabrina.tres" id="7_k7fmi"]
 [ext_resource type="Resource" uid="uid://5tatmk3s0v8c" path="res://Resources/Characters/hector.tres" id="8_bgwsq"]
 [ext_resource type="Script" uid="uid://8kbtb2yinplx" path="res://Resources/Evidence/evidence.gd" id="9_yv6hd"]
-[ext_resource type="Resource" uid="uid://byffv5an80r8m" path="res://Resources/Evidence/test_evidence.tres" id="10_u7v6q"]
-[ext_resource type="Resource" uid="uid://dd5y3fu73dsw2" path="res://Resources/Evidence/knife.tres" id="11_u7v6q"]
+[ext_resource type="Resource" uid="uid://5mxsmevw6pu4" path="res://Resources/Evidence/card.tres" id="10_yv6hd"]
 
 [node name="FlagManager" type="Node"]
 script = ExtResource("1_skr22")
@@ -26,8 +25,7 @@ characters = Dictionary[String, ExtResource("2_3pq6a")]({
 })
 billboarding = false
 evidence = Dictionary[String, ExtResource("9_yv6hd")]({
-"knife": ExtResource("11_u7v6q"),
-"test": ExtResource("10_u7v6q")
+"card": ExtResource("10_yv6hd")
 })
 int_flags = Dictionary[String, int]({
 "tutorial": 0

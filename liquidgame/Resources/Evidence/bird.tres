@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Evidence" load_steps=3 format=3 uid="uid://bhw75fi0wugux"]
+
+[ext_resource type="Texture2D" uid="uid://cu7ky7qrynewv" path="res://Assets/2D/bird_headless.png" id="1_6a2d7"]
+[ext_resource type="Script" uid="uid://8kbtb2yinplx" path="res://Resources/Evidence/evidence.gd" id="1_t1jp4"]
+
+[resource]
+script = ExtResource("1_t1jp4")
+e_name = "Bird Statue"
+e_sprite = ExtResource("1_6a2d7")
+e_desc = "Mr Meld's magnum opus, revealed to have a dead body inside... Just what happened?"
+metadata/_custom_type_script = "uid://8kbtb2yinplx"

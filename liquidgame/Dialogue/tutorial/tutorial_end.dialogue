@@ -1,0 +1,5 @@
+~ start
+(A few hours later...)
+(The Bird Statue was added to your evidence.)
+do FlagManager.set_int("tutorial",4)
+=> END

@@ -7,6 +7,7 @@ extends "res://Assets/Scenes/System/interactable.gd"
 @export var flag_val_int_min: int
 @export var flag_val_int_max: int
 @export var flag_val_string: String
+@export var clickable = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var showchar = true
@@ -32,13 +33,14 @@ func _ready() -> void:
 	# $Color.material_overlay = character.material
 	
 func _on_interact():
-	get_node("/root/MainGame").dialogue_anim(dialogue,character)
-	$AnimationPlayer.current_animation="disappear"
-	await get_node("/root/MainGame").finished_dialogue
-	if get_node("/root/MainGame").hide_after:
-		$Area3D.input_ray_pickable = false
-	else:
-		$AnimationPlayer.current_animation="appear"
+	if clickable:
+		get_node("/root/MainGame").dialogue_anim(dialogue,character)
+		$AnimationPlayer.current_animation="disappear"
+		await get_node("/root/MainGame").finished_dialogue
+		if get_node("/root/MainGame").hide_after:
+			$Area3D.input_ray_pickable = false
+		else:
+			$AnimationPlayer.current_animation="appear"
 
 func disappear():
 	$Area3D.input_ray_pickable = false

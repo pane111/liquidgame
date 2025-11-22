@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://cxa6uqhmdl5of"]
+[gd_scene load_steps=11 format=3 uid="uid://cxa6uqhmdl5of"]
 
-[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_ruyus"]
-[ext_resource type="PackedScene" uid="uid://l0xxs4w8xflo" path="res://assets/3D/furniture/railing.glb" id="4_axv30"]
-[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://assets/3D/furniture/statue stand.glb" id="4_t07o4"]
-[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="5_a5tku"]
-[ext_resource type="PackedScene" uid="uid://c4vofq6t61gir" path="res://assets/3D/floor_tiles.glb" id="7_ky54k"]
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_ruyus"]
+[ext_resource type="Resource" uid="uid://cwwid1ojrgve8" path="res://Dialogue/tutorial/tutorial_end.dialogue" id="2_1gwfa"]
+[ext_resource type="PackedScene" uid="uid://l0xxs4w8xflo" path="res://Assets/3D/furniture/railing.glb" id="4_axv30"]
+[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://Assets/3D/furniture/statue stand.glb" id="4_t07o4"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="5_a5tku"]
+[ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://Assets/Scenes/chars/npc.tscn" id="6_lb3i3"]
+[ext_resource type="Resource" uid="uid://ci8jbaqsug61w" path="res://Dialogue/maingame/bentley_roof.dialogue" id="7_1gwfa"]
+[ext_resource type="PackedScene" uid="uid://c4vofq6t61gir" path="res://Assets/3D/floor_tiles.glb" id="7_ky54k"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -15,6 +18,9 @@ script = ExtResource("1_ruyus")
 start_point = NodePath("PlayerStartPosition")
 rotation_lim = Vector2(0, 12)
 area_name = "Rooftop"
+req_flag = "tutorial"
+flag_val_int = 3
+init_dialogue = ExtResource("2_1gwfa")
 
 [node name="PlayerStartPosition" type="Node3D" parent="."]
 transform = Transform3D(0.88294727, 0, -0.4694714, 0, 1, 0, 0.4694714, 0, 0.88294727, -11.353938, 3.5000005, 6.2570324)
@@ -114,3 +120,10 @@ shadow_opacity = 0.5
 [node name="Door" parent="Lighting" instance=ExtResource("5_a5tku")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.750832, 2.8019743, -19.4989)
 _goto = "uid://brk45c6acql25"
+
+[node name="bentley" parent="." instance=ExtResource("6_lb3i3")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -6.1000004, 2.2, -2.2)
+dialogue = ExtResource("7_1gwfa")
+req_flag = "tutorial"
+flag_val_int_min = 3
+flag_val_int_max = 99

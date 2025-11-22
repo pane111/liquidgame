@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Evidence" load_steps=3 format=3 uid="uid://dhcftl1874mus"]
+
+[ext_resource type="Script" uid="uid://8kbtb2yinplx" path="res://Resources/Evidence/evidence.gd" id="1_504i5"]
+[ext_resource type="Texture2D" uid="uid://dhjml6mjva1w8" path="res://Assets/2D/ashtray.png" id="1_x1ge2"]
+
+[resource]
+script = ExtResource("1_504i5")
+e_name = "Ashtray"
+e_sprite = ExtResource("1_x1ge2")
+e_desc = "Bentley's ashtray. It has a cute bunny on it. For some reason, there are remains of cigarettes from two different brands."
+metadata/_custom_type_script = "uid://8kbtb2yinplx"

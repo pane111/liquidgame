@@ -86,6 +86,7 @@ func dialogue_anim(dia: DialogueResource, char: Character = null):
 			player.can_look=true
 			finished_dialogue.emit()
 			in_dialogue=false
+			
 			$VoicePlayer.stream = player_voice
 		else:
 			$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "fade_char_out"

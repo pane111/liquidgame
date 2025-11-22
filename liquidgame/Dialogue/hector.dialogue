@@ -1,4 +1,7 @@
 ~ start
+{{FlagManager.char_name("hector")}}: Good day. I don't believe we've met before.
 {{FlagManager.char_name("hector")}}: My name is {{FlagManager.char_name("hector")}}...
-{{FlagManager.char_name("hector")}}: Do you think the ice is melting? Methinks the block has gotten a bit smaller.
+{{FlagManager.char_name("hector")}}: I am the lawyer of Meld & Sons.
+{{FlagManager.char_name("hector")}}: Unfortunately, I seem to have gotten myself into a somewhat unpleasant situation.
+{{FlagManager.char_name("hector")}}: ...Do you think the ice is melting? Methinks the block has gotten a bit smaller.
 => END

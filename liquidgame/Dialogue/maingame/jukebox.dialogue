@@ -1,0 +1,18 @@
+~ start
+You: Wow, this jukebox sure has seen better days...
+You: Anyways... there's a few songs here, huh...
+- Caught
+	You: It says here that this is "music for when you catch someone lying"...
+	do AudioManager._switch_music("caught")
+- Underwater Cave Level
+	You: Hmmm... This one seems like the most played one.
+	do AudioManager._switch_music("main")
+- Showtime
+	You: Supposedly, this is "music for when you're fighting in your dream"...
+	do AudioManager._switch_music("tmc")
+- Unused Track 01
+	You: The description says this is "music for when chaotic things are happening"... Wow!
+	do AudioManager._switch_music("unknown")
+- Cancel
+	You: ...Not in the mood right now.
+=> END

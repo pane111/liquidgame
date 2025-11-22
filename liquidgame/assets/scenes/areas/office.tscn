@@ -1,23 +1,24 @@
-[gd_scene load_steps=21 format=3 uid="uid://2m4mvq03m225"]
+[gd_scene load_steps=22 format=3 uid="uid://2m4mvq03m225"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_g5cb2"]
 [ext_resource type="Resource" uid="uid://c7m4fwrpajryo" path="res://Dialogue/tutorial/player_missed_bentley.dialogue" id="2_cuvxy"]
-[ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://Assets/3D/furniture/wallpiece corner in.glb" id="2_qat77"]
+[ext_resource type="PackedScene" uid="uid://cfv8qcm6x1ysl" path="res://Assets/3D/furniture/wallpiece corner in.glb" id="2_qat77"]
 [ext_resource type="Resource" uid="uid://bv7h2kjpir13h" path="res://Resources/Characters/bentley.tres" id="3_3qtl0"]
-[ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://Assets/3D/furniture/wallpiece.glb" id="3_wecor"]
-[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://Assets/3D/furniture/statue stand.glb" id="4_l5htk"]
-[ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://Assets/3D/floor_planks.glb" id="5_5kemi"]
+[ext_resource type="PackedScene" uid="uid://bl06nrpii05ly" path="res://Assets/3D/furniture/wallpiece.glb" id="3_wecor"]
+[ext_resource type="PackedScene" uid="uid://di6qdjxpooxh8" path="res://Assets/3D/furniture/statue stand.glb" id="4_l5htk"]
+[ext_resource type="PackedScene" uid="uid://cmysuwb8o70tx" path="res://Assets/3D/floor_planks.glb" id="5_5kemi"]
 [ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://Assets/3D/dark.tres" id="6_lgt0n"]
 [ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://Assets/3D/furniture/ceiling_lamp.tscn" id="7_co8ub"]
-[ext_resource type="PackedScene" uid="uid://dq4edvq41md8e" path="res://Assets/3D/furniture/office desk.glb" id="7_qat77"]
+[ext_resource type="PackedScene" uid="uid://c2b5ifl61ret0" path="res://Assets/3D/furniture/office desk.glb" id="7_qat77"]
 [ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="9_kwwsv"]
-[ext_resource type="PackedScene" uid="uid://deinp27j5p8jh" path="res://Assets/3D/furniture/wallpiece corner out.glb" id="10_l5htk"]
+[ext_resource type="PackedScene" uid="uid://dx6ch0jq7jcvq" path="res://Assets/3D/furniture/wallpiece corner out.glb" id="10_l5htk"]
 [ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://Assets/Scenes/chars/npc.tscn" id="13_xri3p"]
 [ext_resource type="Resource" uid="uid://dd5x3ddaf1dmp" path="res://Dialogue/tutorial/bentley_main_office.dialogue" id="14_8kwx2"]
 [ext_resource type="PackedScene" uid="uid://bcmef0ssdl2lc" path="res://Assets/Scenes/chars/sabrina.tscn" id="15_7f0ls"]
 [ext_resource type="Resource" uid="uid://xciehmel7yg3" path="res://Dialogue/tutorial/annabell_tutorial.dialogue" id="16_4hk68"]
 [ext_resource type="PackedScene" uid="uid://cllj6ollcip14" path="res://Assets/Scenes/chars/jellyfish.tscn" id="17_oxvit"]
 [ext_resource type="Resource" uid="uid://b7dwyawbun872" path="res://Dialogue/tutorial/cilly_tutorial.dialogue" id="18_xpqa2"]
+[ext_resource type="Resource" uid="uid://m4x7p36lhbog" path="res://Dialogue/maingame/cilly_maingame.dialogue" id="19_xpqa2"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -243,3 +244,10 @@ transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25
 dialogue = ExtResource("18_xpqa2")
 req_flag = "tutorial"
 flag_val_int_max = 3
+
+[node name="jellyfish2" parent="." instance=ExtResource("17_oxvit")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -1, 2.5000002, -1)
+dialogue = ExtResource("19_xpqa2")
+req_flag = "tutorial"
+flag_val_int_min = 4
+flag_val_int_max = 99

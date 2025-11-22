@@ -1,16 +1,16 @@
 [gd_scene load_steps=14 format=3 uid="uid://cxa6uqhmdl5of"]
 
-[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_ruyus"]
-[ext_resource type="Resource" uid="uid://cfsgqw5l4y8s2" path="res://dialogue/tutorial/tutorial_end.dialogue" id="2_1gwfa"]
-[ext_resource type="PackedScene" uid="uid://l0xxs4w8xflo" path="res://assets/3D/furniture/railing.glb" id="4_axv30"]
-[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://assets/3D/furniture/statue stand.glb" id="4_t07o4"]
-[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="5_a5tku"]
-[ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://assets/scenes/chars/npc.tscn" id="6_lb3i3"]
-[ext_resource type="Resource" uid="uid://beylrt5ujnfwm" path="res://dialogue/maingame/bentley_roof.dialogue" id="7_1gwfa"]
-[ext_resource type="PackedScene" uid="uid://ciuokm66b1rv7" path="res://assets/scenes/interactable_object.tscn" id="7_bya5u"]
-[ext_resource type="PackedScene" uid="uid://c4vofq6t61gir" path="res://assets/3D/floor_tiles.glb" id="7_ky54k"]
-[ext_resource type="Resource" uid="uid://bvoy86g6odh7a" path="res://dialogue/ashtray.dialogue" id="8_oyisu"]
-[ext_resource type="Texture2D" uid="uid://dfixwlqd6fa8q" path="res://assets/2D/ashtray.png" id="10_t07o4"]
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_ruyus"]
+[ext_resource type="PackedScene" uid="uid://bfm6ip3xb8731" path="res://Assets/3D/furniture/railing.glb" id="4_axv30"]
+[ext_resource type="PackedScene" uid="uid://di6qdjxpooxh8" path="res://Assets/3D/furniture/statue stand.glb" id="4_t07o4"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="5_a5tku"]
+[ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://Assets/Scenes/chars/npc.tscn" id="6_lb3i3"]
+[ext_resource type="Resource" uid="uid://ci8jbaqsug61w" path="res://Dialogue/maingame/bentley_roof.dialogue" id="7_1gwfa"]
+[ext_resource type="PackedScene" uid="uid://ciuokm66b1rv7" path="res://Assets/Scenes/interactable_object.tscn" id="7_bya5u"]
+[ext_resource type="PackedScene" uid="uid://4s1a5bu6iuou" path="res://Assets/3D/floor_tiles.glb" id="7_ky54k"]
+[ext_resource type="Resource" uid="uid://c8avqc1p1pynd" path="res://Dialogue/ashtray.dialogue" id="8_oyisu"]
+[ext_resource type="Texture2D" uid="uid://dhjml6mjva1w8" path="res://Assets/2D/ashtray.png" id="10_t07o4"]
+[ext_resource type="PackedScene" uid="uid://35helwfbm7kb" path="res://Assets/Scenes/jukebox.tscn" id="11_bnwkh"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -21,9 +21,6 @@ script = ExtResource("1_ruyus")
 start_point = NodePath("PlayerStartPosition")
 rotation_lim = Vector2(0, 12)
 area_name = "Rooftop"
-req_flag = "tutorial"
-flag_val_int = 3
-init_dialogue = ExtResource("2_1gwfa")
 
 [node name="PlayerStartPosition" type="Node3D" parent="."]
 transform = Transform3D(0.88294727, 0, -0.4694714, 0, 1, 0, 0.4694714, 0, 0.88294727, -11.353938, 3.5000005, 6.2570324)
@@ -135,3 +132,6 @@ flag_val_int_max = 99
 transform = Transform3D(-2.1456883e-07, 0, -2, 0, 2, 0, 2, 0, -2.1456883e-07, 3.4175682, 4.0939035, 2.0986881)
 image = ExtResource("10_t07o4")
 dialogue = ExtResource("8_oyisu")
+
+[node name="InteractableObject2" parent="." instance=ExtResource("11_bnwkh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.5, -20)

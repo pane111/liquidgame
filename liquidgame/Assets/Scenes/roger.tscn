@@ -9,6 +9,7 @@ size = Vector3(1.9917603, 3, 1)
 
 [node name="InteractableObject" type="Node3D" groups=["interactable"]]
 script = ExtResource("1_qceqt")
+image = ExtResource("3_up3v3")
 dialogue = ExtResource("2_up3v3")
 hovering = false
 

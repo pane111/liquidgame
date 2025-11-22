@@ -1,0 +1,7 @@
+~ start
+{{FlagManager.char_name("cilly")}}: Huh? Oh, it's you.
+{{FlagManager.char_name("cilly")}}: So, whaddya up to? Investigating? Hahaha!
+{{FlagManager.char_name("cilly")}}: Just don't get in my way, alright?
+{{FlagManager.char_name("cilly")}}: ...
+{{FlagManager.char_name("cilly")}}: Man, they really don't prepare you for situations like this in training.
+=> END

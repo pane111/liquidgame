@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://d3v22pgllbtmu"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_f0qnb"]
-[ext_resource type="PackedScene" uid="uid://bmowaffmhu6wr" path="res://Assets/3D/simple_room.fbx" id="1_mfl1m"]
+[ext_resource type="PackedScene" uid="uid://qw0emfr80y0d" path="res://Assets/3D/simple_room.fbx" id="1_mfl1m"]
 [ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://Assets/Scenes/chars/npc.tscn" id="3_7wweu"]
 [ext_resource type="PackedScene" uid="uid://draw7n7tnksc2" path="res://Assets/Scenes/chars/hammerdog.tscn" id="4_sd6vh"]
 [ext_resource type="PackedScene" uid="uid://cllj6ollcip14" path="res://Assets/Scenes/chars/jellyfish.tscn" id="5_n4iwq"]

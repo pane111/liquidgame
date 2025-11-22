@@ -1,25 +1,64 @@
 ~ start
-{{FlagManager.char_name("Bentley")}}: ...
-{{FlagManager.char_name("Bentley")}}: Hey, you found me!
-{{FlagManager.char_name("Bentley")}}: ...That, uh, sounds like I was hiding from you...
-{{FlagManager.char_name("Bentley")}}: Which I was not! Just to be clear! You seem like an alright person.
-{{FlagManager.char_name("Bentley")}}: ...
-{{FlagManager.char_name("Bentley")}}: Well, I was sorta hiding, but not from you, per se.
-{{FlagManager.char_name("Bentley")}}: This is just kinda where I go to wind down, you know? I'm the only one who comes up here...
-{{FlagManager.char_name("Bentley")}}: I guess it's just, uh, a good place to be alone with your thoughts, I suppose.
-{{FlagManager.char_name("Bentley")}}: And hey, you can smoke here too, hah. You, uh, want one?
-- Yeah, thanks man.
-	{{FlagManager.char_name("Bentley")}}: Haha, smoking is the best, isn't it?
-	{{FlagManager.char_name("Bentley")}}: Yeaaah... It's awesome... *COUGH* *COUGH*
-	do set_surprised_expression()
-	{{FlagManager.char_name("Bentley")}}: *COUGH* Aaaugh! *COUGH*
-	do set_normal_expression()
-	{{FlagManager.char_name("Bentley")}}: I'm, uh, I'm fine!
-- No, I don't smoke.
-	{{FlagManager.char_name("Bentley")}}: Haha, I hear ya. Smoking is terrible. That's why I don't do it. But I keep them around because people like them, ya know?
-{{FlagManager.char_name("Bentley")}}: ...
-{{FlagManager.char_name("Bentley")}}: So... How are you holding up?
-{{FlagManager.char_name("Bentley")}}: ...Er, I guess that might be a dumb question, considering everything that happened...
-{{FlagManager.char_name("Bentley")}}: Ugh. Just forget I asked...
-do AudioManager._switch_music("main")
+if FlagManager.get_int("bentley_roof") == 1:
+	if FlagManager.get_int("ragebaited") == 1:
+		{{FlagManager.char_name("Bentley")}}: ...
+		- I'm sorry
+			{{FlagManager.char_name("Bentley")}}: ...Really now?
+			{{FlagManager.char_name("Bentley")}}: After all that?
+			{{FlagManager.char_name("Bentley")}}: Sigh... Well, it's fine, I suppose.
+			{{FlagManager.char_name("Bentley")}}: It's been a long day. I just came here to unwind a bit, ya know?
+			{{FlagManager.char_name("Bentley")}}: Er... let's talk more later. I'm a bit tired.
+			do FlagManager.set_int("ragebaited",0)
+		- (Leave)
+	else:
+		{{FlagManager.char_name("Bentley")}}: Hey there, pal.
+		{{FlagManager.char_name("Bentley")}}: Er, we, uh, are pals, right?
+		{{FlagManager.char_name("Bentley")}}: ...
+else:
+	if FlagManager.get_int("ragebaited") == 1:
+		do FlagManager.set_int("bentley_roof",1)
+		{{FlagManager.char_name("Bentley")}}: ...
+		{{FlagManager.char_name("Bentley")}}: Ugh... Not you...
+		{{FlagManager.char_name("Bentley")}}: Sigh... Sorry, I just, uh, don't really wanna talk right now.
+		- I'm sorry, I was just playing a prank on you
+			{{FlagManager.char_name("Bentley")}}: ...Really now?
+			{{FlagManager.char_name("Bentley")}}: Sigh... Well, it's fine, I suppose.
+			{{FlagManager.char_name("Bentley")}}: It's been a long day. I just came here to unwind a bit, ya know?
+			{{FlagManager.char_name("Bentley")}}: Er... let's talk more later. I'm a bit tired.
+			do FlagManager.set_int("ragebaited",0)
+		- (Ignore him)
+			do shock_effect()
+			{{FlagManager.char_name("Bentley")}}: ...Really now?
+			{{FlagManager.char_name("Bentley")}}: We just found a dead body, and you're still doing this?
+			{{FlagManager.char_name("Bentley")}}: What the hell is your problem?
+			{{FlagManager.char_name("Bentley")}}: You... could at least give me an apology!
+			{{FlagManager.char_name("Bentley")}}: Even a fake one!
+			{{FlagManager.char_name("Bentley")}}: Aaargh!
+			{{FlagManager.char_name("Bentley")}}: ...
+			{{FlagManager.char_name("Bentley")}}: You are really something.
+			do AudioManager._switch_music("main")
+	else:
+		{{FlagManager.char_name("Bentley")}}: ...
+		{{FlagManager.char_name("Bentley")}}: Hey, you found me!
+		{{FlagManager.char_name("Bentley")}}: ...That, uh, sounds like I was hiding from you...
+		{{FlagManager.char_name("Bentley")}}: Which I was not! Just to be clear! You seem like an alright person.
+		{{FlagManager.char_name("Bentley")}}: ...
+		{{FlagManager.char_name("Bentley")}}: Well, I was sorta hiding, but not from you, per se.
+		{{FlagManager.char_name("Bentley")}}: This is just kinda where I go to wind down, you know? I'm the only one who comes up here...
+		{{FlagManager.char_name("Bentley")}}: I guess it's just, uh, a good place to be alone with your thoughts, I suppose.
+		{{FlagManager.char_name("Bentley")}}: And hey, you can smoke here too, hah. You, uh, want one?
+		- Yeah, thanks man.
+			{{FlagManager.char_name("Bentley")}}: Haha, smoking is the best, isn't it?
+			{{FlagManager.char_name("Bentley")}}: Yeaaah... It's awesome... *COUGH* *COUGH*
+			do set_surprised_expression()
+			{{FlagManager.char_name("Bentley")}}: *COUGH* Aaaugh! *COUGH*
+			do set_normal_expression()
+			{{FlagManager.char_name("Bentley")}}: I'm, uh, I'm fine!
+		- No, I don't smoke.
+			{{FlagManager.char_name("Bentley")}}: Haha, I hear ya. Smoking is terrible. That's why I don't do it. But I keep them around because people like them, ya know?
+		{{FlagManager.char_name("Bentley")}}: ...
+		{{FlagManager.char_name("Bentley")}}: So... How are you holding up?
+		{{FlagManager.char_name("Bentley")}}: ...Er, I guess that might be a dumb question, considering everything that happened...
+		{{FlagManager.char_name("Bentley")}}: Ugh. Just forget I asked...
+		do FlagManager.set_int("bentley_roof",1)
 => END

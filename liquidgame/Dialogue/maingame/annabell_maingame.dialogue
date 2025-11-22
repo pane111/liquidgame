@@ -1,0 +1,7 @@
+~ start
+{{FlagManager.char_name("annabell")}}: Oh Roger, what did you get yourself into...
+{{FlagManager.char_name("annabell")}}: Huh? Oh, hi.
+{{FlagManager.char_name("annabell")}}: Sigh... I can't believe this happened.
+{{FlagManager.char_name("annabell")}}: Hey... if you find any useful information, could you let me know?
+{{FlagManager.char_name("annabell")}}: ...Roger, well, he was a good friend of mine. I'd like to get to the bottom of this... situation.
+=> END

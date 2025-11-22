@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://cllj6ollcip14"]
 
 [ext_resource type="Script" uid="uid://b04pshwcy136n" path="res://Assets/Scenes/npc.gd" id="1_wsrcg"]
-[ext_resource type="Resource" uid="uid://b408vlljv47kp" path="res://Dialogue/test2.dialogue" id="2_wsrcg"]
+[ext_resource type="Resource" uid="uid://4yw3hv7108u0" path="res://Dialogue/test2.dialogue" id="2_wsrcg"]
 [ext_resource type="Resource" uid="uid://d2vw1loiemyw8" path="res://Resources/Characters/jellyfish.tres" id="3_sj4iv"]
-[ext_resource type="Texture2D" uid="uid://4kai8xedm3yt" path="res://Assets/2D/Characters/Jellyfish/jellyfish_outline.png" id="4_gkjse"]
-[ext_resource type="Texture2D" uid="uid://b02ox06caa015" path="res://Assets/2D/Characters/Jellyfish/jellyfish_color.png" id="5_6gdsn"]
-[ext_resource type="Texture2D" uid="uid://dq5f5euylmlke" path="res://Assets/2D/Characters/Jellyfish/jellyfish_shading.png" id="6_raiut"]
+[ext_resource type="Texture2D" uid="uid://c4udct5d18u7r" path="res://Assets/2D/Characters/Jellyfish/jellyfish_outline.png" id="4_gkjse"]
+[ext_resource type="Texture2D" uid="uid://cglxphwyggojh" path="res://Assets/2D/Characters/Jellyfish/jellyfish_color.png" id="5_6gdsn"]
+[ext_resource type="Texture2D" uid="uid://cfflrdct7efyg" path="res://Assets/2D/Characters/Jellyfish/jellyfish_shading.png" id="6_raiut"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_peea3"]
 size = Vector3(1, 4.3, 1)

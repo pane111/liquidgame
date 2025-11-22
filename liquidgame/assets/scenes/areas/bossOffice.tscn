@@ -1,22 +1,25 @@
-[gd_scene load_steps=20 format=3 uid="uid://dwp8cx2ei2dgj"]
+[gd_scene load_steps=23 format=3 uid="uid://dwp8cx2ei2dgj"]
 
-[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_mjg2f"]
-[ext_resource type="Resource" uid="uid://qd0s1q3h336k" path="res://dialogue/tutorial/boss_1.dialogue" id="2_ifk5x"]
-[ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_l6exm"]
-[ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://assets/3D/furniture/wallpiece.glb" id="3_4v4c4"]
-[ext_resource type="Resource" uid="uid://4sr2jq5cauvk" path="res://resources/characters/boss.tres" id="3_vodc6"]
-[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://assets/3D/furniture/statue stand.glb" id="5_frx7a"]
-[ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://assets/3D/floor_planks.glb" id="6_bbwqm"]
-[ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://assets/3D/dark.tres" id="6_mjg2f"]
-[ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="7_5xca8"]
-[ext_resource type="PackedScene" uid="uid://bg6wm7466snf1" path="res://assets/3D/furniture/window.glb" id="8_frx7a"]
-[ext_resource type="PackedScene" uid="uid://bxyec8samu5na" path="res://assets/3D/furniture/boss desk.glb" id="8_l6exm"]
-[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="9_4xt5x"]
-[ext_resource type="PackedScene" uid="uid://ciuokm66b1rv7" path="res://assets/scenes/interactable_object.tscn" id="10_ucbwp"]
-[ext_resource type="PackedScene" uid="uid://deinp27j5p8jh" path="res://assets/3D/furniture/wallpiece corner out.glb" id="12_bbwqm"]
-[ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://assets/scenes/chars/npc.tscn" id="13_g1odx"]
-[ext_resource type="Texture2D" uid="uid://bjnt8dmgspygd" path="res://assets/2D/magazine.png" id="15_w55y7"]
-[ext_resource type="Resource" uid="uid://dguohllnuhqm3" path="res://dialogue/tutorial/bentley_introduction.dialogue" id="16_vodc6"]
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_mjg2f"]
+[ext_resource type="Resource" uid="uid://c8630nurnsaoc" path="res://Dialogue/tutorial/boss_1.dialogue" id="2_ifk5x"]
+[ext_resource type="PackedScene" uid="uid://cfv8qcm6x1ysl" path="res://Assets/3D/furniture/wallpiece corner in.glb" id="2_l6exm"]
+[ext_resource type="PackedScene" uid="uid://bl06nrpii05ly" path="res://Assets/3D/furniture/wallpiece.glb" id="3_4v4c4"]
+[ext_resource type="Resource" uid="uid://4sr2jq5cauvk" path="res://Resources/Characters/boss.tres" id="3_vodc6"]
+[ext_resource type="PackedScene" uid="uid://di6qdjxpooxh8" path="res://Assets/3D/furniture/statue stand.glb" id="5_frx7a"]
+[ext_resource type="PackedScene" uid="uid://cmysuwb8o70tx" path="res://Assets/3D/floor_planks.glb" id="6_bbwqm"]
+[ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://Assets/3D/dark.tres" id="6_mjg2f"]
+[ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://Assets/3D/furniture/ceiling_lamp.tscn" id="7_5xca8"]
+[ext_resource type="PackedScene" uid="uid://b57nac6jwfmvg" path="res://Assets/3D/furniture/window.glb" id="8_frx7a"]
+[ext_resource type="PackedScene" uid="uid://bqq04hghiuf0s" path="res://Assets/3D/furniture/boss desk.glb" id="8_l6exm"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="9_4xt5x"]
+[ext_resource type="PackedScene" uid="uid://ciuokm66b1rv7" path="res://Assets/Scenes/interactable_object.tscn" id="10_ucbwp"]
+[ext_resource type="PackedScene" uid="uid://dx6ch0jq7jcvq" path="res://Assets/3D/furniture/wallpiece corner out.glb" id="12_bbwqm"]
+[ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://Assets/Scenes/chars/npc.tscn" id="13_g1odx"]
+[ext_resource type="Texture2D" uid="uid://26i7axc5qd8o" path="res://Assets/2D/magazine.png" id="15_w55y7"]
+[ext_resource type="Resource" uid="uid://qjgqtc7k0b00" path="res://Dialogue/tutorial/bentley_introduction.dialogue" id="16_vodc6"]
+[ext_resource type="PackedScene" uid="uid://boxgeamjeq4oh" path="res://Assets/Scenes/chars/boss.tscn" id="18_6gl2h"]
+[ext_resource type="Resource" uid="uid://cbrjk4iblb4g1" path="res://Dialogue/maingame/boss_maingame.dialogue" id="19_jpeog"]
+[ext_resource type="PackedScene" uid="uid://d1rer83pecrxf" path="res://Assets/Scenes/chars/hector.tscn" id="20_tpfyg"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -177,3 +180,16 @@ image = ExtResource("15_w55y7")
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 8, 2.5, 0)
 dialogue = ExtResource("16_vodc6")
 req_flag = "tutorial"
+
+[node name="boss" parent="." instance=ExtResource("18_6gl2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 5)
+dialogue = ExtResource("19_jpeog")
+req_flag = "tutorial"
+flag_val_int_min = 4
+flag_val_int_max = 99
+
+[node name="hector" parent="." instance=ExtResource("20_tpfyg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, 7)
+req_flag = "tutorial"
+flag_val_int_min = 4
+flag_val_int_max = 99

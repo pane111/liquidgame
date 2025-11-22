@@ -12,9 +12,13 @@ do set_char_voice("boss")
 do set_char_voice("bentley")
 {{FlagManager.char_name("bentley")}}: I... I'm feeling lightheaded.
 {{FlagManager.char_name("bentley")}}: I have to catch fresh air.
-do FlagManager.set_int("tutorial",3)
+do FlagManager.set_int("tutorial",4)
 do FlagManager.add_evidence("bird","res://Resources/Evidence/bird.tres")
 do load_path("res://Assets/Scenes/Areas/office.tscn")
-System: This is the end of the game. So far. Don't let that stop you from snooping around.
-System: Try to find Bentley ! 
+do set_player_voice()
+(A few hours later...)
+(The Bird Statue was added to your evidence.)
+do AudioManager._switch_music("main")
+System: You have reached the end of the game (so far).
+System: However, feel free to look around to explore the area and talk to everyone!
 => END

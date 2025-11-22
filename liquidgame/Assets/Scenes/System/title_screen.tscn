@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyj0frrxh02hb"]
+
+[ext_resource type="Script" uid="uid://dulbq824w27gs" path="res://Assets/Scenes/System/title_screen.gd" id="1_f1l34"]
+[ext_resource type="Theme" uid="uid://4hg2sp3stq0y" path="res://Resources/iced_theme.tres" id="1_roqbg"]
+[ext_resource type="FontFile" uid="uid://dnuk8d7h14pr2" path="res://RacingSansOne-Regular.ttf" id="2_f1l34"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpx0r"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_f1l34")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kpx0r")
+
+[node name="StartBtn" type="Button" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = -15.5
+offset_right = 53.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_roqbg")
+theme_override_font_sizes/font_size = 48
+text = "START GAME"
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -234.0
+offset_right = 91.5
+offset_bottom = -125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_roqbg")
+theme_override_fonts/font = ExtResource("2_f1l34")
+theme_override_font_sizes/font_size = 86
+text = "ICED"
+
+[connection signal="pressed" from="CanvasLayer/Panel/StartBtn" to="." method="_on_start_btn_pressed"]

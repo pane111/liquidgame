@@ -1,0 +1,5 @@
+~ start
+{{FlagManager.char_name("boss")}}: Oh. Hello.
+{{FlagManager.char_name("boss")}}: Ugh... Apologies, but this is not a good time.
+{{FlagManager.char_name("boss")}}: It's fine. You don't have to work today. Feel free to wander about.
+=> END

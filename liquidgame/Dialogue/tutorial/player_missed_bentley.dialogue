@@ -48,5 +48,7 @@
 	{{FlagManager.char_name("Bentley")}}: Go through the door on your right and you'll get to the entrance hall. I'll wait there.
 	{{FlagManager.char_name("Bentley")}}: ...Feel free to look around, I guess. You don't seem interested in my guidance anyways.
 	{{FlagManager.char_name("Bentley")}}: But this is my job, so I gotta do it regardless, I guess.
-do FlagManager.set_int("tutorial",2)
+	do FlagManager.set_int("ragebaited",1)
+	do FlagManager.set_int("tutorial",2)
+
 => END

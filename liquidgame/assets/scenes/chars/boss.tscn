@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://boxgeamjeq4oh"]
 
-[ext_resource type="Script" uid="uid://b04pshwcy136n" path="res://assets/scenes/npc.gd" id="1_4ydte"]
-[ext_resource type="Resource" uid="uid://cnm6xwfh4ffjx" path="res://dialogue/test_boss.dialogue" id="2_4ydte"]
-[ext_resource type="Resource" uid="uid://4sr2jq5cauvk" path="res://resources/characters/boss.tres" id="3_jjjqd"]
-[ext_resource type="Texture2D" uid="uid://djeive56sug14" path="res://assets/2D/Characters/Boss/boss_outline.png" id="4_n4cuc"]
-[ext_resource type="Texture2D" uid="uid://emrf7p6e0eyg" path="res://assets/2D/Characters/Boss/boss_color.png" id="5_vdxs0"]
-[ext_resource type="Texture2D" uid="uid://bus1dj1eci46t" path="res://assets/2D/Characters/Boss/boss_shading.png" id="6_r0q3e"]
+[ext_resource type="Script" uid="uid://b04pshwcy136n" path="res://Assets/Scenes/npc.gd" id="1_4ydte"]
+[ext_resource type="Resource" uid="uid://dfpalw1sxih8o" path="res://dialogue/test_boss.dialogue" id="2_4ydte"]
+[ext_resource type="Resource" uid="uid://4sr2jq5cauvk" path="res://Resources/Characters/boss.tres" id="3_jjjqd"]
+[ext_resource type="Texture2D" uid="uid://uuadc7hsf7s3" path="res://assets/2D/Characters/Boss/boss_outline.png" id="4_n4cuc"]
+[ext_resource type="Texture2D" uid="uid://dnaq5vt0ps4x7" path="res://assets/2D/Characters/Boss/boss_color.png" id="5_vdxs0"]
+[ext_resource type="Texture2D" uid="uid://cep4n0se7kcrt" path="res://assets/2D/Characters/Boss/boss_shading.png" id="6_r0q3e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_peea3"]
 size = Vector3(1.3000001, 5, 1)

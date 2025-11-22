@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://bcmef0ssdl2lc"]
 
 [ext_resource type="Script" uid="uid://b04pshwcy136n" path="res://Assets/Scenes/npc.gd" id="1_vpvhg"]
-[ext_resource type="Resource" uid="uid://beuxdixiuboyl" path="res://Dialogue/test_angry.dialogue" id="2_vpvhg"]
+[ext_resource type="Resource" uid="uid://cd605f7sad7ah" path="res://Dialogue/test_angry.dialogue" id="2_vpvhg"]
 [ext_resource type="Resource" uid="uid://bpkxbi7yq0s6j" path="res://Resources/Characters/sabrina.tres" id="3_xdyro"]
-[ext_resource type="Texture2D" uid="uid://b3sbkm6ak8c82" path="res://Assets/2D/Characters/Sabrina/sabrina_outline.png" id="4_s6ct4"]
-[ext_resource type="Texture2D" uid="uid://by01w15jh0y2f" path="res://Assets/2D/Characters/Sabrina/sabrina_color.png" id="5_ya3n0"]
-[ext_resource type="Texture2D" uid="uid://7t0s4qieta7a" path="res://Assets/2D/Characters/Sabrina/sabrina_shading.png" id="6_cq0r4"]
+[ext_resource type="Texture2D" uid="uid://ufnfaive4ik6" path="res://Assets/2D/Characters/Sabrina/sabrina_outline.png" id="4_s6ct4"]
+[ext_resource type="Texture2D" uid="uid://xrfgar80s8l1" path="res://Assets/2D/Characters/Sabrina/sabrina_color.png" id="5_ya3n0"]
+[ext_resource type="Texture2D" uid="uid://crd8van46m5ll" path="res://Assets/2D/Characters/Sabrina/sabrina_shading.png" id="6_cq0r4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_peea3"]
 size = Vector3(1, 5, 1)

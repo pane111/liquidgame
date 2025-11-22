@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://d1rer83pecrxf"]
 
 [ext_resource type="Script" uid="uid://b04pshwcy136n" path="res://Assets/Scenes/npc.gd" id="1_1j06j"]
-[ext_resource type="Resource" uid="uid://etwg3r4xdprg" path="res://Dialogue/hector.dialogue" id="2_pdsie"]
+[ext_resource type="Resource" uid="uid://n7ntes6e1bao" path="res://Dialogue/hector.dialogue" id="2_pdsie"]
 [ext_resource type="Resource" uid="uid://5tatmk3s0v8c" path="res://Resources/Characters/hector.tres" id="3_41s4u"]
-[ext_resource type="Texture2D" uid="uid://dtr4nxineoycr" path="res://Assets/2D/Characters/Hector/hector_outline.png" id="4_46hfd"]
-[ext_resource type="Texture2D" uid="uid://lb7aah0ocw7c" path="res://Assets/2D/Characters/Hector/hector_color.png" id="5_jvrx4"]
-[ext_resource type="Texture2D" uid="uid://do3y2ng7r434n" path="res://Assets/2D/Characters/Hector/hector_shading.png" id="6_lf8nr"]
+[ext_resource type="Texture2D" uid="uid://dxf8t43oei2gk" path="res://Assets/2D/Characters/Hector/hector_outline.png" id="4_46hfd"]
+[ext_resource type="Texture2D" uid="uid://co76k4cbi5weo" path="res://Assets/2D/Characters/Hector/hector_color.png" id="5_jvrx4"]
+[ext_resource type="Texture2D" uid="uid://b0wikoij0nino" path="res://Assets/2D/Characters/Hector/hector_shading.png" id="6_lf8nr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_peea3"]
 size = Vector3(1, 5, 1)

@@ -1,0 +1,8 @@
+~ start
+{{FlagManager.char_name("hammerdog")}}: Oh, hey.
+{{FlagManager.char_name("hammerdog")}}: I guess I haven't introduced myself properly yet, ahah.
+{{FlagManager.char_name("hammerdog")}}: The name's Aron... I do the heavy lifting around here.
+{{FlagManager.char_name("hammerdog")}}: What happened earlier was real scary, huh?
+{{FlagManager.char_name("hammerdog")}}: Damn it... I can't believe Roger is dead...
+{{FlagManager.char_name("hammerdog")}}: The whole time, I thought he just quit or something. I dunno.
+=> END

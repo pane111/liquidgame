@@ -1,15 +1,15 @@
 [gd_scene load_steps=11 format=3 uid="uid://cw6qadey7cnh4"]
 
 [ext_resource type="Script" uid="uid://wrug3eu6ks5x" path="res://scripts/flag_manager.gd" id="1_skr22"]
-[ext_resource type="Script" uid="uid://dvcn684qc8ol5" path="res://resources/characters/character.gd" id="2_3pq6a"]
-[ext_resource type="Resource" uid="uid://bv7h2kjpir13h" path="res://resources/characters/bentley.tres" id="3_uubbq"]
-[ext_resource type="Resource" uid="uid://cbavpy0d0fw6y" path="res://resources/characters/hammer_dog.tres" id="4_k7fmi"]
-[ext_resource type="Resource" uid="uid://d2vw1loiemyw8" path="res://resources/characters/jellyfish.tres" id="5_bgwsq"]
-[ext_resource type="Resource" uid="uid://4sr2jq5cauvk" path="res://resources/characters/boss.tres" id="6_uubbq"]
-[ext_resource type="Resource" uid="uid://bpkxbi7yq0s6j" path="res://resources/characters/sabrina.tres" id="7_k7fmi"]
-[ext_resource type="Resource" uid="uid://5tatmk3s0v8c" path="res://resources/characters/hector.tres" id="8_bgwsq"]
-[ext_resource type="Script" uid="uid://8kbtb2yinplx" path="res://resources/Evidence/evidence.gd" id="9_yv6hd"]
-[ext_resource type="Resource" uid="uid://5mxsmevw6pu4" path="res://resources/Evidence/card.tres" id="10_yv6hd"]
+[ext_resource type="Script" uid="uid://dvcn684qc8ol5" path="res://Resources/Characters/character.gd" id="2_3pq6a"]
+[ext_resource type="Resource" uid="uid://bv7h2kjpir13h" path="res://Resources/Characters/bentley.tres" id="3_uubbq"]
+[ext_resource type="Resource" uid="uid://cbavpy0d0fw6y" path="res://Resources/Characters/hammer_dog.tres" id="4_k7fmi"]
+[ext_resource type="Resource" uid="uid://d2vw1loiemyw8" path="res://Resources/Characters/jellyfish.tres" id="5_bgwsq"]
+[ext_resource type="Resource" uid="uid://4sr2jq5cauvk" path="res://Resources/Characters/boss.tres" id="6_uubbq"]
+[ext_resource type="Resource" uid="uid://bpkxbi7yq0s6j" path="res://Resources/Characters/sabrina.tres" id="7_k7fmi"]
+[ext_resource type="Resource" uid="uid://5tatmk3s0v8c" path="res://Resources/Characters/hector.tres" id="8_bgwsq"]
+[ext_resource type="Script" uid="uid://8kbtb2yinplx" path="res://Resources/Evidence/evidence.gd" id="9_yv6hd"]
+[ext_resource type="Resource" uid="uid://5mxsmevw6pu4" path="res://Resources/Evidence/card.tres" id="10_yv6hd"]
 
 [node name="FlagManager" type="Node"]
 script = ExtResource("1_skr22")
@@ -28,5 +28,7 @@ evidence = Dictionary[String, ExtResource("9_yv6hd")]({
 "card": ExtResource("10_yv6hd")
 })
 int_flags = Dictionary[String, int]({
+"bentley_roof": 0,
+"ragebaited": 0,
 "tutorial": 0
 })

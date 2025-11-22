@@ -14,6 +14,9 @@ var locations = {
 }
 @export var teleportationAllowed = false
 
+var cursor_standard = load("res://cursor.png")
+var cursor_pointing = load("res://cursorSelect.png")
+
 var current_area
 var prev_area
 var main_game_node
@@ -40,6 +43,8 @@ var queued_dia
 var queued=false
 
 func _ready() -> void:
+	Input.set_custom_mouse_cursor(cursor_standard, Input.CURSOR_ARROW, Vector2(16,16))
+	Input.set_custom_mouse_cursor(cursor_pointing, Input.CURSOR_POINTING_HAND, Vector2(16,16))
 	main_game_node = get_node("/root/MainGame")
 	player = $Player
 	$VoicePlayer.stream = player_voice

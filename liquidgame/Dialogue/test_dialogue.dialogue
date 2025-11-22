@@ -11,4 +11,14 @@ do set_normal_expression()
 - Disappear forever
 	{{FlagManager.char_name("Bentley")}}: Okay!
 	do hide_after_dialogue()
+- Say something that makes me have to present the knife
+	do FlagManager.set_weak_point("Kitchen Knife")
+	{{FlagManager.char_name("Bentley")}}: I'll get real surprised if you show me a knife right now!
+	if FlagManager.caught:
+		do set_surprised_expression()
+		{{FlagManager.char_name("Bentley")}}: Oh my god! You have a knife! I'm scared!
+		do FlagManager.set_weak_point("")
+		{{FlagManager.char_name("Bentley")}}: Don't stab me, it would be really bad!
+	else: 
+		{{FlagManager.char_name("Bentley")}}: Now it's too late
 => END

@@ -3,7 +3,8 @@ extends Node
 @export var characters: Dictionary[String,Character]
 @export var billboarding = true
 @export var evidence: Dictionary[String,Evidence]
-
+var weak_point: String
+var caught=false
 var int_flags = {
 	"test_int": 1
 }
@@ -11,6 +12,10 @@ var int_flags = {
 var str_flags = {
 	"test_str": "test"
 }
+
+func set_weak_point(val):
+	weak_point = val
+	caught=false
 
 func add_evidence(name: String, ev: Evidence):
 	evidence[name] = ev

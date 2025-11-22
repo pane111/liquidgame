@@ -7,6 +7,7 @@ func set_item(i: Evidence):
 	e_item = i
 	$HBoxContainer/TextureRect.texture = i.e_sprite
 	$HBoxContainer/Label.text = i.e_name
+	
 
 func _process(delta: float) -> void:
 	if mouse_over && Input.is_action_just_pressed("click"):

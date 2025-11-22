@@ -21,11 +21,13 @@ var inter_obj
 var cur_char
 signal finished_dialogue
 signal finished_dialogue_hide
+signal presented
 var hide_after=false
 var in_dialogue=false
 
 var ev_open=false
 var can_open_ev=true
+var cur_ev
 
 @export var voice_pitch_lower = 0.2
 @export var voice_pitch_higher = 0.1
@@ -39,7 +41,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("rclick") && can_open_ev:
 		toggle_ev()
-		
+func set_cur_ev(val: Evidence):
+	cur_ev = val
 	
 func dialogue_anim(dia: DialogueResource, char: Character = null):
 	hide_after=false
@@ -74,12 +77,13 @@ func play_voice():
 	$VoicePlayer.play()
 	
 func ev_detail(evidence: Evidence):
-		$CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer/HBoxContainer/ItemSprite.texture = evidence.e_sprite
-		$CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer/HBoxContainer/ItemName.text = evidence.e_name
-		$CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer/ItemDesc.text = evidence.e_desc
-		$CanvasLayer/DialoguePanel/EvLayer/ItemDetails.show()
-		if in_dialogue:
-			$CanvasLayer/DialoguePanel/EvLayer/PresentButton.show()
+	set_cur_ev(evidence)
+	$CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer/HBoxContainer/ItemSprite.texture = evidence.e_sprite
+	$CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer/HBoxContainer/ItemName.text = evidence.e_name
+	$CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer/ItemDesc.text = evidence.e_desc
+	$CanvasLayer/DialoguePanel/EvLayer/ItemDetails.show()
+	if in_dialogue:
+		$CanvasLayer/DialoguePanel/EvLayer/PresentButton.show()
 
 func set_normal_expression():
 	$CanvasLayer/DialoguePanel/CharSprite/Outline.texture = cur_char.normal_outline
@@ -90,6 +94,7 @@ func open_evidence_menu():
 	$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "evidence_on"
 	$CanvasLayer/DialoguePanel/EvLayer/EvidenceList.show()
 	ev_open=true
+	player.can_look=false
 
 func close_evidence_menu():
 	$CanvasLayer/DialoguePanel/EvLayer/ItemDetails.hide()
@@ -98,6 +103,7 @@ func close_evidence_menu():
 	await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
 	$CanvasLayer/DialoguePanel/EvLayer/EvidenceList.hide()
 	ev_open=false
+	player.can_look=true
 
 func toggle_ev():
 	if ev_open:
@@ -194,3 +200,23 @@ func _on_go_back_button_down() -> void:
 	$CanvasLayer/RClickMenu.hide()
 	if prev_area != "" || prev_area!=null:
 		load_new_area(load(prev_area))
+func shock_effect():
+	$CanvasLayer/FadeAnim.current_animation="flash_white"
+	AudioManager._play_sound("crash")
+	AudioManager._switch_music("caught")
+
+func _on_present_button_pressed() -> void:
+	if cur_ev.e_name == FlagManager.weak_point:
+		print_debug("Picked correct evidence")
+		FlagManager.caught=true
+		close_evidence_menu()
+		await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
+		presented.emit()
+		shock_effect()
+	else:
+		print_debug("Wrong evidence/no weak point")
+		FlagManager.caught=false
+		close_evidence_menu()
+		await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
+		presented.emit()
+	

@@ -4,12 +4,12 @@ importer="dialogue_manager"
 importer_version=15
 type="Resource"
 uid="uid://etwg3r4xdprg"
-path="res://.godot/imported/hector.dialogue-b80665400f6b1d02ed12d07fca87d062.tres"
+path="res://.godot/imported/hector.dialogue-adf831410767c8c5f2423e1560c08953.tres"
 
 [deps]
 
-source_file="res://dialogue/hector.dialogue"
-dest_files=["res://.godot/imported/hector.dialogue-b80665400f6b1d02ed12d07fca87d062.tres"]
+source_file="res://Dialogue/hector.dialogue"
+dest_files=["res://.godot/imported/hector.dialogue-adf831410767c8c5f2423e1560c08953.tres"]
 
 [params]
 

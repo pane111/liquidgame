@@ -148,6 +148,7 @@ response_template = NodePath("ResponseExample")
 custom_minimum_size = Vector2(350, 60)
 layout_mode = 2
 text = "Response example"
+autowrap_mode = 3
 
 [node name="Progress" type="Polygon2D" parent="Balloon"]
 unique_name_in_owner = true

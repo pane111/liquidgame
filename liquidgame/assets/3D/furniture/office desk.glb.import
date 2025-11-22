@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dq4edvq41md8e"
-path="res://.godot/imported/office desk.glb-842b0425c47c4d15155619969bbc486f.scn"
+path="res://.godot/imported/office desk.glb-ff24c68f0fd8b23e67157bdcfc7ab4c9.scn"
 
 [deps]
 
-source_file="res://assets/3D/furniture/office desk.glb"
-dest_files=["res://.godot/imported/office desk.glb-842b0425c47c4d15155619969bbc486f.scn"]
+source_file="res://Assets/3D/furniture/office desk.glb"
+dest_files=["res://.godot/imported/office desk.glb-ff24c68f0fd8b23e67157bdcfc7ab4c9.scn"]
 
 [params]
 

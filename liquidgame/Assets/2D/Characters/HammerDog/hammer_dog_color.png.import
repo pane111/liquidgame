@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dl6ydioelwyni"
-path.s3tc="res://.godot/imported/hammer_dog_color.png-a8f6235a6e300bee97bdc8dfc56e9b3c.s3tc.ctex"
+path.s3tc="res://.godot/imported/hammer_dog_color.png-598a1e4da18301b4795d336018e6d1ff.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/2D/Characters/HammerDog/hammer_dog_color.png"
-dest_files=["res://.godot/imported/hammer_dog_color.png-a8f6235a6e300bee97bdc8dfc56e9b3c.s3tc.ctex"]
+source_file="res://Assets/2D/Characters/HammerDog/hammer_dog_color.png"
+dest_files=["res://.godot/imported/hammer_dog_color.png-598a1e4da18301b4795d336018e6d1ff.s3tc.ctex"]
 
 [params]
 

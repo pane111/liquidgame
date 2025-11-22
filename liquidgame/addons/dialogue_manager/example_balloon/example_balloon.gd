@@ -71,7 +71,8 @@ var mutation_cooldown: Timer = Timer.new()
 func _ready() -> void:
 	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
-
+	
+	get_node("/root/MainGame").presented.connect(advance)
 	# If the responses menu doesn't have a next action set, use this one
 	if responses_menu.next_action.is_empty():
 		responses_menu.next_action = next_action
@@ -212,6 +213,11 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 #endregion
 
+func advance():
+	var inp = InputEventMouseButton.new()
+	inp.button_index = MOUSE_BUTTON_LEFT
+	inp.pressed=true
+	_on_balloon_gui_input(inp)
 
 func _on_evidence_button_pressed() -> void:
 	get_node("/root/MainGame").toggle_ev()

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nsysf1akx2kq"
-path="res://.godot/imported/boss_phone_color.png-9c5abdf6bce5225ac4e4b16e4849a8d9.ctex"
+path="res://.godot/imported/boss_phone_color.png-64239b5957c193aebadd7b831d1a9271.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/2D/Characters/Boss/boss_phone_color.png"
-dest_files=["res://.godot/imported/boss_phone_color.png-9c5abdf6bce5225ac4e4b16e4849a8d9.ctex"]
+source_file="res://Assets/2D/Characters/Boss/boss_phone_color.png"
+dest_files=["res://.godot/imported/boss_phone_color.png-64239b5957c193aebadd7b831d1a9271.ctex"]
 
 [params]
 

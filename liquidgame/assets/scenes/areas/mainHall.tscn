@@ -1,20 +1,21 @@
-[gd_scene load_steps=17 format=3 uid="uid://d0e0mekr4kpgs"]
+[gd_scene load_steps=18 format=3 uid="uid://d0e0mekr4kpgs"]
 
-[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_jmlkm"]
-[ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="2_qxnvn"]
-[ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="3_ehqxr"]
-[ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://assets/3D/furniture/wallpiece.glb" id="3_lsgol"]
-[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://assets/3D/furniture/statue stand.glb" id="5_gcq5k"]
-[ext_resource type="PackedScene" uid="uid://b0ngqo7v61jht" path="res://assets/3D/furniture/big door.glb" id="5_vvl6r"]
-[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="7_3x6pt"]
-[ext_resource type="PackedScene" uid="uid://d1rer83pecrxf" path="res://assets/scenes/chars/hector.tscn" id="8_6i13h"]
-[ext_resource type="PackedScene" uid="uid://boxgeamjeq4oh" path="res://assets/scenes/chars/boss.tscn" id="9_n7ok7"]
-[ext_resource type="PackedScene" uid="uid://bcmef0ssdl2lc" path="res://assets/scenes/chars/sabrina.tscn" id="10_jl5h5"]
-[ext_resource type="PackedScene" uid="uid://brq5dbdg3620b" path="res://assets/scenes/invisible_object.tscn" id="12_jl5h5"]
-[ext_resource type="PackedScene" uid="uid://coo8x3pxgocw7" path="res://assets/3D/statues/ice_bird_full.glb" id="13_nrtr3"]
-[ext_resource type="PackedScene" uid="uid://cr8rt2yx7ggqj" path="res://assets/3D/statues/ice_bird_body.glb" id="14_kawtl"]
-[ext_resource type="PackedScene" uid="uid://deglwy35wjdl2" path="res://assets/3D/statues/ice_bird_head.glb" id="15_kxwgw"]
-[ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://assets/3D/floor_planks.glb" id="15_xmpfl"]
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_jmlkm"]
+[ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://Assets/3D/furniture/ceiling_lamp.tscn" id="2_qxnvn"]
+[ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://Assets/3D/furniture/wallpiece corner in.glb" id="3_ehqxr"]
+[ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://Assets/3D/furniture/wallpiece.glb" id="3_lsgol"]
+[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://Assets/3D/furniture/statue stand.glb" id="5_gcq5k"]
+[ext_resource type="PackedScene" uid="uid://b0ngqo7v61jht" path="res://Assets/3D/furniture/big door.glb" id="5_vvl6r"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="7_3x6pt"]
+[ext_resource type="PackedScene" uid="uid://d1rer83pecrxf" path="res://Assets/Scenes/chars/hector.tscn" id="8_6i13h"]
+[ext_resource type="PackedScene" uid="uid://boxgeamjeq4oh" path="res://Assets/Scenes/chars/boss.tscn" id="9_n7ok7"]
+[ext_resource type="PackedScene" uid="uid://bcmef0ssdl2lc" path="res://Assets/Scenes/chars/sabrina.tscn" id="10_jl5h5"]
+[ext_resource type="PackedScene" uid="uid://brq5dbdg3620b" path="res://Assets/Scenes/invisible_object.tscn" id="12_jl5h5"]
+[ext_resource type="PackedScene" uid="uid://bvf05hufk17ws" path="res://assets/3D/statues/ice_bird_full.glb" id="13_nrtr3"]
+[ext_resource type="PackedScene" uid="uid://ctct382p1xew6" path="res://assets/3D/statues/ice_bird_body.glb" id="14_kawtl"]
+[ext_resource type="PackedScene" uid="uid://mdgi7r08f7se" path="res://assets/3D/statues/ice_bird_head.glb" id="15_kxwgw"]
+[ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://Assets/3D/floor_planks.glb" id="15_xmpfl"]
+[ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://Assets/Scenes/chars/npc.tscn" id="16_j6bpp"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -191,3 +192,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10.
 
 [node name="floor_square9" parent="." instance=ExtResource("15_xmpfl")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10.08078, -0.09999857, 7.0471034)
+
+[node name="bentley" parent="." instance=ExtResource("16_j6bpp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.6, 0)

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7t0s4qieta7a"
-path.s3tc="res://.godot/imported/sabrina_shading.png-062d891c70cc8c504efdd3310c9df271.s3tc.ctex"
+path.s3tc="res://.godot/imported/sabrina_shading.png-fca90a7052c3d4b697e2826255115471.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/2D/Characters/Sabrina/sabrina_shading.png"
-dest_files=["res://.godot/imported/sabrina_shading.png-062d891c70cc8c504efdd3310c9df271.s3tc.ctex"]
+source_file="res://Assets/2D/Characters/Sabrina/sabrina_shading.png"
+dest_files=["res://.godot/imported/sabrina_shading.png-fca90a7052c3d4b697e2826255115471.s3tc.ctex"]
 
 [params]
 

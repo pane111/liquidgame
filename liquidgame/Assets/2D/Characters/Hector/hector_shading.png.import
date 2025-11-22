@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://do3y2ng7r434n"
-path.s3tc="res://.godot/imported/hector_shading.png-00b76e75c31a71a74f88fd0d216f5f7d.s3tc.ctex"
+path.s3tc="res://.godot/imported/hector_shading.png-d4c6200c73abbcf31690954565650322.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/2D/Characters/Hector/hector_shading.png"
-dest_files=["res://.godot/imported/hector_shading.png-00b76e75c31a71a74f88fd0d216f5f7d.s3tc.ctex"]
+source_file="res://Assets/2D/Characters/Hector/hector_shading.png"
+dest_files=["res://.godot/imported/hector_shading.png-d4c6200c73abbcf31690954565650322.s3tc.ctex"]
 
 [params]
 

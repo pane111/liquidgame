@@ -38,6 +38,8 @@ var cur_ev
 @export var ev_item_scene: PackedScene
 @export var player_voice: AudioStream
 
+@export var default_scene: PackedScene
+
 var queued_char
 var queued_dia
 var queued=false
@@ -48,7 +50,7 @@ func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
 	player = $Player
 	$VoicePlayer.stream = player_voice
-	load_new_area(load(locations["_boss_office"]),false)
+	load_new_area(default_scene,false)
 	set_evidence()
 	
 func _process(delta: float) -> void:

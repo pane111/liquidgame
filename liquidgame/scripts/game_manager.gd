@@ -34,6 +34,10 @@ var cur_ev
 @export var ev_item_scene: PackedScene
 @export var player_voice: AudioStream
 
+var queued_char
+var queued_dia
+var queued=false
+
 func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
 	player = $Player
@@ -57,20 +61,29 @@ func dialogue_anim(dia: DialogueResource, char: Character = null):
 		set_normal_expression()
 		in_dialogue=true
 		$CanvasLayer/DialoguePanel/CharSprite/Shading.self_modulate = char.color
-		$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "dialogue_start"
+		if !queued:
+			$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "dialogue_start"
+		else:
+			queued=false
+			$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "fade_char_in"
 		await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
 		var balloon = DialogueManager.show_example_dialogue_balloon(dia,"start")
 		await DialogueManager.dialogue_ended
 		if ev_open:
 			close_evidence_menu()
 			await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
-		$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "dialogue_end"
-		await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
-		$CanvasLayer/DialoguePanel.hide()
-		player.can_look=true
-		finished_dialogue.emit()
-		in_dialogue=false
-		$VoicePlayer.stream = player_voice
+		if !queued:
+			$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "dialogue_end"
+			await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
+			$CanvasLayer/DialoguePanel.hide()
+			player.can_look=true
+			finished_dialogue.emit()
+			in_dialogue=false
+			$VoicePlayer.stream = player_voice
+		else:
+			$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "fade_char_out"
+			await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
+			dialogue_anim(queued_dia,queued_char)
 	else:
 		DialogueManager.show_example_dialogue_balloon(dia,"start")
 		await DialogueManager.dialogue_ended
@@ -78,6 +91,12 @@ func play_voice():
 	var random_pitch = randf_range(1-voice_pitch_lower,1+voice_pitch_higher)
 	$VoicePlayer.pitch_scale = random_pitch
 	$VoicePlayer.play()
+	
+func link_dialogue(dia: String, char: String):
+	queued_dia = load(dia)
+	queued_char = load(char)
+	queued=true
+	
 	
 func ev_detail(evidence: Evidence):
 	set_cur_ev(evidence)

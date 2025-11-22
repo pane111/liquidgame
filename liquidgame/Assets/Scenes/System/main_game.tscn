@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://6jwyshv4pv0f"]
+[gd_scene load_steps=31 format=3 uid="uid://6jwyshv4pv0f"]
 
 [ext_resource type="Script" uid="uid://b6ui0seb11adj" path="res://scripts/game_manager.gd" id="1_0qls7"]
 [ext_resource type="PackedScene" uid="uid://cij3m80i3u2v3" path="res://Assets/Scenes/player.tscn" id="1_3nrmw"]
@@ -206,6 +206,36 @@ tracks/0/keys = {
 "values": [473.7886, 473.7886, 559.0]
 }
 
+[sub_resource type="Animation" id="Animation_q51aq"]
+resource_name = "fade_char_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.08, 0.633333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nksk1"]
+resource_name = "fade_char_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03333333, 0.56333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7abc5"]
 _data = {
 &"RESET": SubResource("Animation_d8qdf"),
@@ -213,6 +243,8 @@ _data = {
 &"dialogue_start": SubResource("Animation_fnbvd"),
 &"evidence_off": SubResource("Animation_jvbpl"),
 &"evidence_on": SubResource("Animation_33jy8"),
+&"fade_char_in": SubResource("Animation_nksk1"),
+&"fade_char_out": SubResource("Animation_q51aq"),
 &"surprised": SubResource("Animation_7abc5")
 }
 

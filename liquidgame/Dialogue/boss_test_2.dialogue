@@ -1,0 +1,4 @@
+~ start
+{{FlagManager.char_name("boss")}}: Yo dude... Put that knife away...
+{{FlagManager.char_name("boss")}}: Pretty please?
+=> END

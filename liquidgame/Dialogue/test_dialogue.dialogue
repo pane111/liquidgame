@@ -19,6 +19,8 @@ do set_normal_expression()
 		{{FlagManager.char_name("Bentley")}}: Oh my god! You have a knife! I'm scared!
 		do FlagManager.set_weak_point("")
 		{{FlagManager.char_name("Bentley")}}: Don't stab me, it would be really bad!
+		{{FlagManager.char_name("Bentley")}}: I'm gonna go call the boss now!
+		do link_dialogue("res://Dialogue/boss_test_2.dialogue","res://Resources/Characters/boss.tres")
 	else: 
 		{{FlagManager.char_name("Bentley")}}: Now it's too late
 => END

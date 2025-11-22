@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Evidence" load_steps=3 format=3 uid="uid://frdia5bluma1"]
+
+[ext_resource type="Script" uid="uid://8kbtb2yinplx" path="res://Resources/Evidence/evidence.gd" id="1_ikrl6"]
+[ext_resource type="Texture2D" uid="uid://cneqh36j3yso6" path="res://Assets/2D/coolmag.png" id="1_t36t3"]
+
+[resource]
+script = ExtResource("1_ikrl6")
+e_name = "COOL! Magazine"
+e_sprite = ExtResource("1_t36t3")
+e_desc = "A magazine full of colorful photos of celebrities... How vapid. Seems the boss was reading it..."
+metadata/_custom_type_script = "uid://8kbtb2yinplx"

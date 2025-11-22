@@ -1,0 +1,32 @@
+~ start
+{{FlagManager.char_name("Bentley")}}: So... here we are. This is, well, this is it. Most of the work you’ll do will be inside of these four walls here.
+{{FlagManager.char_name("Bentley")}}: New Accountant? You realize what this is, right? It’s like you’ve been invited to a five-star-cruise...
+do AudioManager.pause_music()
+{{FlagManager.char_name("Bentley")}}: on a sinking ship.
+do AudioManager.resume_music()
+do set_angry_expression(false)
+{{FlagManager.char_name("Bentley")}}: In other words, you hit the jackpot!
+- What do you mean?
+do set_normal_expression()
+{{FlagManager.char_name("Bentley")}}: Well... This company won't exist much longer.
+{{FlagManager.char_name("Bentley")}}: Meld & Sons has been in the process of liquification for a few months now. They’re about to drive the final nails into the coffin.
+do set_angry_expression(false)
+{{FlagManager.char_name("Bentley")}}: Makes you wonder what they'll do with all those unsold statues. Are they gonna liquify them too? Hahaha!
+- So... what am I doing here?
+do set_normal_expression()
+{{FlagManager.char_name("Bentley")}}: Did the boss not tell you anything? Oh boy. Well, as I understand it, your job here is to go over the files and finances and, uh, set everything up for liquification.
+- Liquidation. (Correct him)
+	{{FlagManager.char_name("Bentley")}}: Oh, but—yeah, of course. That’s what I meant, haha. (I could swear that's what the boss called it yesterday...?)
+	{{FlagManager.char_name("Bentley")}}: Er, regardless. About the whole jackpot thing. You get a whole month's salary for a few days of work! I'd be looking over my shoulder if I was you.
+- Okay, sounds good.
+	{{FlagManager.char_name("Bentley")}}: Yeah, I bet it does. You get a whole month's salary for a few days of work! I'd be looking over my shoulder if I was you.
+{{FlagManager.char_name("Bentley")}}: ...
+{{FlagManager.char_name("Bentley")}}: You know what, er, forget what I just said. The people here are really nice. It's just...
+{{FlagManager.char_name("Bentley")}}: It's just been a tough couple of months, what with the liquif--liquidation and Roger just up and vanishing on us...
+{{FlagManager.char_name("Bentley")}}: But, you know, it will be over soon and then we'll get that promised separation pay. Can’t wait for that, hah!
+{{FlagManager.char_name("Bentley")}}: So, yeah... That's what's on everyone's mind right now. 
+do set_angry_expression(false)
+{{FlagManager.char_name("Bentley")}}: Let's go check out the entrance hall next. It's the door to your right. I'll see you there!
+do FlagManager.set_int("tutorial",2)
+do hide_after_dialogue()
+=> END

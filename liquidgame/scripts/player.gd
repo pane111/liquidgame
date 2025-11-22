@@ -35,7 +35,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _process(delta: float) -> void:
-	if can_look:
+	if can_look && !get_parent().in_dialogue:
 		var x_pan = panvec.normalized().x * panning_speed.x * delta * pan_mult
 		rotation_degrees.x = lerp(rotation_degrees.x,rotation_degrees.x+x_pan,delta * easing)
 		rotation_degrees.x = clamp(rotation_degrees.x + x_pan,init_rot.x,init_rot.x + panning_limit.x)

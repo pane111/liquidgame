@@ -16,14 +16,19 @@
 script = ExtResource("1_skr22")
 characters = Dictionary[String, ExtResource("2_3pq6a")]({
 "Bentley": ExtResource("3_uubbq"),
+"annabell": ExtResource("7_k7fmi"),
+"bentley": ExtResource("3_uubbq"),
 "boss": ExtResource("6_uubbq"),
+"cilly": ExtResource("5_bgwsq"),
 "hammerdog": ExtResource("4_k7fmi"),
 "hector": ExtResource("8_bgwsq"),
-"jellyfish": ExtResource("5_bgwsq"),
 "sabrina": ExtResource("7_k7fmi")
 })
 billboarding = false
 evidence = Dictionary[String, ExtResource("9_yv6hd")]({
 "knife": ExtResource("11_u7v6q"),
 "test": ExtResource("10_u7v6q")
+})
+int_flags = Dictionary[String, int]({
+"tutorial": 0
 })

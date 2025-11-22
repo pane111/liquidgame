@@ -1,4 +1,11 @@
 ~ start
-(It's the latest issue of COOL! magazine...)
-(How boring.)
+You: (It's the latest issue of COOL! magazine...)
+You: (How boring.)
+if FlagManager.check_evidence("magazine")==true:
+	You: (Hey, I just remembered, I can check this from the Evidence Collection by right clicking. How convenient!)
+else:
+	do FlagManager.add_evidence("magazine","res://Resources/Evidence/magazine.tres")
+	You: (Hmmm... It might be useful to keep in mind that the boss reads that stuff, though.)
+	System: COOL! Magazine was added to the Evidence Collection.
+	System: You can right click to view your collection, or press the evidence button during dialogue.
 => END

@@ -1,0 +1,21 @@
+~ start
+{{FlagManager.char_name("boss")}}: The first time you enter the firm is really something isn’t it? Still... I didn’t expect you to fold down on us like that.
+{{FlagManager.char_name("boss")}}: It’s one of the hottest days of the whole year and you decided to take a step into a building-size fridge, after all!
+{{FlagManager.char_name("boss")}}: I read that the sudden temperature change can be a bit too much for the inexperienced. Best assure you that you will get used to it in no time. It was the temperature change that knocked you out wasn’t it? Or was it the awe-inspiring grandeur of our entrance hall!?
+- Oh, it must have been the grandeur!
+	{{FlagManager.char_name("boss")}}: Yes, of course! Wahahaha! It’s not everyday that you can lay your eyes on Meld originals. I must imagine how it would feel to behold them if I wasn’t the one who created them.
+- Where am I?
+	{{FlagManager.char_name("boss")}}: Oh dear... You must be joking! You are at the office of the one and only Meld & Sons Ice Sculptures. The *only* ice sculpture business for people with taste.
+{{FlagManager.char_name("boss")}}: Well, in any case, I should reintroduce myself! I am Otto Meld, the owner of Meld & Sons. My father, a begifted sculptor, was the one who founded the firm.
+{{FlagManager.char_name("boss")}}: Thanks to the unmatched quality of our sculptures, he soon rose to the top of the fierce competition. They say my father's precious works of fine art contain as much of his sweat as they do pure, natural water from the Alps.
+{{FlagManager.char_name("boss")}}: You see, his sculptures have wetted the carpets of the most famous palaces and cooled the air on the most star-studied of banquets! They say his statues were transported all over the world via train and plane and--
+- Okay, but, what am I doing here?
+{{FlagManager.char_name("boss")}}: Oh, but of course... I nearly forgot!
+{{FlagManager.char_name("boss")}}: You see, you have been chosen - in a VERY rigorous selection process - to be our new bookkeeper here at Meld & Sons.
+{{FlagManager.char_name("boss")}}: ...You did apply for that position, correct?
+{{FlagManager.char_name("boss")}}: But regardless... You must excuse me now. Our lawyer was insistent upon visiting the cryo-fabricator and suddenly found himself taking a look closer than he would have hoped for. You see, he was--ICED.
+{{FlagManager.char_name("boss")}}: He’s cooling off—well, I mean,
+{{FlagManager.char_name("boss")}}: ...
+{{FlagManager.char_name("boss")}}: {{FlagManager.char_name("bentley")}} here will show you around. Go on, don't be afraid, he doesn't bite. Hahaha! We can talk later after I'm done discussing business with {{FlagManager.char_name("hector")}}.
+Tutorial: Move your mouse to look around. You can click on objects and people to interact with them.
+=> END

@@ -1,0 +1,31 @@
+~ start
+do set_angry_expression(false)
+{{FlagManager.char_name("Bentley")}}: Hiya, new gal! How are you doing?
+- I've been better
+	do set_normal_expression()
+	{{FlagManager.char_name("Bentley")}}: W-well, I guess that's fair.
+- Considering the circumstances, I suppose I'm alright
+	{{FlagManager.char_name("Bentley")}}: Well, I'm glad to hear that!
+do set_normal_expression()
+{{FlagManager.char_name("Bentley")}}: I'm supposed to be showing you around, but, uh, well... There's really not a lot to show, haha. 
+{{FlagManager.char_name("Bentley")}}: When I first got here, I was sneaking around, looking for secret rooms and such, but... There's nothing.
+{{FlagManager.char_name("Bentley")}}: Just same-y looking hallways and rooms...
+{{FlagManager.char_name("Bentley")}}: Er, not that I have a problem with that, of course! Haha!
+{{FlagManager.char_name("Bentley")}}: It's a lovely old building! Yeah!
+{{FlagManager.char_name("Bentley")}}: ...Anyway. This is the boss' office. Uh... Please don't tell him I said this, but you gotta be careful around here, 'cause he doesn't like his "literature sessions", that's what he calls them, being interrupted.
+{{FlagManager.char_name("Bentley")}}: Now, uh, a *certain someone* told me the books in his room are gathering dust, so uh, maybe he has a secret book stash? O-or one of those digital reading thingamajigs? [color="#f5ce42"]Or... perhaps he lied and doesn't read at all![/color]
+Tutorial: Sometimes, characters will say something that can be proven wrong, highlighted in color. We'll call these statements [color="#f5ce42"]Weak Points[/color]. To counter a weak point, open the Evidence Collection by right clicking or pressing the Evidence button, select the correct evidence, and Present it.
+if FlagManager.check_evidence("magazine")==true:
+	do FlagManager.set_weak_point("COOL! Magazine")
+	Tutorial: You picked up something that can contradict {{FlagManager.char_name("Bentley")}}'s statement. Present it now!
+	while FlagManager.caught==false:
+		Tutorial: That was incorrect. If you advance the dialogue or present the wrong evidence, you may miss your chance to strike a weak point. Try again!
+	do FlagManager.set_weak_point("")
+	{{FlagManager.char_name("Bentley")}}: O-oh. Cool Magazine, huh? Guess the boss is uh, looking out for potential business partners, maybe? Haha. 
+	{{FlagManager.char_name("Bentley")}}: ...You think the boss really reads this? For hours on end? Er, w-well, it's none of my concern.
+else: 
+	Tutorial: ...However, you do not currently have any evidence that can contradict {{FlagManager.char_name("Bentley")}}. Yet.
+{{FlagManager.char_name("Bentley")}}: …Well now, should we start the tour? Meet me in the, um… other office room right through this door here.
+do FlagManager.set_int("tutorial",1)
+do hide_after_dialogue()
+=> END

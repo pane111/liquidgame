@@ -5,13 +5,8 @@ extends Node
 @export var evidence: Dictionary[String,Evidence]
 var weak_point: String
 var caught=false
-var int_flags = {
-	"test_int": 1
-}
-
-var str_flags = {
-	"test_str": "test"
-}
+@export var int_flags: Dictionary[String,int]
+@export var str_flags: Dictionary[String,String]
 
 func set_weak_point(val):
 	weak_point = val
@@ -19,10 +14,13 @@ func set_weak_point(val):
 
 func add_evidence(name: String, ev: String):
 	evidence[name] = load(ev)
+	get_node("/root/MainGame").set_evidence()
 	
 func remove_evidence(name: String):
-	evidence[name] = null
-
+	evidence.erase(name)
+	get_node("/root/MainGame").set_evidence()
+func check_evidence(name: String):
+	return evidence.has(name)
 func char_name(name):
 	var c = characters[name]
 	var c_col = c.color

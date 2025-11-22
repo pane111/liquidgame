@@ -41,9 +41,10 @@ var queued=false
 func _ready() -> void:
 	main_game_node = get_node("/root/MainGame")
 	player = $Player
-	load_new_area(load(locations["_entrance_hall"]),false)
-	set_evidence()
 	$VoicePlayer.stream = player_voice
+	load_new_area(load(locations["_boss_office"]),false)
+	set_evidence()
+	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("rclick") && can_open_ev:
 		toggle_ev()
@@ -57,7 +58,7 @@ func dialogue_anim(dia: DialogueResource, char: Character = null):
 		$CanvasLayer/DialoguePanel.show()
 		cur_char = char
 		
-		$VoicePlayer.stream = cur_char.voice
+		$VoicePlayer.stream = char.voice
 		set_normal_expression()
 		in_dialogue=true
 		$CanvasLayer/DialoguePanel/CharSprite/Shading.self_modulate = char.color
@@ -83,6 +84,7 @@ func dialogue_anim(dia: DialogueResource, char: Character = null):
 		else:
 			$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "fade_char_out"
 			await $CanvasLayer/DialoguePanel/DialogueAnim.animation_finished
+			cur_char = queued_char
 			dialogue_anim(queued_dia,queued_char)
 	else:
 		DialogueManager.show_example_dialogue_balloon(dia,"start")
@@ -144,14 +146,16 @@ func set_evidence():
 		new_listitem.set_item(item)
 		$CanvasLayer/DialoguePanel/EvLayer/EvidenceList/EvidenceItems.add_child(new_listitem)
 	
-func set_surprised_expression():
-	$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "surprised"
+func set_surprised_expression(animate = true):
+	if animate:
+		$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "surprised"
 	$CanvasLayer/DialoguePanel/CharSprite/Outline.texture = cur_char.surprised_outline
 	$CanvasLayer/DialoguePanel/CharSprite/Color.texture = cur_char.surprised_color
 	$CanvasLayer/DialoguePanel/CharSprite/Shading.texture = cur_char.surprised_shading
 	
-func set_angry_expression():
-	$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "surprised"
+func set_angry_expression(animate = true):
+	if animate:
+		$CanvasLayer/DialoguePanel/DialogueAnim.current_animation = "surprised"
 	$CanvasLayer/DialoguePanel/CharSprite/Outline.texture = cur_char.angry_outline
 	$CanvasLayer/DialoguePanel/CharSprite/Color.texture = cur_char.angry_color
 	$CanvasLayer/DialoguePanel/CharSprite/Shading.texture = cur_char.angry_shading
@@ -193,7 +197,9 @@ func _unhandled_input(event: InputEvent) -> void:
 				load_new_area(load(locations["_roof"]))
 			KEY_9:
 				load_new_area(load(locations["_break_room"]))
-	
+func load_path(area: String, fade=true):
+	load_new_area(load(area),fade)
+
 func load_new_area(area: PackedScene, fade = true):
 	if area != null:
 		if fade:

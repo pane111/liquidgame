@@ -14,6 +14,10 @@ func _switch_music(loopName: String):
 	if musicLoops.has(loopName):
 		musicPlayer.stream = musicLoops[loopName]
 		musicPlayer.play()
+func pause_music():
+	musicPlayer.stream_paused = true
+func resume_music():
+	musicPlayer.stream_paused = false
 
 func _stop_music():
 	musicPlayer.stop()

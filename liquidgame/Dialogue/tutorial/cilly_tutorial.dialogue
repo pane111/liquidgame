@@ -1,0 +1,4 @@
+~ start
+{{FlagManager.char_name("cilly")}}: Hey there! You’re the new number-pusher, aren’t you? I’m Cilly, I do all the cleaning around here. That being said, I don't really have time right now, but make sure to say hello later, so I can give you a proper welcome! Bye!!
+do hide_after_dialogue()
+=> END

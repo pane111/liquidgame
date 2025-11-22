@@ -1,0 +1,51 @@
+~ start
+{{FlagManager.char_name("Bentley")}}: ....Um.
+{{FlagManager.char_name("Bentley")}}: Hey.
+{{FlagManager.char_name("Bentley")}}: So.
+{{FlagManager.char_name("Bentley")}}: Haha... Well, this is awkward.
+{{FlagManager.char_name("Bentley")}}: I'm {{FlagManager.char_name("Bentley")}}...
+{{FlagManager.char_name("Bentley")}}: I think you may have missed me just now.
+{{FlagManager.char_name("Bentley")}}: Remember? I'm supposed to be your guide.
+{{FlagManager.char_name("Bentley")}}: ...
+{{FlagManager.char_name("Bentley")}}: Okay I know I'm not really the most remarkable person ever, but come on!
+{{FlagManager.char_name("Bentley")}}: You just walked right past me!
+{{FlagManager.char_name("Bentley")}}: Like I didn't exist at all!
+{{FlagManager.char_name("Bentley")}}: That's kind of rude! In my opinion!
+{{FlagManager.char_name("Bentley")}}: ...
+{{FlagManager.char_name("Bentley")}}: Er, well, sorry for that.
+{{FlagManager.char_name("Bentley")}}: Let's start over, okay?
+{{FlagManager.char_name("Bentley")}}: ...My name is {{FlagManager.char_name("Bentley")}}. I'm, uh, your guide.
+{{FlagManager.char_name("Bentley")}}: We were just in the boss' office, and right now we're in the main office.
+{{FlagManager.char_name("Bentley")}}: This'll be where you do most of your work...
+{{FlagManager.char_name("Bentley")}}: But hey, not like there'll be much to do, haha.
+{{FlagManager.char_name("Bentley")}}: Might as well take it easy and relax, because, well...
+{{FlagManager.char_name("Bentley")}}: You've basically been invited to a luxury cruise...
+{{FlagManager.char_name("Bentley")}}: ...That is currently on its way to the very bottom of the ocean!
+{{FlagManager.char_name("Bentley")}}: Buuut, that means you hit the jackpot!
+- What are you talking about...?
+	{{FlagManager.char_name("Bentley")}}: Well, I don't think I'm supposed to tell you, but this company's going under.
+	{{FlagManager.char_name("Bentley")}}: Meld & Sons has been in the process of liquification for a few months now... They're about to drive the final nails into the coffin, so to speak.
+	{{FlagManager.char_name("Bentley")}}: ...I do wonder what'll happen to the sculptures. You think they're safe to drink after they melt?
+	- Why exactly am I here then?
+		{{FlagManager.char_name("Bentley")}}: Oh... Did the boss not tell you anything...? Hoo boy. Well, uh, from what I've heard, I guess you'll be going over the files and records to make sure it's all correct, and set everything up for liquification.
+		- You mean Liquidation. (Correct him)
+			{{FlagManager.char_name("Bentley")}}: H-huh, is that the right word? I, er, could have sworn the boss said liquification. 
+		- Sounds good.
+			{{FlagManager.char_name("Bentley")}}: Yeah! You just gotta look over some documents for a few days, and then you get a whole month worth of pay.
+		{{FlagManager.char_name("Bentley")}}: Sigh... I will say though, it's been rough around here lately.
+		{{FlagManager.char_name("Bentley")}}: We're all gonna be out of a job soon, and Roger, y'know, the guy you're replacing, he just vanished a month ago...
+		{{FlagManager.char_name("Bentley")}}: But hey, it'll be over soon, and we're gonna get our separation pay!
+		{{FlagManager.char_name("Bentley")}}: Can't wait for that, hahahah. I promised some friends I'd get them drinks.
+		{{FlagManager.char_name("Bentley")}}: ...Well, let's check out the entrance hall next. It's to your right. I'll be waiting.
+- (Pretend he's not there)
+	{{FlagManager.char_name("Bentley")}}: ...
+	{{FlagManager.char_name("Bentley")}}: ......
+	{{FlagManager.char_name("Bentley")}}: ............
+	{{FlagManager.char_name("Bentley")}}: Are you serious right now...?
+	{{FlagManager.char_name("Bentley")}}: Look, I know you won't be here for long, but, you know, you should probably like, try to be friends with your colleagues...
+	{{FlagManager.char_name("Bentley")}}: Sigh... Well, this is the main office, you'll be working here, you know, all that stuff.
+	{{FlagManager.char_name("Bentley")}}: Go through the door on your right and you'll get to the entrance hall. I'll wait there.
+	{{FlagManager.char_name("Bentley")}}: ...Feel free to look around, I guess. You don't seem interested in my guidance anyways.
+	{{FlagManager.char_name("Bentley")}}: But this is my job, so I gotta do it regardless, I guess.
+do FlagManager.set_int("tutorial",2)
+=> END

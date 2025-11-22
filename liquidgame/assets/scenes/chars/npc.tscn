@@ -62,21 +62,21 @@ shape = SubResource("BoxShape3D_peea3")
 
 [node name="Outline" type="Sprite3D" parent="."]
 flip_h = true
-pixel_size = 0.003
+pixel_size = 0.006
 texture_filter = 2
 render_priority = 3
 texture = ExtResource("3_q3a62")
 
 [node name="Color" type="Sprite3D" parent="."]
 flip_h = true
-pixel_size = 0.003
+pixel_size = 0.006
 texture_filter = 2
 render_priority = 1
 texture = ExtResource("5_job24")
 
 [node name="Shading" type="Sprite3D" parent="."]
 flip_h = true
-pixel_size = 0.003
+pixel_size = 0.006
 texture_filter = 2
 render_priority = 2
 texture = ExtResource("6_qnm6p")

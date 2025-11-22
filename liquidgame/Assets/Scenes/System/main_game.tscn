@@ -7,11 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://cxlbrxhcw1ed7" path="res://Assets/2D/Characters/Bentley/bentley_color.png" id="4_7abc5"]
 [ext_resource type="Texture2D" uid="uid://vc2lfmsnr87w" path="res://Assets/2D/Characters/Bentley/bentley_shading.png" id="5_hg5cd"]
 [ext_resource type="Material" path="res://shaders/dither_background.tres" id="6_a0er8"]
-[ext_resource type="Texture2D" uid="uid://874s8oworhil" path="res://assets/2D/hud_area_label.png" id="7_hg5cd"]
+[ext_resource type="Texture2D" uid="uid://874s8oworhil" path="res://Assets/2D/hud_area_label.png" id="7_hg5cd"]
 [ext_resource type="Theme" uid="uid://4hg2sp3stq0y" path="res://Resources/iced_theme.tres" id="7_t25hs"]
 [ext_resource type="PackedScene" uid="uid://hugcybvj4ew4" path="res://Assets/Scenes/System/evidence_item.tscn" id="8_t25hs"]
 [ext_resource type="StyleBox" uid="uid://wll4sgrmkeeu" path="res://Resources/Evidence/ev_item_style.tres" id="9_jvbpl"]
-[ext_resource type="Texture2D" uid="uid://cdr5pgijdwvb3" path="res://assets/2D/evidence_placeholder.png" id="10_hkbjw"]
+[ext_resource type="Texture2D" uid="uid://cdr5pgijdwvb3" path="res://Assets/2D/evidence_placeholder.png" id="10_hkbjw"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_d0c4d"]
 material = ExtResource("6_a0er8")
@@ -190,20 +190,19 @@ tracks/1/keys = {
 "values": [Vector2(1.001358e-05, 1), Vector2(1e-05, 1), Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_7abc5"]
-resource_name = "surprised"
-length = 0.2
+[sub_resource type="Animation" id="Animation_nksk1"]
+resource_name = "fade_char_in"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CharSprite:position:y")
-tracks/0/interp = 2
+tracks/0/path = NodePath("CharSprite:modulate")
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.033333335, 0.2),
+"times": PackedFloat32Array(0, 0.03333333, 0.56333333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [473.7886, 473.7886, 559.0]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_q51aq"]
@@ -221,19 +220,20 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_nksk1"]
-resource_name = "fade_char_in"
+[sub_resource type="Animation" id="Animation_7abc5"]
+resource_name = "surprised"
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CharSprite:modulate")
-tracks/0/interp = 1
+tracks/0/path = NodePath("CharSprite:position:y")
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.03333333, 0.56333333),
+"times": PackedFloat32Array(0, 0.1, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [559.0, 500.0, 559.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7abc5"]
@@ -249,7 +249,7 @@ _data = {
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q51aq"]
-bg_color = Color(1, 0.35760865, 0.630946, 1)
+bg_color = Color(1, 0.61, 0.77900004, 1)
 skew = Vector2(-0.06, 0)
 border_width_left = 2
 border_width_top = 6
@@ -441,9 +441,9 @@ theme_override_styles/panel = ExtResource("9_jvbpl")
 
 [node name="ItemDetails" type="PanelContainer" parent="CanvasLayer/DialoguePanel/EvLayer"]
 visible = false
-offset_left = 764.0
+offset_left = 790.0
 offset_top = 71.0
-offset_right = 1221.0
+offset_right = 1247.0
 offset_bottom = 373.0
 theme_override_styles/panel = ExtResource("9_jvbpl")
 
@@ -459,14 +459,18 @@ texture = ExtResource("10_hkbjw")
 
 [node name="ItemName" type="Label" parent="CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.3529412)
 theme_override_font_sizes/font_size = 24
 text = "Evidence Item
 "
 
 [node name="ItemDesc" type="Label" parent="CanvasLayer/DialoguePanel/EvLayer/ItemDetails/VBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.3529412)
 theme_override_font_sizes/font_size = 24
 text = "This is where the item description goes."
+autowrap_mode = 2
 
 [node name="PresentButton" type="Button" parent="CanvasLayer/DialoguePanel/EvLayer"]
 visible = false
@@ -476,14 +480,16 @@ offset_top = 357.0
 offset_right = 1202.0
 offset_bottom = 417.0
 theme = ExtResource("7_t25hs")
+theme_override_colors/font_outline_color = Color(0.766127, 0.4650393, 1, 1)
+theme_override_constants/outline_size = 8
 theme_override_styles/normal = SubResource("StyleBoxFlat_q51aq")
 text = "PRESENT"
 
 [node name="AreaLabel" type="Label" parent="CanvasLayer"]
 custom_minimum_size = Vector2(155, 30)
-offset_left = 13.0
+offset_left = 25.0
 offset_top = 12.0
-offset_right = 226.0
+offset_right = 238.0
 offset_bottom = 68.0
 theme_override_colors/font_shadow_color = Color(0.08235294, 0.08235294, 0.08235294, 0.2627451)
 theme_override_colors/font_outline_color = Color(0.0023322236, 0.27376676, 0.67579144, 1)

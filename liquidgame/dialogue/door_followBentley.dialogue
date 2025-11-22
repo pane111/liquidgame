@@ -1,0 +1,4 @@
+~ start
+You: (I should follow {{FlagManager.char_name("bentley")}} into the entrance hall.)
+You: (He said it's the door to my right.)
+=> END

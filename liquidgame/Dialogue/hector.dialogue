@@ -1,4 +1,4 @@
 ~ start
 {{FlagManager.char_name("hector")}}: My name is {{FlagManager.char_name("hector")}}...
-{{FlagManager.char_name("hector")}}: Do you think the ice is melting? I think the block has gotten a bit smaller, methinks.
+{{FlagManager.char_name("hector")}}: Do you think the ice is melting? Methinks the block has gotten a bit smaller.
 => END

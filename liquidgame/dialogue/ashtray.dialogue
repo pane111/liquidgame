@@ -1,0 +1,8 @@
+~ start
+You: (This has to be Bentley's ashtray.)
+You: (There's actually two different brands of cigarettes in here.)
+You: (...Interesting)
+if FlagManager.check_evidence("magazine")==false:
+	do FlagManager.add_evidence("ashtray","res://Resources/Evidence/ashtray.tres")
+	System: (The ashtray was added to the evidence.)
+=> END

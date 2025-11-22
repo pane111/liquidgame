@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://cwuu40uk5cppe"]
 
 [ext_resource type="Script" uid="uid://ykjt6cle2hj8" path="res://scripts/audiomanager.gd" id="1_m4glj"]
-[ext_resource type="AudioStream" uid="uid://c5ppxqmcrdvwg" path="res://audio/sfx/click_002.wav" id="2_486km"]
+[ext_resource type="AudioStream" uid="uid://bufbnlc3r0eoe" path="res://audio/sfx/click_002.wav" id="2_486km"]
 [ext_resource type="AudioStream" uid="uid://caectgy3vcgq0" path="res://audio/music/caught.ogg" id="2_ab4um"]
 [ext_resource type="AudioStream" uid="uid://d2kacbhud72j0" path="res://audio/Iced_Interactive.tres" id="2_f8lif"]
-[ext_resource type="AudioStream" uid="uid://rfkegicfqx1j" path="res://audio/sfx/click_001.wav" id="3_6ao2k"]
+[ext_resource type="AudioStream" uid="uid://bjjryfixh7nip" path="res://audio/sfx/click_001.wav" id="3_6ao2k"]
 [ext_resource type="AudioStream" uid="uid://e00gcrffv2k4" path="res://audio/music/lu_underwatercavelvl_loop.wav" id="3_itxai"]
-[ext_resource type="AudioStream" uid="uid://cg2fffa06ipdb" path="res://audio/sfx/smash.wav" id="4_aq0d4"]
+[ext_resource type="AudioStream" uid="uid://bx3g73ha2fhap" path="res://audio/sfx/smash.wav" id="4_aq0d4"]
 [ext_resource type="AudioStream" uid="uid://0mgan34w7k3j" path="res://audio/sfx/Swoosh_2.wav" id="7_gjxq0"]
 [ext_resource type="AudioStream" uid="uid://cuqgtwviqbeae" path="res://audio/sfx/explosion.wav" id="8_5paou"]
 

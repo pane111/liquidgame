@@ -1,13 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://cxa6uqhmdl5of"]
+[gd_scene load_steps=14 format=3 uid="uid://cxa6uqhmdl5of"]
 
-[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_ruyus"]
-[ext_resource type="Resource" uid="uid://cwwid1ojrgve8" path="res://Dialogue/tutorial/tutorial_end.dialogue" id="2_1gwfa"]
-[ext_resource type="PackedScene" uid="uid://l0xxs4w8xflo" path="res://Assets/3D/furniture/railing.glb" id="4_axv30"]
-[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://Assets/3D/furniture/statue stand.glb" id="4_t07o4"]
-[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="5_a5tku"]
-[ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://Assets/Scenes/chars/npc.tscn" id="6_lb3i3"]
-[ext_resource type="Resource" uid="uid://ci8jbaqsug61w" path="res://Dialogue/maingame/bentley_roof.dialogue" id="7_1gwfa"]
-[ext_resource type="PackedScene" uid="uid://c4vofq6t61gir" path="res://Assets/3D/floor_tiles.glb" id="7_ky54k"]
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_ruyus"]
+[ext_resource type="Resource" uid="uid://cfsgqw5l4y8s2" path="res://dialogue/tutorial/tutorial_end.dialogue" id="2_1gwfa"]
+[ext_resource type="PackedScene" uid="uid://l0xxs4w8xflo" path="res://assets/3D/furniture/railing.glb" id="4_axv30"]
+[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://assets/3D/furniture/statue stand.glb" id="4_t07o4"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="5_a5tku"]
+[ext_resource type="PackedScene" uid="uid://5whxhmlcsrmg" path="res://assets/scenes/chars/npc.tscn" id="6_lb3i3"]
+[ext_resource type="Resource" uid="uid://beylrt5ujnfwm" path="res://dialogue/maingame/bentley_roof.dialogue" id="7_1gwfa"]
+[ext_resource type="PackedScene" uid="uid://ciuokm66b1rv7" path="res://assets/scenes/interactable_object.tscn" id="7_bya5u"]
+[ext_resource type="PackedScene" uid="uid://c4vofq6t61gir" path="res://assets/3D/floor_tiles.glb" id="7_ky54k"]
+[ext_resource type="Resource" uid="uid://bvoy86g6odh7a" path="res://dialogue/ashtray.dialogue" id="8_oyisu"]
+[ext_resource type="Texture2D" uid="uid://dfixwlqd6fa8q" path="res://assets/2D/ashtray.png" id="10_t07o4"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -117,7 +120,7 @@ shadow_opacity = 0.4
 transform = Transform3D(0.29950482, -0.1969219, -0.9335518, -0.8369241, -0.52402735, -0.15796696, -0.45809945, 0.8286238, -0.32175738, -4.1464896, 28.717892, -15.682976)
 shadow_opacity = 0.5
 
-[node name="Door" parent="Lighting" instance=ExtResource("5_a5tku")]
+[node name="Door" parent="." instance=ExtResource("5_a5tku")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.750832, 2.8019743, -19.4989)
 _goto = "uid://brk45c6acql25"
 
@@ -127,3 +130,8 @@ dialogue = ExtResource("7_1gwfa")
 req_flag = "tutorial"
 flag_val_int_min = 3
 flag_val_int_max = 99
+
+[node name="InteractableObject" parent="." instance=ExtResource("7_bya5u")]
+transform = Transform3D(-2.1456883e-07, 0, -2, 0, 2, 0, 2, 0, -2.1456883e-07, 3.4175682, 4.0939035, 2.0986881)
+image = ExtResource("10_t07o4")
+dialogue = ExtResource("8_oyisu")

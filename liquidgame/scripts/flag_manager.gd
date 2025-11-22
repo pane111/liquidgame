@@ -30,6 +30,9 @@ func char_name(name):
 	print_debug("Character: " + col_string)
 	return col_string
 
+func reset_player_pos():
+	var placeholder = 0
+
 func set_int(name,val):
 	int_flags[name]=val
 	

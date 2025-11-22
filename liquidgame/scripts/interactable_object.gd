@@ -1,10 +1,12 @@
 extends "res://Assets/Scenes/System/interactable.gd"
 
+@export var image: Texture2D
 @export var dialogue: DialogueResource
 @export var hovering = true
 @export var destroy = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Sprite3D.texture = image
 	if !hovering && $AnimationPlayer!=null:
 		$AnimationPlayer.stop()
 func _on_interact():

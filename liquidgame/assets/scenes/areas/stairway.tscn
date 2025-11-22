@@ -1,15 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://brk45c6acql25"]
+[gd_scene load_steps=15 format=3 uid="uid://brk45c6acql25"]
 
-[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_41o4p"]
-[ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://Assets/3D/furniture/wallpiece corner in.glb" id="2_yn8ay"]
-[ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://Assets/3D/furniture/wallpiece.glb" id="3_871ti"]
-[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://Assets/3D/furniture/statue stand.glb" id="4_na71v"]
-[ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://Assets/3D/floor_planks.glb" id="5_ttrrm"]
-[ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://Assets/3D/dark.tres" id="6_m43gv"]
-[ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://Assets/3D/furniture/ceiling_lamp.tscn" id="7_x0men"]
-[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="8_wt7sn"]
-[ext_resource type="PackedScene" uid="uid://dg3dn5ynkvrk6" path="res://assets/3D/furniture/stair.glb" id="9_871ti"]
-[ext_resource type="PackedScene" uid="uid://ctsvrabwrksa5" path="res://assets/3D/furniture/picture frame.glb" id="10_na71v"]
+[ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://assets/scenes/areas/area.gd" id="1_41o4p"]
+[ext_resource type="PackedScene" uid="uid://b6va648b3w0dq" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_yn8ay"]
+[ext_resource type="PackedScene" uid="uid://b7daapp7nketh" path="res://assets/3D/furniture/wallpiece.glb" id="3_871ti"]
+[ext_resource type="PackedScene" uid="uid://btxgy2ynkp0ta" path="res://assets/3D/furniture/statue stand.glb" id="4_na71v"]
+[ext_resource type="PackedScene" uid="uid://bc3xrh6rd5tg3" path="res://assets/3D/floor_planks.glb" id="5_ttrrm"]
+[ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://assets/3D/dark.tres" id="6_m43gv"]
+[ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://assets/3D/furniture/ceiling_lamp.tscn" id="7_x0men"]
+[ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://assets/scenes/door.tscn" id="8_wt7sn"]
+[ext_resource type="PackedScene" uid="uid://dnvv222mvxat1" path="res://assets/3D/furniture/stair.glb" id="9_871ti"]
+[ext_resource type="PackedScene" uid="uid://ccphc3py16d8s" path="res://assets/3D/furniture/picture frame.glb" id="10_na71v"]
+[ext_resource type="Resource" uid="uid://bg56nqhorwqfu" path="res://dialogue/door_lockedBasement.dialogue" id="10_ttrrm"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
 
@@ -174,6 +175,8 @@ _goto = "uid://2m4mvq03m225"
 
 [node name="Door2" parent="." instance=ExtResource("8_wt7sn")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.9458046, -2.1254463, -6.6065373)
+isLocked = true
+dialogue = ExtResource("10_ttrrm")
 _goto = "uid://1airqduoass5"
 
 [node name="Door3" parent="." instance=ExtResource("8_wt7sn")]

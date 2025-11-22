@@ -203,6 +203,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				load_new_area(load(locations["_staircase"]))
 			KEY_5:
 				load_new_area(load(locations["_basement_hallway"]))
+				AudioManager._stop_music()
 			KEY_6:
 				load_new_area(load(locations["_cooling_room"]))
 			KEY_7:
@@ -231,6 +232,7 @@ func load_new_area(area: PackedScene, fade = true):
 		player.rotation_degrees = current_area.start_point.rotation_degrees
 		player.init_rot = current_area.start_point.rotation_degrees
 		player.panning_limit = current_area.rotation_lim
+		SuperManager.current_area = current_area
 		if fade:
 			$CanvasLayer/FadeAnim.current_animation = "fade_black_out"
 			await $CanvasLayer/FadeAnim.animation_finished

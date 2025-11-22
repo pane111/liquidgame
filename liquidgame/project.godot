@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 FlagManager="*res://Assets/Scenes/System/flag_manager.tscn"
 AudioManager="*res://assets/scenes/System/AudioManager.tscn"
+SuperManager="*res://assets/scenes/System/super_manager.tscn"
 
 [display]
 

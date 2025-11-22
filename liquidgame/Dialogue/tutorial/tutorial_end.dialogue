@@ -2,6 +2,5 @@
 do set_player_voice()
 (A few hours later...)
 (The Bird Statue was added to your evidence.)
-do AudioManager._switch_music("main")
 do FlagManager.set_int("tutorial",4)
 => END

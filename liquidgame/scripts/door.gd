@@ -13,10 +13,9 @@ extends "res://Assets/Scenes/System/interactable.gd"
 
 func _on_interact():
 	
-	if req_flag != "" && req_flag!= null: # Check if the NPC has a required flag
+	if req_flag != "" && req_flag != null: # Check if the NPC has a required flag
 		if flag_is_string && FlagManager.get_str(req_flag) != flag_val_string: # If flag is a STRING, and the flag in FlagManager does not equal the required value, hide character
 			isLocked=true
-			get_node("/root/MainGame").dialogue_anim(dialogue)
 		else:
 			isLocked=false
 		if !flag_is_string && (FlagManager.get_int(req_flag) < flag_val_int_min || FlagManager.get_int(req_flag) > flag_val_int_max): # If flag is an INT, and the flag in FlagManager is not in the range hide character
@@ -27,5 +26,7 @@ func _on_interact():
 	
 	if !isLocked:
 		get_node("/root/MainGame").load_new_area(load(_goto))
+	else:
+		get_node("/root/MainGame").dialogue_anim(dialogue)
 	
 	

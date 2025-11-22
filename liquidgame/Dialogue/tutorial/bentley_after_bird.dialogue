@@ -11,6 +11,7 @@ do set_angry_expression(false)
 {{FlagManager.char_name("Bentley")}}: Hahaha! I'm sorry. Anyway--
 do flash()
 do blackout()
+do SuperManager.reset_player_pos()
 do AudioManager.pause_music()
 do set_surprised_expression()
 {{FlagManager.char_name("Bentley")}}: WAAAAAHHHH!!!

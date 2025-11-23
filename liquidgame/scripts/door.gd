@@ -9,7 +9,7 @@ extends "res://Assets/Scenes/System/interactable.gd"
 @export var flag_val_string: String
 
 
-@export_file("*.tscn") var _goto: String
+@export var _goto: String
 
 func _on_interact():
 	
@@ -25,7 +25,7 @@ func _on_interact():
 	
 	
 	if !isLocked:
-		get_node("/root/MainGame").load_new_area(load(_goto))
+		get_node("/root/MainGame").load_new_area(LocationManager.get_area(_goto))
 	else:
 		get_node("/root/MainGame").dialogue_anim(dialogue)
 	

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://ci044y0muwlma"]
 
 [ext_resource type="Script" uid="uid://er2i3lnsc7wb" path="res://scripts/door.gd" id="1_tdxg0"]
-[ext_resource type="Resource" uid="uid://1dd72nhqcwdj" path="res://dialogue/door_followBentley.dialogue" id="2_7y1hl"]
-[ext_resource type="Texture2D" uid="uid://csurw123qfydi" path="res://assets/2D/door.png" id="2_tdxg0"]
+[ext_resource type="Resource" uid="uid://1dd72nhqcwdj" path="res://Dialogue/door_followBentley.dialogue" id="2_7y1hl"]
+[ext_resource type="Texture2D" uid="uid://csurw123qfydi" path="res://Assets/2D/door.png" id="2_tdxg0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tdxg0"]
 size = Vector3(3.2, 6, 0.2)

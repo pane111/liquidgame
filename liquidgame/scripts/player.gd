@@ -9,7 +9,7 @@ var init_rot= Vector3(0,0,0)
 var panvec=Vector3.ZERO
 var pan_mult = 1.0
 func _ready() -> void:
-	SuperManager.player = self
+	# SuperManager.player = self
 	print_debug("Player initialized")
 	
 

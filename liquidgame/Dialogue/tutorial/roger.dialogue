@@ -14,7 +14,7 @@ do set_char_voice("bentley")
 {{FlagManager.char_name("bentley")}}: I have to catch fresh air.
 do FlagManager.set_int("tutorial",4)
 do FlagManager.add_evidence("bird","res://Resources/Evidence/bird.tres")
-do load_path("res://Assets/Scenes/Areas/office.tscn")
+do load_path("office")
 do set_player_voice()
 (A few hours later...)
 (The Bird Statue was added to your evidence.)

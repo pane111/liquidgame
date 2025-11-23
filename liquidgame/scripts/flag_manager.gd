@@ -27,11 +27,8 @@ func char_name(name):
 	var hex := "#%02x%02x%02x" % [int(c_col.r * 255), int(c_col.g * 255), int(c_col.b * 255)] 
 	hex = hex.to_upper()
 	var col_string = "[color="+str(hex)+"]"+c.c_name+"[/color]"
-	print_debug("Character: " + col_string)
 	return col_string
 
-func reset_player_pos():
-	var placeholder = 0
 
 func set_int(name,val):
 	int_flags[name]=val

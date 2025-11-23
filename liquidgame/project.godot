@@ -10,8 +10,9 @@ config_version=5
 
 [application]
 
-config/name="LiquidGame"
-run/main_scene="uid://dyj0frrxh02hb"
+config/name="ICED"
+config/version="0.1"
+run/main_scene="uid://6jwyshv4pv0f"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,8 +20,8 @@ config/icon="res://icon.svg"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 FlagManager="*res://Assets/Scenes/System/flag_manager.tscn"
-AudioManager="*res://assets/scenes/System/AudioManager.tscn"
-SuperManager="*res://assets/scenes/System/super_manager.tscn"
+LocationManager="*res://scripts/location_manager.gd"
+AudioManager="*res://Assets/Scenes/System/AudioManager.tscn"
 
 [display]
 

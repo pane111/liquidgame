@@ -3,7 +3,6 @@ extends Node3D
 @export var start_point: Node3D
 @export var rotation_lim: Vector2
 @export var area_name: String
-@export_file("*.tscn") var _prev: String
 
 @export var req_flag: String
 @export var flag_is_string = false # If TRUE, the flag returns a string, eg flag "last_room" = "office", if FALSE, check an int, eg "completed_tutorial" = 1

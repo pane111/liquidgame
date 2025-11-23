@@ -11,7 +11,6 @@ do set_angry_expression(false)
 {{FlagManager.char_name("Bentley")}}: Hahaha! I'm sorry. Anyway--
 do flash()
 do blackout()
-do SuperManager.reset_player_pos()
 do AudioManager.pause_music()
 do set_surprised_expression()
 {{FlagManager.char_name("Bentley")}}: WAAAAAHHHH!!!
@@ -30,6 +29,7 @@ do set_surprised_expression()
 do set_normal_expression()
 {{FlagManager.char_name("Bentley")}}: Sheesh... Where the hell is {{FlagManager.char_name("hammerdog")}}?
 {{FlagManager.char_name("Bentley")}}: Someone's gotta fix the lights ASAP...
+do reset_player_view()
 do restore_light()
 do set_char_voice("hammerdog")
 {{FlagManager.char_name("hammerdog")}}: What's going on? What was that noise?

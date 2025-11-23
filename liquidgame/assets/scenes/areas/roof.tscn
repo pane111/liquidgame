@@ -16,7 +16,7 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_axv30"]
 
-[node name="MainHall" type="Node3D" node_paths=PackedStringArray("start_point")]
+[node name="Roof" type="Node3D" node_paths=PackedStringArray("start_point")]
 script = ExtResource("1_ruyus")
 start_point = NodePath("PlayerStartPosition")
 rotation_lim = Vector2(0, 12)
@@ -119,7 +119,7 @@ shadow_opacity = 0.5
 
 [node name="Door" parent="." instance=ExtResource("5_a5tku")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.750832, 2.8019743, -19.4989)
-_goto = "uid://brk45c6acql25"
+_goto = "staircase"
 
 [node name="bentley" parent="." instance=ExtResource("6_lb3i3")]
 transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -6.1000004, 2.2, -2.2)

@@ -119,7 +119,7 @@ isLocked = true
 req_flag = "tutorial"
 flag_val_int_min = 4
 flag_val_int_max = 99
-_goto = "uid://2m4mvq03m225"
+_goto = "office"
 
 [node name="Lighting" type="Node3D" parent="."]
 

@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=3 uid="uid://1airqduoass5"]
 
 [ext_resource type="Script" uid="uid://nyyx13w32kok" path="res://Assets/Scenes/Areas/area.gd" id="1_367hl"]
-[ext_resource type="PackedScene" uid="uid://cfv8qcm6x1ysl" path="res://assets/3D/furniture/wallpiece corner in.glb" id="2_kecdp"]
-[ext_resource type="PackedScene" uid="uid://bl06nrpii05ly" path="res://assets/3D/furniture/wallpiece.glb" id="3_1vlgq"]
-[ext_resource type="PackedScene" uid="uid://di6qdjxpooxh8" path="res://assets/3D/furniture/statue stand.glb" id="4_4ocfb"]
-[ext_resource type="PackedScene" uid="uid://dx6ch0jq7jcvq" path="res://assets/3D/furniture/wallpiece corner out.glb" id="6_367hl"]
+[ext_resource type="PackedScene" uid="uid://cfv8qcm6x1ysl" path="res://Assets/3D/furniture/wallpiece corner in.glb" id="2_kecdp"]
+[ext_resource type="PackedScene" uid="uid://bl06nrpii05ly" path="res://Assets/3D/furniture/wallpiece.glb" id="3_1vlgq"]
+[ext_resource type="PackedScene" uid="uid://di6qdjxpooxh8" path="res://Assets/3D/furniture/statue stand.glb" id="4_4ocfb"]
+[ext_resource type="PackedScene" uid="uid://dx6ch0jq7jcvq" path="res://Assets/3D/furniture/wallpiece corner out.glb" id="6_367hl"]
 [ext_resource type="Material" uid="uid://ks3hr8u7cmc6" path="res://Assets/3D/dark.tres" id="6_d3o22"]
 [ext_resource type="PackedScene" uid="uid://dhpooxohog2dd" path="res://Assets/3D/furniture/ceiling_lamp.tscn" id="7_b77vr"]
-[ext_resource type="PackedScene" uid="uid://4s1a5bu6iuou" path="res://assets/3D/floor_tiles.glb" id="7_kecdp"]
+[ext_resource type="PackedScene" uid="uid://4s1a5bu6iuou" path="res://Assets/3D/floor_tiles.glb" id="7_kecdp"]
 [ext_resource type="PackedScene" uid="uid://ci044y0muwlma" path="res://Assets/Scenes/door.tscn" id="9_1vlgq"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jmlkm"]
@@ -169,7 +169,7 @@ flickerIntervall = 2.0
 
 [node name="Door" parent="." instance=ExtResource("9_1vlgq")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.1074734, 2.947105, 3.9302359)
-_goto = "uid://brk45c6acql25"
+_goto = "staircase"
 
 [node name="Door2" parent="." instance=ExtResource("9_1vlgq")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.841254, 2.947105, -4.417668)

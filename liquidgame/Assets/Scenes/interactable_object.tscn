@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://ciuokm66b1rv7"]
 
 [ext_resource type="Script" uid="uid://ccdksva50f377" path="res://scripts/interactable_object.gd" id="1_1nq8h"]
-[ext_resource type="Texture2D" uid="uid://26i7axc5qd8o" path="res://assets/2D/magazine.png" id="2_32a84"]
-[ext_resource type="Resource" uid="uid://bthdm646lips2" path="res://dialogue/magazine.dialogue" id="2_t7t0a"]
+[ext_resource type="Texture2D" uid="uid://26i7axc5qd8o" path="res://Assets/2D/magazine.png" id="2_32a84"]
+[ext_resource type="Resource" uid="uid://bthdm646lips2" path="res://Dialogue/magazine.dialogue" id="2_t7t0a"]
 [ext_resource type="Texture2D" uid="uid://cfnypd7ctwhbu" path="res://Assets/2D/sparkle_1.png" id="4_q5v3f"]
 [ext_resource type="Texture2D" uid="uid://bl6a76hes627y" path="res://Assets/2D/sparkle_2.png" id="5_qyl6k"]
 

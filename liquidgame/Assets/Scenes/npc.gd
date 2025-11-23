@@ -34,6 +34,7 @@ func _ready() -> void:
 	
 func _on_interact():
 	if clickable:
+		clickable=false
 		get_node("/root/MainGame").dialogue_anim(dialogue,character)
 		$AnimationPlayer.current_animation="disappear"
 		await get_node("/root/MainGame").finished_dialogue
@@ -50,6 +51,7 @@ func appear():
 	$AnimationPlayer.current_animation="appear"
 	await $AnimationPlayer.animation_finished
 	$Area3D.input_ray_pickable = true
+	clickable=true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -10,6 +10,6 @@ Useful functions for dialogue:
 	- Set up weak point -> do FlagManager.set_weak_point("name"), make sure to set weak point to "" afterwards
 	- Shocked effect (screen flash, shatter sound, caught music) -> do shock_effect()
 	- Regain composure (return to normal music) -> do regain()
-	- Load area -> do load_path("area_scene_file", fade=true) (fade decides if the screen should fade to black as a transition)
+	- Load area -> do load_path("area_name", fade=true) (fade decides if the screen should fade to black as a transition)
 	- Make NPC disappear after dialogue -> do hide_after_dialogue()
 	- Weak point color: [color="#f5ce42"]STATEMENT[/color]

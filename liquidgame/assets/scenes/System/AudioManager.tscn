@@ -1,23 +1,22 @@
-[gd_scene load_steps=12 format=3 uid="uid://cwuu40uk5cppe"]
+[gd_scene load_steps=11 format=3 uid="uid://cwuu40uk5cppe"]
 
 [ext_resource type="Script" uid="uid://ykjt6cle2hj8" path="res://scripts/audiomanager.gd" id="1_m4glj"]
 [ext_resource type="AudioStream" uid="uid://c5ppxqmcrdvwg" path="res://audio/sfx/click_002.wav" id="2_486km"]
 [ext_resource type="AudioStream" uid="uid://caectgy3vcgq0" path="res://audio/music/caught.ogg" id="2_ab4um"]
-[ext_resource type="AudioStream" uid="uid://d2kacbhud72j0" path="res://audio/Iced_Interactive.tres" id="2_f8lif"]
+[ext_resource type="AudioStream" uid="uid://cln2i12ekxkcc" path="res://audio/sfx/lu_underwatercavelvl_loop_ogg.ogg" id="3_4l1ti"]
 [ext_resource type="AudioStream" uid="uid://rfkegicfqx1j" path="res://audio/sfx/click_001.wav" id="3_6ao2k"]
-[ext_resource type="AudioStream" uid="uid://e00gcrffv2k4" path="res://audio/music/lu_underwatercavelvl_loop.wav" id="3_itxai"]
 [ext_resource type="AudioStream" uid="uid://bj1rujp6lnfg8" path="res://audio/music/showtime.mp3" id="4_3utn6"]
 [ext_resource type="AudioStream" uid="uid://cg2fffa06ipdb" path="res://audio/sfx/smash.wav" id="4_aq0d4"]
 [ext_resource type="AudioStream" uid="uid://dcran0mvfgetl" path="res://audio/music/finalarea.ogg" id="5_3x6or"]
 [ext_resource type="AudioStream" uid="uid://0mgan34w7k3j" path="res://audio/sfx/Swoosh_2.wav" id="7_gjxq0"]
 [ext_resource type="AudioStream" uid="uid://cuqgtwviqbeae" path="res://audio/sfx/explosion.wav" id="8_5paou"]
 
-[node name="AudioManager2" type="Node2D"]
+[node name="AudioManager" type="Node2D"]
 script = ExtResource("1_m4glj")
 musicLoops = Dictionary[String, AudioStream]({
 "caught": ExtResource("2_ab4um"),
 "funny": null,
-"main": ExtResource("3_itxai"),
+"main": ExtResource("3_4l1ti"),
 "scary": null,
 "tmc": ExtResource("4_3utn6"),
 "unknown": ExtResource("5_3x6or")
@@ -31,7 +30,7 @@ streamClips = Dictionary[String, AudioStream]({
 })
 
 [node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_f8lif")
+stream = ExtResource("3_4l1ti")
 volume_db = -8.0
 autoplay = true
 
